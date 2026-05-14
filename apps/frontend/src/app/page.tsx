@@ -27,6 +27,7 @@ import { PublicEmptyState, PublicGridSkeleton } from '@/components/PublicState';
 import PublicSectionIntro from '@/components/PublicSectionIntro';
 import NewsCard from '@/components/NewsCard';
 import { parseWebsiteBuilderState } from '@/lib/website-builder';
+import { featuredOpenDonation } from '@/lib/donations';
 import {
   ArrowRight,
   BookOpen,
@@ -576,6 +577,87 @@ export default function LandingPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#ecf7ff_0%,#f7fbff_100%)] py-10 md:py-14">
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-[radial-gradient(circle_at_left,rgba(56,189,248,0.18),transparent_62%)]" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-[radial-gradient(circle_at_right,rgba(14,165,233,0.16),transparent_60%)]" />
+        <div className="container relative mx-auto max-w-6xl px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUpVariant}
+            className="overflow-hidden rounded-[2rem] border border-sky-200/80 bg-white shadow-[0_28px_70px_-34px_rgba(14,165,233,0.22)]"
+          >
+            <div className="grid gap-0 lg:grid-cols-[1.12fr_0.88fr]">
+              <div className="relative px-5 py-6 sm:px-7 sm:py-7 md:px-8 md:py-8">
+                <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(224,242,254,0.85)_0%,rgba(255,255,255,0.96)_44%,rgba(240,249,255,0.92)_100%)]" />
+                <div className="relative">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-[10px] font-black uppercase tracking-[0.26em] text-sky-700">
+                    <HeartHandshake size={14} />
+                    Open Donasi
+                  </span>
+                  <h2 className="mt-4 max-w-2xl text-2xl font-black leading-tight tracking-[-0.03em] text-slate-950 md:text-[2.35rem]">
+                    {featuredOpenDonation.title}
+                  </h2>
+                  <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600 md:text-base">
+                    {featuredOpenDonation.summary}
+                  </p>
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    <div className="rounded-2xl border border-sky-100 bg-white px-4 py-3 shadow-sm">
+                      <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-400">Target Wakaf</p>
+                      <p className="mt-1 text-lg font-black text-slate-900">
+                        Rp {featuredOpenDonation.target.toLocaleString('id-ID')}
+                      </p>
+                    </div>
+                    <div className="rounded-2xl border border-sky-100 bg-white px-4 py-3 shadow-sm">
+                      <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-400">Fokus</p>
+                      <p className="mt-1 text-sm font-bold text-slate-800">
+                        {featuredOpenDonation.focus}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                    <Link
+                      href={`/donations/${featuredOpenDonation.slug}`}
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-6 py-3 text-sm font-bold text-white shadow-[0_22px_48px_-24px_rgba(14,165,233,0.45)] transition-all hover:-translate-y-0.5 hover:brightness-105"
+                    >
+                      Lihat Open Donasi <ArrowRight size={16} />
+                    </Link>
+                    <a
+                      href={featuredOpenDonation.whatsappUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-sky-200 bg-white px-6 py-3 text-sm font-bold text-sky-700 transition-all hover:-translate-y-0.5 hover:bg-sky-50"
+                    >
+                      Hubungi Donasi
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative min-h-[260px] overflow-hidden border-t border-sky-100 bg-sky-100/60 lg:min-h-full lg:border-l lg:border-t-0">
+                <Image
+                  src={featuredOpenDonation.posterImage}
+                  alt={featuredOpenDonation.title}
+                  fill
+                  unoptimized
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.06)_0%,rgba(15,23,42,0.2)_100%)]" />
+                <div className="absolute bottom-4 left-4 right-4 rounded-[1.4rem] border border-white/60 bg-white/88 px-4 py-4 shadow-[0_18px_40px_-28px_rgba(15,23,42,0.28)] backdrop-blur-sm">
+                  <p className="text-[10px] font-black uppercase tracking-[0.22em] text-sky-600">
+                    Amal Jariyah
+                  </p>
+                  <p className="mt-2 text-base font-black leading-6 text-slate-900">
+                    Bantu ruang kelas santri terasa lebih nyaman, bersih, dan layak untuk belajar.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

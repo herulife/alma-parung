@@ -118,7 +118,11 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
   const isProfileActive = effectivePathname === '/profil' || effectivePathname.startsWith('/teachers') || effectivePathname.startsWith('/facilities');
   const isProgramActive = effectivePathname.startsWith('/program');
   const isPsbActive = effectivePathname.startsWith('/psb');
-  const isInformationActive = effectivePathname.startsWith('/galeri') || effectivePathname.startsWith('/videos') || effectivePathname.startsWith('/news');
+  const isInformationActive =
+    effectivePathname.startsWith('/galeri') ||
+    effectivePathname.startsWith('/videos') ||
+    effectivePathname.startsWith('/news') ||
+    effectivePathname.startsWith('/donations');
   const isContactActive = effectivePathname.startsWith('/kontak');
   const isPortalPage = effectivePathname.startsWith('/portal');
   const builderState = useMemo(() => parseWebsiteBuilderState(settings), [settings]);
@@ -350,6 +354,9 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
                     <Link href="/news" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-50 hover:text-sky-700">
                       Berita
                     </Link>
+                    <Link href="/donations/wakaf-cat-tembok" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-50 hover:text-sky-700">
+                      Open Donasi
+                    </Link>
                   </div>
                 </div>
               </li>
@@ -480,6 +487,7 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
                     <Link href="/galeri" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Galeri</Link>
                     <Link href="/videos" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Video</Link>
                     <Link href="/news" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Berita</Link>
+                    <Link href="/donations/wakaf-cat-tembok" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Open Donasi</Link>
                   </div>
                 </div>
 
