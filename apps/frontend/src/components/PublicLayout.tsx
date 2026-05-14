@@ -140,10 +140,10 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
   if (isBuilderPreview && (loading || !user || user.role === 'user')) {
     return (
       <PublicSiteProvider value={createContextValue('draft')}>
-        <div className="flex min-h-screen items-center justify-center bg-slate-950 text-white">
+        <div className="flex min-h-screen items-center justify-center bg-[linear-gradient(180deg,#f4fbff_0%,#e7f4ff_100%)] text-slate-900">
           <div className="text-center">
-            <div className="mx-auto h-10 w-10 animate-spin rounded-full border-2 border-blue-300 border-t-transparent" />
-            <p className="mt-4 text-sm font-bold text-blue-100">Menyiapkan preview builder...</p>
+            <div className="mx-auto h-10 w-10 animate-spin rounded-full border-2 border-sky-400 border-t-transparent" />
+            <p className="mt-4 text-sm font-bold text-sky-700">Menyiapkan preview builder...</p>
           </div>
         </div>
       </PublicSiteProvider>
@@ -243,14 +243,14 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
 
   return (
     <PublicSiteProvider value={createContextValue('live')}>
-      <div className="public-site-shell min-h-screen bg-white font-sans antialiased">
+      <div className="public-site-shell min-h-screen bg-[linear-gradient(180deg,#f8fcff_0%,#eef7ff_100%)] font-sans antialiased">
       {/* ═══════════════════ NAVBAR ═══════════════════ */}
       {!hideNavbar ? (
-      <nav className="sticky top-0 z-[1000] border-b border-blue-900/80 bg-blue-950/95 shadow-[0_10px_30px_rgba(2,6,23,0.2)] backdrop-blur-md">
+      <nav className="sticky top-0 z-[1000] border-b border-sky-200/80 bg-white/90 shadow-[0_12px_30px_rgba(59,130,246,0.08)] backdrop-blur-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-[4.25rem] items-center justify-between md:h-20">
             {/* Logo */}
-            <Link href="/" className="group flex min-w-0 items-center gap-3 text-white transition-opacity hover:opacity-95">
+            <Link href="/" className="group flex min-w-0 items-center gap-3 text-slate-900 transition-opacity hover:opacity-95">
               <div className="relative">
                 <Image
                   src={logoUrl}
@@ -258,23 +258,23 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
                   width={48}
                   height={48}
                   unoptimized
-                  className="h-9 w-9 rounded-full border border-blue-400/80 object-cover shadow-[0_10px_25px_rgba(16,185,129,0.18)] transition-transform duration-300 group-hover:scale-105 md:h-12 md:w-12"
+                  className="h-9 w-9 rounded-full border border-sky-300 object-cover shadow-[0_10px_24px_rgba(59,130,246,0.14)] transition-transform duration-300 group-hover:scale-105 md:h-12 md:w-12"
                 />
               </div>
               <div className="flex min-w-0 flex-col">
                 <span className="truncate text-[15px] font-extrabold leading-none tracking-tight md:text-xl">
                   {schoolName}
                 </span>
-                <span className="mt-1 truncate text-[9px] font-medium uppercase tracking-[0.22em] text-blue-200/75 md:text-[11px]">
+                <span className="mt-1 truncate text-[9px] font-medium uppercase tracking-[0.22em] text-sky-600/80 md:text-[11px]">
                   {welcomeText}
                 </span>
               </div>
             </Link>
 
             {/* Desktop Menu */}
-            <ul ref={desktopDropdownRef} className="hidden items-center gap-2 rounded-full border border-blue-900/70 bg-blue-900/30 px-3 py-2 lg:flex">
+            <ul ref={desktopDropdownRef} className="hidden items-center gap-2 rounded-full border border-sky-200 bg-sky-50/90 px-3 py-2 lg:flex">
               <li>
-                <Link href="/" className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${pathname === '/' ? 'bg-blue-400/12 text-blue-200 shadow-inner shadow-blue-400/10' : 'text-blue-50 hover:bg-blue-400/10 hover:text-blue-200'}`}>
+                <Link href="/" className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${pathname === '/' ? 'bg-sky-500/12 text-sky-700 shadow-inner shadow-sky-300/20' : 'text-slate-700 hover:bg-sky-100 hover:text-sky-700'}`}>
                   Beranda
                 </Link>
               </li>
@@ -285,40 +285,40 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
                   aria-expanded={openDesktopDropdown === 'profil'}
                   className={`flex cursor-pointer items-center gap-1 rounded-full px-4 py-2 text-sm font-medium transition-all ${
                     isProfileActive || openDesktopDropdown === 'profil'
-                      ? 'bg-blue-400/12 text-blue-200 shadow-inner shadow-blue-400/10'
-                      : 'text-blue-50 hover:bg-blue-400/10 hover:text-blue-200'
+                      ? 'bg-sky-500/12 text-sky-700 shadow-inner shadow-sky-300/20'
+                      : 'text-slate-700 hover:bg-sky-100 hover:text-sky-700'
                   }`}
                 >
                   Profil <ChevronDown size={12} className={`transition-transform ${openDesktopDropdown === 'profil' ? 'rotate-180' : ''}`} />
                 </button>
                 <div className={`absolute left-0 top-full pt-4 w-52 z-50 ${openDesktopDropdown === 'profil' ? 'block' : 'hidden'}`}>
-                  <div className="overflow-hidden rounded-2xl border border-blue-100 bg-white py-2 shadow-[0_20px_50px_rgba(15,23,42,0.18)]">
+                  <div className="overflow-hidden rounded-2xl border border-sky-100 bg-white py-2 shadow-[0_20px_50px_rgba(59,130,246,0.12)]">
                     <div className="border-b border-slate-100 px-4 pb-2 pt-1">
-                      <p className="text-[10px] font-black uppercase tracking-[0.24em] text-blue-600">Profil</p>
+                      <p className="text-[10px] font-black uppercase tracking-[0.24em] text-sky-600">Profil</p>
                       <p className="mt-1 text-xs text-slate-500">Kenali pondok dan para asatidz lebih dekat.</p>
                     </div>
-                    <Link href="/profil" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-700">
+                    <Link href="/profil" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-50 hover:text-sky-700">
                       Profil Pesantren
                     </Link>
-                    <Link href="/sambutan" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-700">
+                    <Link href="/sambutan" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-50 hover:text-sky-700">
                       Sambutan Pimpinan
                     </Link>
-                    <Link href="/teachers" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-700">
+                    <Link href="/teachers" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-50 hover:text-sky-700">
                       Profil Asatidz
                     </Link>
-                    <Link href="/facilities" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-700">
+                    <Link href="/facilities" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-50 hover:text-sky-700">
                       Fasilitas Pondok
                     </Link>
                   </div>
                 </div>
               </li>
               <li>
-                <Link href="/program" className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${isProgramActive ? 'bg-blue-400/12 text-blue-200 shadow-inner shadow-blue-400/10' : 'text-blue-50 hover:bg-blue-400/10 hover:text-blue-200'}`}>
+                <Link href="/program" className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${isProgramActive ? 'bg-sky-500/12 text-sky-700 shadow-inner shadow-sky-300/20' : 'text-slate-700 hover:bg-sky-100 hover:text-sky-700'}`}>
                   Program
                 </Link>
               </li>
               <li>
-                <Link href="/psb" className={`rounded-full px-4 py-2 text-sm font-semibold transition-all ${isPsbActive ? 'bg-amber-400/12 text-amber-200 shadow-inner shadow-amber-300/10' : 'text-blue-50 hover:bg-amber-400/10 hover:text-amber-200'}`}>
+                <Link href="/psb" className={`rounded-full px-4 py-2 text-sm font-semibold transition-all ${isPsbActive ? 'bg-sky-500/12 text-sky-700 shadow-inner shadow-sky-300/20' : 'text-slate-700 hover:bg-sky-100 hover:text-sky-700'}`}>
                   PSB
                 </Link>
               </li>
@@ -329,32 +329,32 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
                   aria-expanded={openDesktopDropdown === 'informasi'}
                   className={`flex cursor-pointer items-center gap-1 rounded-full px-4 py-2 text-sm font-medium transition-all ${
                     isInformationActive || openDesktopDropdown === 'informasi'
-                      ? 'bg-blue-400/12 text-blue-200 shadow-inner shadow-blue-400/10'
-                      : 'text-blue-50 hover:bg-blue-400/10 hover:text-blue-200'
+                      ? 'bg-sky-500/12 text-sky-700 shadow-inner shadow-sky-300/20'
+                      : 'text-slate-700 hover:bg-sky-100 hover:text-sky-700'
                   }`}
                 >
                   Informasi <ChevronDown size={12} className={`transition-transform ${openDesktopDropdown === 'informasi' ? 'rotate-180' : ''}`} />
                 </button>
                 <div className={`absolute left-0 top-full pt-4 w-52 z-50 ${openDesktopDropdown === 'informasi' ? 'block' : 'hidden'}`}>
-                  <div className="overflow-hidden rounded-2xl border border-blue-100 bg-white py-2 shadow-[0_20px_50px_rgba(15,23,42,0.18)]">
+                  <div className="overflow-hidden rounded-2xl border border-sky-100 bg-white py-2 shadow-[0_20px_50px_rgba(59,130,246,0.12)]">
                     <div className="border-b border-slate-100 px-4 pb-2 pt-1">
-                      <p className="text-[10px] font-black uppercase tracking-[0.24em] text-blue-600">Informasi</p>
+                      <p className="text-[10px] font-black uppercase tracking-[0.24em] text-sky-600">Informasi</p>
                       <p className="mt-1 text-xs text-slate-500">Ikuti berita, video, dan dokumentasi kegiatan pondok.</p>
                     </div>
-                    <Link href="/galeri" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-700">
+                    <Link href="/galeri" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-50 hover:text-sky-700">
                       Galeri
                     </Link>
-                    <Link href="/videos" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-700">
+                    <Link href="/videos" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-50 hover:text-sky-700">
                       Video
                     </Link>
-                    <Link href="/news" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-700">
+                    <Link href="/news" className="block px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-50 hover:text-sky-700">
                       Berita
                     </Link>
                   </div>
                 </div>
               </li>
               <li className="relative">
-                <Link href="/kontak" className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${isContactActive ? 'bg-blue-400/12 text-blue-200 shadow-inner shadow-blue-400/10' : 'text-blue-50 hover:bg-blue-400/10 hover:text-blue-200'}`}>
+                <Link href="/kontak" className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${isContactActive ? 'bg-sky-500/12 text-sky-700 shadow-inner shadow-sky-300/20' : 'text-slate-700 hover:bg-sky-100 hover:text-sky-700'}`}>
                   Kontak
                 </Link>
               </li>
@@ -363,12 +363,12 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
             {/* Desktop Auth */}
             <div className="hidden items-center gap-3 lg:flex">
               {loading ? (
-                <div className="h-11 w-44 animate-pulse rounded-full bg-blue-900/60" />
+                <div className="h-11 w-44 animate-pulse rounded-full bg-sky-100" />
               ) : user ? (
                 <>
-                  <div className="rounded-full border border-blue-800/80 bg-blue-900/35 px-4 py-2.5 text-sm text-blue-100">
-                    <span className="text-blue-300/80">Assalamu&apos;alaikum, </span>
-                    <span className="font-semibold text-white">{firstName}</span>
+                  <div className="rounded-full border border-sky-200 bg-sky-50 px-4 py-2.5 text-sm text-slate-700">
+                    <span className="text-sky-600/80">Assalamu&apos;alaikum, </span>
+                    <span className="font-semibold text-slate-900">{firstName}</span>
                   </div>
                   <div className="group relative">
                     <div ref={accountMenuRef} className="relative">
@@ -376,20 +376,20 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
                         type="button"
                         aria-label={dashboardLabel}
                         onClick={() => setOpenAccountMenu((prev) => !prev)}
-                        className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-400 text-white shadow-lg shadow-blue-900/20 transition-all hover:brightness-105"
+                        className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 text-white shadow-lg shadow-sky-200/70 transition-all hover:brightness-105"
                       >
                         <CircleUserRound size={20} />
                       </button>
-                      <div className={`absolute right-0 top-full mt-3 w-64 overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-[0_20px_50px_rgba(15,23,42,0.18)] transition-all duration-200 ${openAccountMenu ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-1 opacity-0'}`}>
+                      <div className={`absolute right-0 top-full mt-3 w-64 overflow-hidden rounded-2xl border border-sky-100 bg-white shadow-[0_20px_50px_rgba(59,130,246,0.12)] transition-all duration-200 ${openAccountMenu ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-1 opacity-0'}`}>
                         <div className="border-b border-slate-100 px-4 py-4 text-right">
-                          <p className="text-[10px] font-black uppercase tracking-[0.22em] text-blue-600">{dashboardLabel}</p>
+                          <p className="text-[10px] font-black uppercase tracking-[0.22em] text-sky-600">{dashboardLabel}</p>
                           <p className="mt-1 text-sm font-semibold text-slate-800">{user.name}</p>
                         </div>
                         <div className="p-2">
                           <Link
                             href={dashboardHref}
                             onClick={() => setOpenAccountMenu(false)}
-                            className="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-blue-50 hover:text-blue-700"
+                            className="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-sky-50 hover:text-sky-700"
                           >
                             <span>Buka {dashboardLabel}</span>
                             <ArrowRight size={16} />
@@ -412,7 +412,7 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
                 </>
               ) : (
                 <>
-                  <Link href="/psb" className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-blue-400 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition-all hover:brightness-105">
+                  <Link href="/psb" className="inline-flex items-center rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-sky-200/70 transition-all hover:brightness-105">
                     Daftar PSB
                   </Link>
                   <div ref={accountMenuRef} className="relative">
@@ -420,20 +420,20 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
                       type="button"
                       aria-label="Menu akun"
                       onClick={() => setOpenAccountMenu((prev) => !prev)}
-                      className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-blue-700/90 bg-blue-900/35 text-blue-50 transition-all hover:border-blue-500 hover:bg-blue-900/60 hover:text-blue-200"
+                      className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-sky-200 bg-sky-50 text-sky-700 transition-all hover:border-sky-300 hover:bg-sky-100 hover:text-sky-800"
                     >
                       <CircleUserRound size={20} />
                     </button>
-                    <div className={`absolute right-0 top-full mt-3 w-56 overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-[0_20px_50px_rgba(15,23,42,0.18)] transition-all duration-200 ${openAccountMenu ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-1 opacity-0'}`}>
+                    <div className={`absolute right-0 top-full mt-3 w-56 overflow-hidden rounded-2xl border border-sky-100 bg-white shadow-[0_20px_50px_rgba(59,130,246,0.12)] transition-all duration-200 ${openAccountMenu ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-1 opacity-0'}`}>
                       <div className="border-b border-slate-100 px-4 py-4 text-right">
-                        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-blue-600">Menu Akun</p>
+                        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-sky-600">Menu Akun</p>
                         <p className="mt-1 text-sm font-medium text-slate-500">Masuk untuk mengakses portal atau panel admin.</p>
                       </div>
                       <div className="p-2">
                         <Link
                           href="/login"
                           onClick={() => setOpenAccountMenu(false)}
-                          className="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-blue-50 hover:text-blue-700"
+                          className="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-sky-50 hover:text-sky-700"
                         >
                           <span>Masuk</span>
                           <ArrowRight size={16} />
@@ -446,40 +446,40 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
             </div>
 
             {/* Mobile Hamburger */}
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden flex h-10 w-10 items-center justify-center rounded-2xl border border-blue-800 bg-blue-900/55 shadow-[0_12px_30px_-18px_rgba(0,0,0,0.6)] transition-colors hover:bg-blue-800">
-              {mobileMenuOpen ? <X size={20} className="text-blue-50" /> : <Menu size={20} className="text-blue-50" />}
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden flex h-10 w-10 items-center justify-center rounded-2xl border border-sky-200 bg-white shadow-[0_12px_30px_-18px_rgba(59,130,246,0.16)] transition-colors hover:bg-sky-50">
+              {mobileMenuOpen ? <X size={20} className="text-sky-700" /> : <Menu size={20} className="text-sky-700" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="absolute left-0 top-full z-[999] w-full border-t border-blue-900 bg-blue-950/98 shadow-2xl lg:hidden">
+          <div className="absolute left-0 top-full z-[999] w-full border-t border-sky-200 bg-white/98 shadow-2xl lg:hidden">
             <div className="px-4 pb-5 pt-3">
-              <div className="rounded-[1.6rem] border border-blue-900/60 bg-[linear-gradient(180deg,rgba(6,78,59,0.28)_0%,rgba(6,78,59,0.18)_100%)] p-3 shadow-[0_24px_50px_-34px_rgba(0,0,0,0.55)] backdrop-blur-sm">
-                <div className="grid grid-cols-1 gap-2 rounded-2xl border border-blue-900/40 bg-blue-950/25 p-2">
-                  <Link href="/" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-semibold text-blue-50 hover:bg-blue-900">Beranda</Link>
-                  <Link href="/program" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-semibold text-blue-50 hover:bg-blue-900">Program</Link>
-                  <Link href="/psb" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-semibold text-blue-50 hover:bg-blue-900">Info PSB</Link>
-                  <Link href="/kontak" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-semibold text-blue-50 hover:bg-blue-900">Kontak</Link>
+              <div className="rounded-[1.6rem] border border-sky-200 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(239,246,255,0.95)_100%)] p-3 shadow-[0_24px_50px_-34px_rgba(59,130,246,0.18)] backdrop-blur-sm">
+                <div className="grid grid-cols-1 gap-2 rounded-2xl border border-sky-100 bg-sky-50/80 p-2">
+                  <Link href="/" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-100">Beranda</Link>
+                  <Link href="/program" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-100">Program</Link>
+                  <Link href="/psb" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-100">Info PSB</Link>
+                  <Link href="/kontak" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-100">Kontak</Link>
                 </div>
 
                 <div className="mt-4">
-                  <p className="px-1 text-[10px] font-black uppercase tracking-[0.25em] text-blue-300/70">Profil</p>
+                  <p className="px-1 text-[10px] font-black uppercase tracking-[0.25em] text-sky-500/80">Profil</p>
                   <div className="mt-2 grid grid-cols-1 gap-2">
-                    <Link href="/profil" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-blue-50 hover:bg-blue-900/70">Profil Pesantren</Link>
-                    <Link href="/sambutan" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-blue-50 hover:bg-blue-900/70">Sambutan Pimpinan</Link>
-                    <Link href="/teachers" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-blue-50 hover:bg-blue-900/70">Profil Asatidz</Link>
-                    <Link href="/facilities" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-blue-50 hover:bg-blue-900/70">Fasilitas Pondok</Link>
+                    <Link href="/profil" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Profil Pesantren</Link>
+                    <Link href="/sambutan" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Sambutan Pimpinan</Link>
+                    <Link href="/teachers" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Profil Asatidz</Link>
+                    <Link href="/facilities" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Fasilitas Pondok</Link>
                   </div>
                 </div>
 
                 <div className="mt-4">
-                  <p className="px-1 text-[10px] font-black uppercase tracking-[0.25em] text-blue-300/70">Informasi</p>
+                  <p className="px-1 text-[10px] font-black uppercase tracking-[0.25em] text-sky-500/80">Informasi</p>
                   <div className="mt-2 grid grid-cols-1 gap-2">
-                    <Link href="/galeri" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-blue-50 hover:bg-blue-900/70">Galeri</Link>
-                    <Link href="/videos" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-blue-50 hover:bg-blue-900/70">Video</Link>
-                    <Link href="/news" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-blue-50 hover:bg-blue-900/70">Berita</Link>
+                    <Link href="/galeri" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Galeri</Link>
+                    <Link href="/videos" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Video</Link>
+                    <Link href="/news" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Berita</Link>
                   </div>
                 </div>
 
@@ -488,26 +488,26 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
                     <div className="h-24 animate-pulse rounded-2xl bg-blue-900/40" />
                   ) : user ? (
                     <>
-                      <div className="rounded-[1.35rem] border border-blue-800 bg-blue-900/40 px-5 py-4 text-center text-blue-100">
-                        <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-300/70">Sudah Masuk</p>
-                        <p className="mt-2 text-base font-semibold text-white">{user.name}</p>
-                        <p className="mt-1 text-sm text-blue-200/80">
+                      <div className="rounded-[1.35rem] border border-sky-200 bg-sky-50 px-5 py-4 text-center text-slate-700">
+                        <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600/70">Sudah Masuk</p>
+                        <p className="mt-2 text-base font-semibold text-slate-900">{user.name}</p>
+                        <p className="mt-1 text-sm text-slate-600">
                           {isPortalUser ? 'Lanjutkan proses melalui Portal Wali Santri.' : 'Lanjutkan pengelolaan melalui panel admin.'}
                         </p>
                       </div>
-                      <Link href={dashboardHref} onClick={() => setMobileMenuOpen(false)} className="block rounded-[1.15rem] bg-blue-500 px-6 py-3 text-center text-sm font-bold text-white shadow-lg shadow-blue-950/30">
+                      <Link href={dashboardHref} onClick={() => setMobileMenuOpen(false)} className="block rounded-[1.15rem] bg-sky-500 px-6 py-3 text-center text-sm font-bold text-white shadow-lg shadow-sky-200/80">
                         {isPortalUser ? 'Buka Portal Wali Santri' : 'Buka Panel Admin'}
                       </Link>
                     </>
                   ) : (
                     <>
-                      <Link href="/psb" onClick={() => setMobileMenuOpen(false)} className="block rounded-[1.15rem] bg-blue-500 px-6 py-3 text-center text-sm font-bold text-white shadow-lg shadow-blue-950/30">
+                      <Link href="/psb" onClick={() => setMobileMenuOpen(false)} className="block rounded-[1.15rem] bg-sky-500 px-6 py-3 text-center text-sm font-bold text-white shadow-lg shadow-sky-200/80">
                         Daftar Sekarang
                       </Link>
                       <Link
                         href="/login"
                         onClick={() => setMobileMenuOpen(false)}
-                        className="flex items-center justify-center gap-3 rounded-[1.15rem] border border-blue-800 bg-blue-900/40 px-6 py-3 text-center text-sm font-bold text-blue-50"
+                        className="flex items-center justify-center gap-3 rounded-[1.15rem] border border-sky-200 bg-white px-6 py-3 text-center text-sm font-bold text-sky-700"
                       >
                         <CircleUserRound size={18} />
                         Masuk Admin
@@ -526,28 +526,28 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
       <main>{children}</main>
 
       {/* ═══════════════════ FOOTER ═══════════════════ */}
-      <footer className="relative overflow-hidden border-t border-blue-900/70 bg-[linear-gradient(180deg,#082f28_0%,#041b18_100%)] pb-8 pt-14 md:pt-16">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.12),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.08),transparent_18%)]" />
+      <footer className="relative overflow-hidden border-t border-sky-200 bg-[linear-gradient(180deg,#f7fbff_0%,#e9f5ff_100%)] pb-8 pt-14 md:pt-16">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.12),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(125,211,252,0.12),transparent_18%)]" />
         <div className="mx-auto max-w-6xl px-4 relative z-10">
           {/* Top: Brand + Social */}
-          <div className="flex flex-col gap-6 rounded-[1.85rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.03)_100%)] p-5 shadow-[0_28px_70px_-42px_rgba(0,0,0,0.62)] backdrop-blur-sm md:flex-row md:items-center md:justify-between md:rounded-[2.15rem] md:p-8">
+          <div className="flex flex-col gap-6 rounded-[1.85rem] border border-sky-100 bg-white/85 p-5 shadow-[0_28px_70px_-42px_rgba(59,130,246,0.14)] backdrop-blur-sm md:flex-row md:items-center md:justify-between md:rounded-[2.15rem] md:p-8">
             <div className="flex flex-col items-center gap-4 text-center md:flex-row md:items-center md:text-left">
               <div className="relative">
-                <div className="absolute inset-0 rounded-full bg-blue-400/20 blur-xl" />
+                <div className="absolute inset-0 rounded-full bg-sky-300/30 blur-xl" />
                 <Image
                   src={logoUrl}
                   alt={`Logo ${schoolName}`}
                   width={72}
                   height={72}
                   unoptimized
-                  className="relative h-16 w-16 rounded-full border-2 border-blue-400/90 object-cover shadow-[0_18px_42px_-20px_rgba(16,185,129,0.35)] md:h-[4.5rem] md:w-[4.5rem]"
+                  className="relative h-16 w-16 rounded-full border-2 border-sky-300 object-cover shadow-[0_18px_42px_-20px_rgba(59,130,246,0.2)] md:h-[4.5rem] md:w-[4.5rem]"
                 />
               </div>
               <div>
-                <p className="text-[10px] font-black uppercase tracking-[0.28em] text-blue-300/85">Pondok Pesantren Tahfidz</p>
-                <div className="mt-2 text-xl font-extrabold tracking-tight text-white md:text-[1.75rem]">{schoolName}</div>
-                <div className="mt-1 text-xs font-medium tracking-[0.16em] text-blue-300/80 md:text-sm">{welcomeText}</div>
-                <p className="mt-4 max-w-2xl text-sm leading-7 text-blue-100/78">
+                <p className="text-[10px] font-black uppercase tracking-[0.28em] text-sky-600/85">Pondok Pesantren Tahfidz</p>
+                <div className="mt-2 text-xl font-extrabold tracking-tight text-slate-900 md:text-[1.75rem]">{schoolName}</div>
+                <div className="mt-1 text-xs font-medium tracking-[0.16em] text-sky-600/80 md:text-sm">{welcomeText}</div>
+                <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
                   Pondok Pesantren Tahfidz Al-Qur&apos;an yang berikhtiar membina santri dalam ilmu,
                   adab, dan kesiapan berdakwah melalui lingkungan belajar yang tertib dan terarah.
                 </p>
@@ -556,7 +556,7 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
             <div className="flex items-center justify-center gap-3 md:max-w-sm md:justify-end">
               {socialLinks.map((s) => (
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-blue-800/90 bg-blue-950/35 text-blue-200 transition-all hover:-translate-y-1 hover:border-blue-400/60 hover:bg-blue-900/60 hover:text-white" aria-label={s.label}>
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-sky-200 bg-sky-50 text-sky-700 transition-all hover:-translate-y-1 hover:border-sky-300 hover:bg-sky-100 hover:text-sky-800" aria-label={s.label}>
                   {s.icon}
                 </a>
               ))}
@@ -565,21 +565,21 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
 
           {/* Grid Footer */}
           <div className="grid gap-4 py-8 md:grid-cols-2 md:gap-5 md:py-10 lg:grid-cols-4">
-            <div className="rounded-[1.55rem] border border-white/8 bg-white/[0.04] p-5 shadow-[0_22px_50px_-36px_rgba(0,0,0,0.6)] backdrop-blur-sm md:rounded-[1.7rem] md:p-6">
-              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-blue-300/85">Ringkasan Pondok</p>
-              <p className="text-sm leading-7 text-blue-100/78">
+            <div className="rounded-[1.55rem] border border-sky-100 bg-white/80 p-5 shadow-[0_22px_50px_-36px_rgba(59,130,246,0.12)] backdrop-blur-sm md:rounded-[1.7rem] md:p-6">
+              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-sky-600/85">Ringkasan Pondok</p>
+              <p className="text-sm leading-7 text-slate-600">
                 Al-Maa Parung menekankan pembinaan tahfidz, adab, ilmu syar&apos;i, dan suasana belajar yang tertib untuk membantu santri tumbuh lebih mandiri.
               </p>
             </div>
-            <div className="rounded-[1.55rem] border border-white/8 bg-white/[0.04] p-5 shadow-[0_22px_50px_-36px_rgba(0,0,0,0.6)] backdrop-blur-sm md:rounded-[1.7rem] md:p-6">
-              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-blue-300/85">Kontak Pondok</p>
+            <div className="rounded-[1.55rem] border border-sky-100 bg-white/80 p-5 shadow-[0_22px_50px_-36px_rgba(59,130,246,0.12)] backdrop-blur-sm md:rounded-[1.7rem] md:p-6">
+              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-sky-600/85">Kontak Pondok</p>
               <div className="space-y-4 text-sm">
                 <div>
-                  <div className="mb-2 text-[10px] font-black uppercase tracking-[0.2em] text-blue-400">Alamat</div>
-                  <div className="leading-7 text-blue-100/80">{schoolAddress}</div>
+                  <div className="mb-2 text-[10px] font-black uppercase tracking-[0.2em] text-sky-500">Alamat</div>
+                  <div className="leading-7 text-slate-600">{schoolAddress}</div>
                 </div>
                 {/* Embed Google Maps */}
-                <div className="h-28 w-full overflow-hidden rounded-[1.15rem] border border-blue-800/80 shadow-inner ring-1 ring-white/5 md:h-40 md:rounded-2xl">
+                <div className="h-28 w-full overflow-hidden rounded-[1.15rem] border border-sky-100 shadow-inner ring-1 ring-sky-100 md:h-40 md:rounded-2xl">
                   <iframe 
                     src="https://maps.google.com/maps?q=Jl.%20H.%20Mawi%20Gg.%20Omega%20Kp.%20Jati%20Waru%20Parung%20Bogor&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                     width="100%" 
@@ -590,15 +590,15 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
                     referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </div>
-                <div className="space-y-2 text-blue-100/80">
+                <div className="space-y-2 text-slate-600">
                   <div>Kontak utama: {schoolPhone}</div>
                   {schoolEmail ? <div>Email: {schoolEmail}</div> : null}
                   {schoolWebsite ? <div>Website: {schoolWebsite}</div> : null}
                 </div>
               </div>
             </div>
-            <div className="rounded-[1.55rem] border border-white/8 bg-white/[0.04] p-5 shadow-[0_22px_50px_-36px_rgba(0,0,0,0.6)] backdrop-blur-sm md:rounded-[1.7rem] md:p-6">
-              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-blue-300/85">Tautan Utama</p>
+            <div className="rounded-[1.55rem] border border-sky-100 bg-white/80 p-5 shadow-[0_22px_50px_-36px_rgba(59,130,246,0.12)] backdrop-blur-sm md:rounded-[1.7rem] md:p-6">
+              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-sky-600/85">Tautan Utama</p>
               <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-1">
                 {[
                   { name: 'Beranda', href: '/' },
@@ -610,30 +610,30 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
                   { name: 'Galeri Kegiatan', href: '/galeri' },
                   { name: 'Kontak Pondok', href: '/kontak' },
                 ].map((link) => (
-                  <Link key={link.href} href={link.href} className="block rounded-xl px-3 py-2 text-sm text-blue-100/82 transition-all hover:bg-white/6 hover:text-white">
+                  <Link key={link.href} href={link.href} className="block rounded-xl px-3 py-2 text-sm text-slate-600 transition-all hover:bg-sky-50 hover:text-sky-700">
                     {link.name}
                   </Link>
                 ))}
               </div>
             </div>
-            <div className="rounded-[1.55rem] border border-white/8 bg-white/[0.04] p-5 shadow-[0_22px_50px_-36px_rgba(0,0,0,0.6)] backdrop-blur-sm md:rounded-[1.7rem] md:p-6">
-              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-blue-300/85">Waktu Layanan</p>
-              <div className="space-y-3 text-sm text-blue-100/80">
-                <div className="rounded-2xl border border-white/8 bg-slate-950/18 px-4 py-3">
+            <div className="rounded-[1.55rem] border border-sky-100 bg-white/80 p-5 shadow-[0_22px_50px_-36px_rgba(59,130,246,0.12)] backdrop-blur-sm md:rounded-[1.7rem] md:p-6">
+              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-sky-600/85">Waktu Layanan</p>
+              <div className="space-y-3 text-sm text-slate-600">
+                <div className="rounded-2xl border border-sky-100 bg-sky-50/70 px-4 py-3">
                   Senin - Sabtu: 08:00 - 16:00 WIB
                 </div>
-                <div className="rounded-2xl border border-white/8 bg-slate-950/18 px-4 py-3">
+                <div className="rounded-2xl border border-sky-100 bg-sky-50/70 px-4 py-3">
                   Ahad &amp; Hari Libur: Tutup
                 </div>
-                <p className="pt-2 font-medium text-blue-300">Kunjungan wali santri setiap Ahad terakhir bulan.</p>
+                <p className="pt-2 font-medium text-sky-600">Kunjungan wali santri setiap Ahad terakhir bulan.</p>
               </div>
             </div>
           </div>
 
           {/* Copyright */}
-          <div className="flex flex-col items-center justify-between gap-3 border-t border-white/8 pt-7 text-center text-sm text-blue-300/60 md:flex-row md:gap-4 md:pt-8 md:text-left">
+          <div className="flex flex-col items-center justify-between gap-3 border-t border-sky-100 pt-7 text-center text-sm text-slate-500 md:flex-row md:gap-4 md:pt-8 md:text-left">
             <div>&copy; 2026 {schoolName}.</div>
-            <div>Dikembangkan oleh <a href="https://herufidiyanto.netlify.app/" className="text-blue-200 transition-colors hover:text-white">Heru F</a></div>
+            <div>Dikembangkan oleh <a href="https://herufidiyanto.netlify.app/" className="text-sky-600 transition-colors hover:text-sky-700">Heru F</a></div>
           </div>
         </div>
       </footer>

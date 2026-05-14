@@ -459,7 +459,7 @@ export default function LandingPage() {
 
   return (
     <PublicLayout>
-      <section className="relative overflow-hidden bg-slate-950">
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f4fbff_0%,#e6f4ff_100%)]">
         <Swiper
           modules={[Pagination, Autoplay, Navigation]}
           loop={canSlideHero}
@@ -480,8 +480,8 @@ export default function LandingPage() {
                     className="absolute inset-0 bg-cover bg-center"
                     style={{ backgroundImage: `url('${slideImage}')` }}
                   />
-                  <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(2,6,23,0.92)_8%,rgba(2,6,23,0.62)_40%,rgba(2,6,23,0.14)_76%,rgba(2,6,23,0.03)_100%)]" />
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.14),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.14),transparent_24%)]" />
+                  <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(239,246,255,0.94)_8%,rgba(224,242,254,0.7)_40%,rgba(255,255,255,0.24)_76%,rgba(255,255,255,0.08)_100%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.18),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(125,211,252,0.18),transparent_24%)]" />
 
                   <div className="container relative z-10 mx-auto max-w-6xl px-4 pb-16 pt-10 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-24">
                     <div className="grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
@@ -492,26 +492,26 @@ export default function LandingPage() {
                         className="max-w-3xl"
                       >
                         <div className="lg:max-w-[46rem]">
-                          <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-blue-300/20 bg-blue-400/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-blue-100 backdrop-blur-md sm:text-[11px]">
+                          <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-sky-700 backdrop-blur-md sm:text-[11px]">
                             <Sparkles size={14} />
                             Al-Maa Parung
                           </span>
-                          <h1 className="mt-4 line-clamp-3 max-w-[19ch] text-balance text-[2.45rem] font-black leading-[0.96] tracking-[-0.045em] text-white drop-shadow-[0_4px_18px_rgba(2,6,23,0.48)] sm:mt-6 sm:text-5xl md:text-[3.65rem] lg:text-[4rem]">
+                          <h1 className="mt-4 line-clamp-3 max-w-[19ch] text-balance text-[2.45rem] font-black leading-[0.96] tracking-[-0.045em] text-slate-900 drop-shadow-[0_4px_18px_rgba(255,255,255,0.35)] sm:mt-6 sm:text-5xl md:text-[3.65rem] lg:text-[4rem]">
                             {slide.title}
                           </h1>
-                          <p className="mt-4 line-clamp-2 max-w-[34rem] text-sm font-medium leading-7 text-slate-200 drop-shadow-[0_2px_10px_rgba(2,6,23,0.46)] sm:mt-5 sm:text-base md:line-clamp-3 md:text-lg">
+                          <p className="mt-4 line-clamp-2 max-w-[34rem] text-sm font-medium leading-7 text-slate-700 sm:mt-5 sm:text-base md:line-clamp-3 md:text-lg">
                             {slide.subtitle}
                           </p>
                           <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
                             <Link
                               href={slide.button_url || '/psb'}
-                              className="inline-flex items-center justify-center gap-2 self-start rounded-full bg-blue-600 px-5 py-3 text-xs font-bold text-white shadow-[0_18px_45px_-20px_rgba(16,185,129,0.6)] transition-all hover:-translate-y-1 hover:bg-blue-500 sm:px-8 sm:py-4 sm:text-sm"
+                              className="inline-flex items-center justify-center gap-2 self-start rounded-full bg-sky-500 px-5 py-3 text-xs font-bold text-white shadow-[0_18px_45px_-20px_rgba(56,189,248,0.45)] transition-all hover:-translate-y-1 hover:bg-sky-400 sm:px-8 sm:py-4 sm:text-sm"
                             >
                               {slide.button_text || 'Lihat Info PSB'} <ArrowRight size={16} />
                             </Link>
                             <Link
                               href="/program"
-                              className="inline-flex items-center justify-center gap-2 self-start rounded-full border border-white/15 bg-white/10 px-5 py-3 text-xs font-bold text-white backdrop-blur-md transition-all hover:bg-white/16 sm:px-8 sm:py-4 sm:text-sm"
+                              className="inline-flex items-center justify-center gap-2 self-start rounded-full border border-sky-200 bg-white/85 px-5 py-3 text-xs font-bold text-sky-700 backdrop-blur-md transition-all hover:bg-white sm:px-8 sm:py-4 sm:text-sm"
                             >
                               Lihat Program
                             </Link>
@@ -520,7 +520,7 @@ export default function LandingPage() {
                             {learningPillars.slice(0, 3).map((pillar) => (
                               <span
                                 key={pillar.title}
-                                className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-black/18 px-4 py-2 text-xs font-semibold text-slate-100 backdrop-blur-sm"
+                                className="inline-flex items-center gap-2 rounded-full border border-sky-100 bg-white/80 px-4 py-2 text-xs font-semibold text-slate-700 backdrop-blur-sm"
                               >
                                 <span className="text-blue-300">{pillar.icon}</span>
                                 {pillar.title}
@@ -546,7 +546,7 @@ export default function LandingPage() {
           })}
         </Swiper>
 
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-t from-[#eaf6ff] via-[#eef8ff]/70 to-transparent" />
 
         <div className="relative z-20 -mt-20 px-4 lg:-mt-16">
           <div className="container mx-auto max-w-6xl">
