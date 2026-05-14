@@ -2,6 +2,7 @@
 
 import React, { Suspense, useMemo, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { ArrowRight, BookOpen, CircleHelp, ExternalLink, LayoutList, ShieldCheck } from 'lucide-react';
 import { adminDocSections, getAdminDocById, roleAccessMatrix } from '@/lib/adminDocs';
@@ -224,6 +225,39 @@ function HelpContent() {
               ))}
             </div>
           </section>
+
+          {currentSection.visualSteps && currentSection.visualSteps.length > 0 && (
+            <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900">Tutorial Bergambar</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Gunakan panduan visual ini jika ingin mengikuti langkah demi langkah dengan area
+                yang sudah ditandai panah dan kotak merah.
+              </p>
+              <div className="mt-6 space-y-8">
+                {currentSection.visualSteps.map((step, index) => (
+                  <article key={step.title} className="space-y-4 rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
+                    <div>
+                      <p className="text-[11px] font-black uppercase tracking-[0.22em] text-emerald-700">
+                        Langkah {index + 1}
+                      </p>
+                      <h4 className="mt-2 text-xl font-bold text-slate-900">{step.title}</h4>
+                      <p className="mt-2 text-sm leading-7 text-slate-600">{step.description}</p>
+                    </div>
+                    <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                      <Image
+                        src={step.image}
+                        alt={step.alt}
+                        width={1440}
+                        height={1600}
+                        unoptimized
+                        className="h-auto w-full"
+                      />
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
 
           <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
             <div className="flex items-center gap-2">

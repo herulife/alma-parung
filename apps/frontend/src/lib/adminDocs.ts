@@ -11,6 +11,12 @@ export interface AdminDocSection {
     steps: string[];
   }>;
   tips: string[];
+  visualSteps?: Array<{
+    title: string;
+    description: string;
+    image: string;
+    alt: string;
+  }>;
 }
 
 export interface RoleAccessRow {
@@ -363,6 +369,29 @@ export const adminDocSections: AdminDocSection[] = [
     tips: [
       'Poster kampanye yang jelas akan membantu publik lebih cepat memahami tujuan donasi.',
       'Cek target dan status aktif sebelum kampanye dipublikasikan.',
+    ],
+    visualSteps: [
+      {
+        title: 'Masuk ke modul Donasi dan buka form campaign baru',
+        description:
+          'Klik menu Program Donasi di sidebar kiri, lalu gunakan tombol Buat Campaign untuk membuka form pembuatan donasi baru.',
+        image: '/assets/tutorials/donations-step-1.png',
+        alt: 'Tutorial langkah masuk ke modul donasi dan membuka form campaign baru',
+      },
+      {
+        title: 'Isi judul dan deskripsi campaign',
+        description:
+          'Masukkan nama program donasi yang jelas, lalu lengkapi deskripsi agar tim dan calon donatur memahami tujuan campaign.',
+        image: '/assets/tutorials/donations-step-2.png',
+        alt: 'Tutorial langkah mengisi judul dan deskripsi campaign donasi',
+      },
+      {
+        title: 'Lengkapi target, tanggal, poster, lalu sebarkan',
+        description:
+          'Isi target dana, tentukan tenggat waktu bila diperlukan, unggah poster campaign, lalu klik Sebarkan saat semua data sudah siap.',
+        image: '/assets/tutorials/donations-step-3.png',
+        alt: 'Tutorial langkah melengkapi target dana dan menyebarkan campaign donasi',
+      },
     ],
   },
   {
