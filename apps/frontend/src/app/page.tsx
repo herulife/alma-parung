@@ -480,8 +480,9 @@ export default function LandingPage() {
                     className="absolute inset-0 bg-cover bg-center"
                     style={{ backgroundImage: `url('${slideImage}')` }}
                   />
-                  <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(239,246,255,0.94)_8%,rgba(224,242,254,0.7)_40%,rgba(255,255,255,0.24)_76%,rgba(255,255,255,0.08)_100%)]" />
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.18),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(125,211,252,0.18),transparent_24%)]" />
+                  <div className="absolute inset-0 bg-[linear-gradient(102deg,rgba(248,252,255,0.9)_0%,rgba(240,249,255,0.72)_24%,rgba(224,242,254,0.26)_46%,rgba(255,255,255,0.04)_68%,rgba(255,255,255,0)_100%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.5),transparent_28%),radial-gradient(circle_at_top_right,rgba(56,189,248,0.16),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(125,211,252,0.16),transparent_24%)]" />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.08)_0%,rgba(15,23,42,0.02)_38%,rgba(15,23,42,0.14)_100%)]" />
 
                   <div className="container relative z-10 mx-auto max-w-6xl px-4 pb-16 pt-10 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-24">
                     <div className="grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
@@ -491,38 +492,41 @@ export default function LandingPage() {
                         transition={{ duration: 0.75, delay: 0.08 }}
                         className="max-w-3xl"
                       >
-                        <div className="lg:max-w-[46rem]">
-                          <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-sky-700 backdrop-blur-md sm:text-[11px]">
+                        <div className="relative overflow-hidden rounded-[2rem] border border-white/65 bg-[linear-gradient(135deg,rgba(255,255,255,0.78)_0%,rgba(255,255,255,0.56)_52%,rgba(239,246,255,0.42)_100%)] px-6 py-7 shadow-[0_28px_70px_-42px_rgba(59,130,246,0.3)] backdrop-blur-xl sm:px-8 sm:py-9 lg:max-w-[46rem]">
+                          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/90 to-transparent" />
+                          <div className="absolute -left-10 top-12 h-32 w-32 rounded-full bg-white/55 blur-3xl" />
+                          <div className="absolute -right-8 bottom-0 h-32 w-32 rounded-full bg-sky-200/35 blur-3xl" />
+                          <span className="relative inline-flex max-w-full items-center gap-2 rounded-full border border-sky-200/90 bg-white/88 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-sky-700 shadow-sm shadow-sky-100/80 backdrop-blur-md sm:text-[11px]">
                             <Sparkles size={14} />
                             Al-Maa Parung
                           </span>
-                          <h1 className="mt-4 line-clamp-3 max-w-[19ch] text-balance text-[2.45rem] font-black leading-[0.96] tracking-[-0.045em] text-slate-900 drop-shadow-[0_4px_18px_rgba(255,255,255,0.35)] sm:mt-6 sm:text-5xl md:text-[3.65rem] lg:text-[4rem]">
+                          <h1 className="relative mt-4 line-clamp-3 max-w-[19ch] text-balance text-[2.45rem] font-black leading-[0.96] tracking-[-0.05em] text-slate-950 sm:mt-6 sm:text-5xl md:text-[3.65rem] lg:text-[4rem]">
                             {slide.title}
                           </h1>
-                          <p className="mt-4 line-clamp-2 max-w-[34rem] text-sm font-medium leading-7 text-slate-700 sm:mt-5 sm:text-base md:line-clamp-3 md:text-lg">
+                          <p className="relative mt-4 line-clamp-2 max-w-[34rem] text-sm font-medium leading-7 text-slate-700 sm:mt-5 sm:text-base md:line-clamp-3 md:text-lg">
                             {slide.subtitle}
                           </p>
-                          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+                          <div className="relative mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
                             <Link
                               href={slide.button_url || '/psb'}
-                              className="inline-flex items-center justify-center gap-2 self-start rounded-full bg-sky-500 px-5 py-3 text-xs font-bold text-white shadow-[0_18px_45px_-20px_rgba(56,189,248,0.45)] transition-all hover:-translate-y-1 hover:bg-sky-400 sm:px-8 sm:py-4 sm:text-sm"
+                              className="inline-flex items-center justify-center gap-2 self-start rounded-full bg-gradient-to-r from-sky-500 via-sky-500 to-cyan-400 px-5 py-3 text-xs font-bold text-white shadow-[0_20px_44px_-22px_rgba(56,189,248,0.5)] transition-all hover:-translate-y-1 hover:brightness-105 sm:px-8 sm:py-4 sm:text-sm"
                             >
                               {slide.button_text || 'Lihat Info PSB'} <ArrowRight size={16} />
                             </Link>
                             <Link
                               href="/program"
-                              className="inline-flex items-center justify-center gap-2 self-start rounded-full border border-sky-200 bg-white/85 px-5 py-3 text-xs font-bold text-sky-700 backdrop-blur-md transition-all hover:bg-white sm:px-8 sm:py-4 sm:text-sm"
+                              className="inline-flex items-center justify-center gap-2 self-start rounded-full border border-sky-200 bg-white/92 px-5 py-3 text-xs font-bold text-sky-700 backdrop-blur-md transition-all hover:bg-sky-50 sm:px-8 sm:py-4 sm:text-sm"
                             >
                               Lihat Program
                             </Link>
                           </div>
-                          <div className="mt-8 flex flex-wrap gap-3">
+                          <div className="relative mt-8 flex flex-wrap gap-3">
                             {learningPillars.slice(0, 3).map((pillar) => (
                               <span
                                 key={pillar.title}
-                                className="inline-flex items-center gap-2 rounded-full border border-sky-100 bg-white/80 px-4 py-2 text-xs font-semibold text-slate-700 backdrop-blur-sm"
+                                className="inline-flex items-center gap-2 rounded-full border border-sky-100/90 bg-white/84 px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm shadow-sky-100/60 backdrop-blur-sm"
                               >
-                                <span className="text-blue-300">{pillar.icon}</span>
+                                <span className="text-sky-400">{pillar.icon}</span>
                                 {pillar.title}
                               </span>
                             ))}
