@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Pondok Pesantren Tahfidz Al-Qur'an Darussunnah - Parung, Bogor",
-  description: "Mencetak generasi penghafal Al-Qur'an yang berakhlak mulia, mandiri, dan siap memimpin peradaban Rabbani.",
+  title: "Pondok Pesantren Tahfidzul Qur'an Al-Maa - Parung, Bogor",
+  description: "Website resmi Pondok Pesantren Tahfidzul Qur'an Al-Maa Parung, Bogor. Informasi profil, program, dan pendaftaran santri baru.",
 };
 
 import { ToastProvider } from "@/components/Toast";

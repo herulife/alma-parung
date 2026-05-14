@@ -3,7 +3,14 @@ function getApiBaseUrl() {
 	if (typeof window !== 'undefined') {
 		return '/api';
 	}
-	return configured || 'http://localhost:8080/api';
+	const backendOrigin = process.env.NEXT_PUBLIC_SITE_API_ORIGIN?.trim();
+	if (configured) {
+		return configured;
+	}
+	if (backendOrigin) {
+		return `${backendOrigin.replace(/\/+$/, '')}/api`;
+	}
+	return 'http://localhost:8080/api';
 }
 
 const API_BASE_URL = getApiBaseUrl();

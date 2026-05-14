@@ -81,10 +81,10 @@ type HeroSlide = {
 type MaybeListResponse<T> = T[] | { data?: T[] | null } | null | undefined;
 
 const institutionFacts = [
-  { label: 'Berdiri', value: 'Sejak 2009', icon: <Sparkles size={18} /> },
-  { label: 'Yayasan', value: 'Tunas Muda Qurani', icon: <Building2 size={18} /> },
-  { label: 'NSPP', value: '510032011292', icon: <ShieldCheck size={18} /> },
-  { label: 'Legalitas', value: 'AHU-038333.50.80.2014', icon: <Landmark size={18} /> },
+  { label: 'Lokasi', value: 'Parung, Bogor', icon: <Sparkles size={18} /> },
+  { label: 'Lembaga', value: 'PPTQ Al-Maa', icon: <Building2 size={18} /> },
+  { label: 'Jenjang', value: 'SMP - SMK', icon: <ShieldCheck size={18} /> },
+  { label: 'Fokus', value: 'Tahfidz & Adab', icon: <Landmark size={18} /> },
 ];
 
 const learningPillars = [
@@ -113,7 +113,7 @@ const learningPillars = [
 const focusAreas = [
   {
     title: 'Profil dan Visi',
-    desc: 'Kenali sejarah pondok, visi-misi, identitas lembaga, dan arah pembinaan Darussunnah.',
+    desc: 'Kenali profil pondok, visi-misi, identitas lembaga, dan arah pembinaan Al-Maa.',
     href: '/profil',
     icon: <School size={24} />,
   },
@@ -188,11 +188,11 @@ const extracurricularCards = [
 ];
 
 const institutionHighlights = [
-  { value: '2009', label: 'Tahun Berdiri', icon: <Calendar size={18} /> },
-  { value: '6', label: 'Program Unggulan', icon: <BookOpen size={18} /> },
-  { value: '3', label: 'Kurikulum Inti', icon: <GraduationCap size={18} /> },
-  { value: '11', label: 'Fasilitas Utama', icon: <Building2 size={18} /> },
-  { value: '9', label: 'Ekskul Pilihan', icon: <Users size={18} /> },
+  { value: '20 Juz', label: 'Target Hafalan', icon: <Calendar size={18} /> },
+  { value: '30', label: 'Kuota Ikhwan', icon: <BookOpen size={18} /> },
+  { value: '30', label: 'Kuota Akhwat', icon: <GraduationCap size={18} /> },
+  { value: 'SMP - SMK', label: 'Jenjang', icon: <Building2 size={18} /> },
+  { value: 'Rp200rb', label: 'Biaya Formulir', icon: <Users size={18} /> },
 ];
 
 const buildHeroSlideId = (overrides: Partial<HeroSlide> = {}, fallbackKey = 'slide') => {
@@ -219,8 +219,8 @@ const buildHeroSlideId = (overrides: Partial<HeroSlide> = {}, fallbackKey = 'sli
 
 const createHeroSlide = (overrides: Partial<HeroSlide> = {}, fallbackKey?: string): HeroSlide => ({
   id: buildHeroSlideId(overrides, fallbackKey),
-  title: 'Tahfidz, Adab, dan Ilmu dalam Satu Pembinaan',
-  subtitle: 'Darussunnah Parung membina santri melalui hafalan Al-Quran, adab, dan pembelajaran terpadu.',
+  title: 'Tahfidz, Adab, dan Ilmu dalam Satu Ritme Pembinaan',
+  subtitle: 'Al-Maa Parung membina santri melalui hafalan Al-Quran, adab, dan pembelajaran terpadu.',
   image_url: '/assets/img/gedung.webp',
   button_text: 'Lihat Info PSB',
   button_url: '/psb',
@@ -492,9 +492,9 @@ export default function LandingPage() {
                         className="max-w-3xl"
                       >
                         <div className="lg:max-w-[46rem]">
-                          <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-400/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-emerald-100 backdrop-blur-md sm:text-[11px]">
+                          <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-blue-300/20 bg-blue-400/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-blue-100 backdrop-blur-md sm:text-[11px]">
                             <Sparkles size={14} />
-                            Darussunnah Parung
+                            Al-Maa Parung
                           </span>
                           <h1 className="mt-4 line-clamp-3 max-w-[19ch] text-balance text-[2.45rem] font-black leading-[0.96] tracking-[-0.045em] text-white drop-shadow-[0_4px_18px_rgba(2,6,23,0.48)] sm:mt-6 sm:text-5xl md:text-[3.65rem] lg:text-[4rem]">
                             {slide.title}
@@ -505,7 +505,7 @@ export default function LandingPage() {
                           <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
                             <Link
                               href={slide.button_url || '/psb'}
-                              className="inline-flex items-center justify-center gap-2 self-start rounded-full bg-emerald-600 px-5 py-3 text-xs font-bold text-white shadow-[0_18px_45px_-20px_rgba(16,185,129,0.6)] transition-all hover:-translate-y-1 hover:bg-emerald-500 sm:px-8 sm:py-4 sm:text-sm"
+                              className="inline-flex items-center justify-center gap-2 self-start rounded-full bg-blue-600 px-5 py-3 text-xs font-bold text-white shadow-[0_18px_45px_-20px_rgba(16,185,129,0.6)] transition-all hover:-translate-y-1 hover:bg-blue-500 sm:px-8 sm:py-4 sm:text-sm"
                             >
                               {slide.button_text || 'Lihat Info PSB'} <ArrowRight size={16} />
                             </Link>
@@ -522,7 +522,7 @@ export default function LandingPage() {
                                 key={pillar.title}
                                 className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-black/18 px-4 py-2 text-xs font-semibold text-slate-100 backdrop-blur-sm"
                               >
-                                <span className="text-emerald-300">{pillar.icon}</span>
+                                <span className="text-blue-300">{pillar.icon}</span>
                                 {pillar.title}
                               </span>
                             ))}
@@ -553,7 +553,7 @@ export default function LandingPage() {
             <div className="grid gap-4 rounded-[2.1rem] border border-white/60 bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(248,250,252,0.92)_100%)] p-5 shadow-[0_30px_70px_-35px_rgba(15,23,42,0.32)] backdrop-blur-xl md:grid-cols-4 md:p-6">
               {institutionFacts.map((fact) => (
                 <div key={fact.label} className="rounded-[1.5rem] border border-slate-100/90 bg-white/95 px-5 py-4 shadow-[0_16px_36px_-30px_rgba(15,23,42,0.18)]">
-                  <div className="mb-3 inline-flex rounded-2xl bg-emerald-50 p-3 text-emerald-600 ring-1 ring-emerald-100">
+                  <div className="mb-3 inline-flex rounded-2xl bg-blue-50 p-3 text-blue-600 ring-1 ring-blue-100">
                     {fact.icon}
                   </div>
                   <p className="text-[10px] font-black uppercase tracking-[0.24em] text-slate-400">{fact.label}</p>
@@ -566,8 +566,8 @@ export default function LandingPage() {
       </section>
 
       <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f5f7f3_0%,#ffffff_24%,#ffffff_100%)] pb-16 pt-8 md:pb-20 md:pt-24">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-emerald-50/80 to-transparent" />
-        <div className="pointer-events-none absolute left-1/2 top-10 h-28 w-28 -translate-x-1/2 rounded-full bg-emerald-100/70 blur-3xl" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-blue-50/80 to-transparent" />
+        <div className="pointer-events-none absolute left-1/2 top-10 h-28 w-28 -translate-x-1/2 rounded-full bg-blue-100/70 blur-3xl" />
         <div className="container relative mx-auto max-w-6xl px-4">
           <motion.div
             initial="hidden"
@@ -577,9 +577,9 @@ export default function LandingPage() {
             className="mb-8 border-b border-slate-200/80 pb-7 md:mb-10 md:pb-8 md:flex md:items-end md:justify-between md:gap-6"
           >
             <div>
-              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-emerald-600">Jelajahi Darussunnah</p>
+              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-600">Jelajahi Al-Maa</p>
               <h2 className="mt-3 max-w-3xl text-3xl font-black leading-[1.02] tracking-[-0.03em] text-slate-900 md:text-[3.35rem]">
-                Mulai dari sisi Darussunnah yang paling ingin Anda kenali lebih dulu.
+                Mulai dari sisi Al-Maa yang paling ingin Anda kenali lebih dulu.
               </h2>
               <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-500 md:text-base">
                 Profil, program, fasilitas, dan pendaftaran kami susun lebih ringkas agar perjalanan
@@ -588,7 +588,7 @@ export default function LandingPage() {
             </div>
             <Link
               href="/psb"
-              className="mt-5 inline-flex items-center gap-2 self-start rounded-full border border-emerald-200 bg-white px-5 py-3 text-sm font-bold text-emerald-700 shadow-sm transition-all hover:-translate-y-0.5 hover:border-emerald-300 hover:text-emerald-800 md:mt-0"
+              className="mt-5 inline-flex items-center gap-2 self-start rounded-full border border-blue-200 bg-white px-5 py-3 text-sm font-bold text-blue-700 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:text-blue-800 md:mt-0"
             >
               Lihat info pendaftaran <ArrowRight size={16} />
             </Link>
@@ -604,14 +604,14 @@ export default function LandingPage() {
               <motion.div key={item.title} variants={fadeUpVariant}>
                 <Link
                   href={item.href}
-                  className="group block h-full rounded-[1.8rem] border border-emerald-100/70 bg-[linear-gradient(180deg,#ffffff_0%,#f4faf6_100%)] p-6 shadow-[0_18px_44px_-34px_rgba(15,23,42,0.16)] transition-all duration-300 hover:-translate-y-2 hover:border-emerald-200 hover:shadow-[0_24px_60px_-30px_rgba(16,185,129,0.18)] md:rounded-[2rem] md:p-7"
+                  className="group block h-full rounded-[1.8rem] border border-blue-100/70 bg-[linear-gradient(180deg,#ffffff_0%,#f4faf6_100%)] p-6 shadow-[0_18px_44px_-34px_rgba(15,23,42,0.16)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-200 hover:shadow-[0_24px_60px_-30px_rgba(16,185,129,0.18)] md:rounded-[2rem] md:p-7"
                 >
-                  <div className="mb-5 inline-flex rounded-2xl bg-white p-4 text-emerald-600 ring-1 ring-emerald-100 transition-colors group-hover:bg-emerald-500 group-hover:text-white group-hover:ring-emerald-500">
+                  <div className="mb-5 inline-flex rounded-2xl bg-white p-4 text-blue-600 ring-1 ring-blue-100 transition-colors group-hover:bg-blue-500 group-hover:text-white group-hover:ring-blue-500">
                     {item.icon}
                   </div>
                   <h2 className="text-xl font-black tracking-tight text-slate-900">{item.title}</h2>
                   <p className="mt-3 text-sm leading-7 text-slate-600">{item.desc}</p>
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-emerald-700">
+                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-blue-700">
                     Selengkapnya <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                   </div>
                 </Link>
@@ -628,17 +628,17 @@ export default function LandingPage() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUpVariant}
-            className="overflow-hidden rounded-[2rem] border border-emerald-900/70 bg-gradient-to-r from-emerald-950 via-emerald-900 to-teal-900 px-5 py-7 text-white shadow-[0_30px_80px_-35px_rgba(6,78,59,0.65)] md:rounded-[2.25rem] md:px-8 md:py-8"
+            className="overflow-hidden rounded-[2rem] border border-blue-900/70 bg-gradient-to-r from-blue-950 via-blue-900 to-teal-900 px-5 py-7 text-white shadow-[0_30px_80px_-35px_rgba(6,78,59,0.65)] md:rounded-[2.25rem] md:px-8 md:py-8"
           >
             <div className="grid gap-8 lg:grid-cols-[1.1fr_1.9fr] lg:items-center">
               <div>
-                <p className="text-[11px] font-black uppercase tracking-[0.28em] text-emerald-200">Darussunnah dalam Angka</p>
+                <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-200">Al-Maa dalam Angka</p>
                 <h2 className="mt-3 text-2xl font-black tracking-tight md:text-4xl">
                   Komitmen pembinaan yang tumbuh konsisten dan terarah.
                 </h2>
                 <Link
                   href="/profil"
-                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-emerald-900 transition-all hover:-translate-y-0.5"
+                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-blue-900 transition-all hover:-translate-y-0.5"
                 >
                   Lihat profil lengkap <ArrowRight size={16} />
                 </Link>
@@ -646,11 +646,11 @@ export default function LandingPage() {
               <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-5">
                 {institutionHighlights.map((item) => (
                   <div key={item.label} className="rounded-[1.35rem] border border-white/10 bg-black/10 px-4 py-4 backdrop-blur-sm md:rounded-[1.5rem] md:py-5">
-                    <div className="mb-3 inline-flex rounded-2xl bg-white/10 p-3 text-emerald-200 md:mb-4">
+                    <div className="mb-3 inline-flex rounded-2xl bg-white/10 p-3 text-blue-200 md:mb-4">
                       {item.icon}
                     </div>
                     <p className="text-2xl font-black tracking-tight text-white">{item.value}</p>
-                    <p className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-emerald-100/80">{item.label}</p>
+                    <p className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-blue-100/80">{item.label}</p>
                   </div>
                 ))}
               </div>
@@ -664,30 +664,30 @@ export default function LandingPage() {
         <div className="container relative z-10 mx-auto max-w-6xl px-4">
           <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-10">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant}>
-              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white px-4 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-emerald-700">
+              <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-4 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-blue-700">
                 <Compass size={14} />
                 Profil Singkat
               </span>
               <h2 className="mt-5 text-[2.55rem] font-black leading-[1.02] tracking-[-0.03em] text-slate-900 md:mt-6 md:text-[3.1rem]">
-                Darussunnah hadir sebagai ruang pembinaan Qurani yang serius, hangat, dan terarah.
+                Al-Maa hadir sebagai ruang pembinaan Qurani yang hangat, tertib, dan terarah.
               </h2>
               <p className="mt-5 text-[15px] leading-8 text-slate-600 md:mt-6 md:text-lg">
-                Pondok Pesantren Tahfidz Al Quran Darussunnah didirikan pada tahun 2009 di Kp. Lengkong
-                Barang RT.01/02, Ds. Iwul, Kec. Parung, Bogor. Saat ini pondok juga tengah membangun
-                fasilitas belajar santri putra beserta masjid di Kp. Muara Jaya RT.01/05, Ciaureuten Ilir,
-                Bogor sebagai penguatan pusat pembinaan generasi muslim masa depan.
+                Pondok Pesantren Tahfidzul Qur&apos;an Al-Maa berlokasi di Jl. H. Mawi, Gg. Omega,
+                Kp. Jati Waru, RT 003/RW 002, Waru, Kec. Parung, Kab. Bogor, Jawa Barat 16330.
+                Pembinaannya menekankan tahfidz, adab, ilmu syar&apos;i dasar, dan suasana belajar
+                yang membantu santri tumbuh mandiri serta siap memberi manfaat.
               </p>
               <div className="mt-7 flex flex-wrap gap-3 md:mt-8">
                 <span className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-4 py-3 text-sm font-bold text-white md:px-5">
-                  <MapPin size={16} className="text-emerald-300" />
+                  <MapPin size={16} className="text-blue-300" />
                   Parung, Bogor 16330
                 </span>
                 <a
                   href="tel:081382410582"
-                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-700 transition-colors hover:border-emerald-200 hover:text-emerald-700 md:px-5"
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-700 transition-colors hover:border-blue-200 hover:text-blue-700 md:px-5"
                 >
-                  <PhoneCall size={16} className="text-emerald-500" />
-                  0813 8241 0582
+                  <PhoneCall size={16} className="text-blue-500" />
+                  0857 7694 8779
                 </a>
               </div>
             </motion.div>
@@ -697,9 +697,9 @@ export default function LandingPage() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeUpVariant}
-              className="rounded-[1.8rem] border border-emerald-100/80 bg-white p-6 shadow-[0_30px_70px_-35px_rgba(15,23,42,0.18)] md:rounded-[2rem] md:p-8"
+              className="rounded-[1.8rem] border border-blue-100/80 bg-white p-6 shadow-[0_30px_70px_-35px_rgba(15,23,42,0.18)] md:rounded-[2rem] md:p-8"
             >
-              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-emerald-600">Arah Pembinaan</p>
+              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-600">Arah Pembinaan</p>
               <h3 className="mt-3 text-2xl font-black tracking-tight text-slate-900">
                 Fokus utama pondok dirancang agar santri tumbuh utuh.
               </h3>
@@ -710,7 +710,7 @@ export default function LandingPage() {
                   'Mengembangkan intelektual, kreativitas, dan jiwa kaderisasi umat.',
                 ].map((point) => (
                   <div key={point} className="flex gap-4 rounded-[1.5rem] border border-slate-100 bg-slate-50 px-5 py-4">
-                    <div className="rounded-2xl bg-emerald-50 p-3 text-emerald-600">
+                    <div className="rounded-2xl bg-blue-50 p-3 text-blue-600">
                       <CheckCircle2 size={18} />
                     </div>
                     <p className="text-sm leading-7 text-slate-600">{point}</p>
@@ -719,7 +719,7 @@ export default function LandingPage() {
               </div>
               <Link
                 href="/profil"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-emerald-600 transition-colors hover:text-emerald-700"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-blue-600 transition-colors hover:text-blue-700"
               >
                 Lihat profil dan visi-misi lengkap <ArrowRight size={16} />
               </Link>
@@ -729,7 +729,7 @@ export default function LandingPage() {
       </section>
 
       <section className="relative overflow-hidden bg-[linear-gradient(180deg,#fbfcfa_0%,#f4f7f3_100%)] py-14 md:py-20">
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-200 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.08),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(15,118,110,0.06),_transparent_24%)]" />
         <div className="container mx-auto max-w-6xl px-4">
           <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch lg:gap-8 xl:gap-10">
@@ -737,7 +737,7 @@ export default function LandingPage() {
               <PublicSectionIntro
                 eyebrow="Program Inti"
                 title="Program unggulan yang menjadi fondasi pembinaan santri"
-                description="Pembinaan utama Darussunnah menguatkan hafalan, adab, wawasan Islam, dan kesiapan hidup santri secara seimbang."
+                description="Pembinaan utama Al-Maa menguatkan hafalan, adab, wawasan Islam, dan kesiapan hidup santri secara seimbang."
               />
               <div className="mt-7 grid gap-4 sm:mt-8 sm:grid-cols-2">
                 {featuredProgramCards.map((program) => (
@@ -756,7 +756,7 @@ export default function LandingPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/92 via-slate-950/24 to-transparent" />
                       <div className="absolute inset-x-0 bottom-0 p-4 text-white md:p-5">
-                        <span className="inline-flex rounded-full border border-white/15 bg-black/20 px-3 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-emerald-200 backdrop-blur-sm">
+                        <span className="inline-flex rounded-full border border-white/15 bg-black/20 px-3 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-blue-200 backdrop-blur-sm">
                           Program Unggulan
                         </span>
                         <p className="mt-3 text-lg font-black leading-tight">{program.title}</p>
@@ -770,7 +770,7 @@ export default function LandingPage() {
                 {curriculumTracks.map((track) => (
                   <span
                     key={track}
-                    className="rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-emerald-700"
+                    className="rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-blue-700"
                   >
                     {track}
                   </span>
@@ -778,7 +778,7 @@ export default function LandingPage() {
               </div>
               <Link
                 href="/program"
-                className="mt-8 inline-flex items-center gap-3 self-start rounded-full border border-emerald-200 bg-white px-6 py-3 text-sm font-black text-emerald-800 shadow-[0_18px_36px_-28px_rgba(15,23,42,0.18)] transition-all hover:-translate-y-0.5 hover:border-emerald-300 hover:text-emerald-700"
+                className="mt-8 inline-flex items-center gap-3 self-start rounded-full border border-blue-200 bg-white px-6 py-3 text-sm font-black text-blue-800 shadow-[0_18px_36px_-28px_rgba(15,23,42,0.18)] transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:text-blue-700"
               >
                 Buka halaman program <ArrowRight size={16} />
               </Link>
@@ -789,9 +789,9 @@ export default function LandingPage() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeUpVariant}
-              className="relative z-10 rounded-[1.8rem] border border-emerald-900/80 bg-[linear-gradient(180deg,#0f172a_0%,#10251d_100%)] p-6 text-white shadow-[0_35px_80px_-35px_rgba(15,23,42,0.35)] md:rounded-[2rem] md:p-8"
+              className="relative z-10 rounded-[1.8rem] border border-blue-900/80 bg-[linear-gradient(180deg,#0f172a_0%,#10251d_100%)] p-6 text-white shadow-[0_35px_80px_-35px_rgba(15,23,42,0.35)] md:rounded-[2rem] md:p-8"
             >
-              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-emerald-200">Ekstrakurikuler</p>
+              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-200">Ekstrakurikuler</p>
               <h3 className="mt-3 text-[2rem] font-black leading-[1.02] tracking-[-0.03em] sm:text-[2.35rem]">
                 Aktivitas penunjang yang membuat santri aktif, terampil, dan percaya diri.
               </h3>
@@ -842,7 +842,7 @@ export default function LandingPage() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant} className="relative z-10">
             <PublicSectionIntro
               eyebrow="Potret Kegiatan"
-              title="Sekilas kehidupan belajar dan pembinaan di Darussunnah"
+              title="Sekilas kehidupan belajar dan pembinaan di Al-Maa"
               description="Lihat suasana belajar, ibadah, kebersamaan, dan ritme keseharian santri melalui dokumentasi kegiatan pondok."
               actionHref="/galeri"
               actionLabel="Lihat galeri lengkap"
@@ -873,7 +873,7 @@ export default function LandingPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/10 to-transparent" />
                     <div className="absolute inset-x-0 bottom-0 p-4 text-white sm:p-7">
-                    <p className="text-[10px] font-black uppercase tracking-[0.32em] text-emerald-200">{galleryAlbums[0].category}</p>
+                    <p className="text-[10px] font-black uppercase tracking-[0.32em] text-blue-200">{galleryAlbums[0].category}</p>
                     <h3 className="mt-3 max-w-xl text-2xl font-black tracking-tight sm:text-3xl">{galleryAlbums[0].title}</h3>
                     <div className="mt-4 flex flex-wrap gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-100">
                       <span className="rounded-full bg-white/10 px-3 py-2 backdrop-blur-sm">{galleryAlbums[0].photoCount} foto</span>
@@ -901,7 +901,7 @@ export default function LandingPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
                       <div className="absolute inset-x-0 bottom-0 p-4 text-white">
-                        <p className="text-[9px] font-black uppercase tracking-[0.28em] text-emerald-200">{album.category}</p>
+                        <p className="text-[9px] font-black uppercase tracking-[0.28em] text-blue-200">{album.category}</p>
                         <h3 className="mt-2 line-clamp-2 text-sm font-black tracking-tight sm:text-base">{album.title}</h3>
                         <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-100">{album.photoCount} foto</p>
                       </div>
@@ -917,7 +917,7 @@ export default function LandingPage() {
                 title="Belum ada dokumentasi galeri"
                 description="Album kegiatan terbaru akan muncul di sini setelah dipublikasikan."
                 className="border-white/10 bg-white/6 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.6)] backdrop-blur-sm"
-                iconClassName="text-emerald-200/70"
+                iconClassName="text-blue-200/70"
                 titleClassName="text-white"
                 descriptionClassName="text-slate-300"
               />
@@ -934,8 +934,8 @@ export default function LandingPage() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant}>
             <PublicSectionIntro
               eyebrow="Video Pilihan"
-              title="Dokumentasi video kegiatan dan pembinaan Darussunnah"
-              description="Beberapa video pilihan untuk melihat suasana pondok, kegiatan santri, dan pembinaan yang berjalan di Darussunnah."
+              title="Dokumentasi video kegiatan dan pembinaan Al-Maa"
+              description="Beberapa video pilihan untuk melihat suasana pondok, kegiatan santri, dan pembinaan yang berjalan di Al-Maa."
               actionHref="/videos"
               actionLabel="Lihat semua video"
               theme="dark"
@@ -956,7 +956,7 @@ export default function LandingPage() {
                   <Link
                     key={series.key}
                     href={`/videos/${series.slug}`}
-                    className="group overflow-hidden rounded-[1.7rem] border border-white/10 bg-white/[0.04] shadow-[0_24px_50px_-34px_rgba(0,0,0,0.45)] backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-emerald-300/20 md:rounded-[1.9rem]"
+                    className="group overflow-hidden rounded-[1.7rem] border border-white/10 bg-white/[0.04] shadow-[0_24px_50px_-34px_rgba(0,0,0,0.45)] backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-blue-300/20 md:rounded-[1.9rem]"
                   >
                     <div className="relative h-52 overflow-hidden bg-slate-900 md:h-56">
                       {thumbnail ? (
@@ -974,7 +974,7 @@ export default function LandingPage() {
                         </div>
                       </div>
                       <div className="absolute inset-x-0 bottom-0 p-4 text-white md:p-5">
-                        <p className="text-[10px] font-black uppercase tracking-[0.24em] text-emerald-200">
+                        <p className="text-[10px] font-black uppercase tracking-[0.24em] text-blue-200">
                           {series.count} video
                         </p>
                         <h3 className="mt-2 text-xl font-black leading-tight">{series.title}</h3>
@@ -994,7 +994,7 @@ export default function LandingPage() {
                 title="Belum ada dokumentasi video"
                 description="Video kegiatan pondok akan tampil di bagian ini setelah dipublikasikan."
                 className="border-white/10 bg-white/6 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.6)] backdrop-blur-sm"
-                iconClassName="text-emerald-200/70"
+                iconClassName="text-blue-200/70"
                 titleClassName="text-white"
                 descriptionClassName="text-slate-300"
               />
@@ -1009,7 +1009,7 @@ export default function LandingPage() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant}>
             <PublicSectionIntro
               eyebrow="Berita Pondok"
-              title="Kabar terbaru dari lingkungan Darussunnah"
+              title="Kabar terbaru dari lingkungan Al-Maa"
               description="Lanjutkan dengan berita, kabar kegiatan, dan pengumuman terbaru dari lingkungan pondok."
               actionHref="/news"
               actionLabel="Semua berita"
@@ -1050,7 +1050,7 @@ export default function LandingPage() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant}>
             <PublicSectionIntro
               eyebrow="Agenda Mendatang"
-              title="Agenda terdekat di lingkungan Darussunnah"
+              title="Agenda terdekat di lingkungan Al-Maa"
               description="Pantau kegiatan pondok, jadwal penting, dan informasi acara yang akan datang."
               actionHref="/agendas"
               actionLabel="Lihat semua agenda"
@@ -1067,12 +1067,12 @@ export default function LandingPage() {
                     <div className="relative overflow-hidden bg-[linear-gradient(135deg,#0f172a_0%,#10251d_100%)] p-6 text-white md:p-7">
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.24),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(245,158,11,0.12),_transparent_26%)]" />
                       <div className="relative flex h-full flex-col">
-                        <span className="inline-flex w-fit rounded-full border border-white/12 bg-white/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-emerald-100 backdrop-blur-sm">
+                        <span className="inline-flex w-fit rounded-full border border-white/12 bg-white/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-blue-100 backdrop-blur-sm">
                           {agendas[0].category || 'Agenda Pondok'}
                         </span>
                         <div className="mt-8 flex items-end gap-4">
                           <div className="rounded-[1.6rem] border border-white/10 bg-white/10 px-5 py-4 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.35)] backdrop-blur-sm">
-                            <p className="text-[10px] font-black uppercase tracking-[0.24em] text-emerald-200">
+                            <p className="text-[10px] font-black uppercase tracking-[0.24em] text-blue-200">
                               {formatAgendaMonth(agendas[0].start_date)}
                             </p>
                             <p className="mt-2 text-4xl font-black leading-none">
@@ -1080,7 +1080,7 @@ export default function LandingPage() {
                             </p>
                           </div>
                           <div className="pb-1">
-                            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-emerald-100/80">Jadwal Terdekat</p>
+                            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-blue-100/80">Jadwal Terdekat</p>
                             <p className="mt-2 text-sm font-semibold text-slate-200">
                               {agendas[0].time_info || '08:00 - selesai'}
                             </p>
@@ -1090,22 +1090,22 @@ export default function LandingPage() {
                     </div>
 
                     <div className="flex h-full flex-col p-6 md:p-7">
-                      <p className="text-[10px] font-black uppercase tracking-[0.22em] text-emerald-700">Agenda Utama</p>
+                      <p className="text-[10px] font-black uppercase tracking-[0.22em] text-blue-700">Agenda Utama</p>
                       <h3 className="mt-3 text-[1.9rem] font-black leading-[1.02] tracking-[-0.03em] text-slate-900">
                         {agendas[0].title}
                       </h3>
                       <p className="mt-4 text-sm font-medium leading-7 text-slate-600 md:text-[15px]">
                         {agendas[0].description ||
-                          'Agenda ini menjadi bagian dari pembinaan rutin untuk memperkuat ilmu, adab, dan kebersamaan di lingkungan Darussunnah.'}
+                          'Agenda ini menjadi bagian dari pembinaan rutin untuk memperkuat ilmu, adab, dan kebersamaan di lingkungan Al-Maa.'}
                       </p>
                       <div className="mt-6 grid gap-3 text-sm text-slate-600">
                         <div className="flex items-start gap-3 rounded-2xl border border-slate-200/80 bg-slate-50/80 px-4 py-3">
-                          <Calendar size={16} className="mt-0.5 shrink-0 text-emerald-600" />
+                          <Calendar size={16} className="mt-0.5 shrink-0 text-blue-600" />
                           <span>{formatAgendaFullDate(agendas[0].start_date)}</span>
                         </div>
                         <div className="flex items-start gap-3 rounded-2xl border border-slate-200/80 bg-slate-50/80 px-4 py-3">
-                          <MapPin size={16} className="mt-0.5 shrink-0 text-emerald-600" />
-                          <span>{agendas[0].location || 'Kompleks Darussunnah Parung'}</span>
+                          <MapPin size={16} className="mt-0.5 shrink-0 text-blue-600" />
+                          <span>{agendas[0].location || 'Kompleks Al-Maa Parung'}</span>
                         </div>
                       </div>
                     </div>
@@ -1116,15 +1116,15 @@ export default function LandingPage() {
                   {agendas.slice(1, 3).map((agenda) => (
                     <article
                       key={agenda.id}
-                      className="flex h-full flex-col rounded-[1.75rem] border border-slate-200/80 bg-white/95 p-5 shadow-[0_20px_42px_-32px_rgba(15,23,42,0.16)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200"
+                      className="flex h-full flex-col rounded-[1.75rem] border border-slate-200/80 bg-white/95 p-5 shadow-[0_20px_42px_-32px_rgba(15,23,42,0.16)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200"
                     >
                       <div className="flex items-start gap-4">
-                        <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-[1.35rem] bg-emerald-500 text-white shadow-lg shadow-emerald-200/70">
+                        <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-[1.35rem] bg-blue-500 text-white shadow-lg shadow-blue-200/70">
                           <span className="text-[9px] font-black uppercase tracking-[0.18em]">{formatAgendaMonth(agenda.start_date)}</span>
                           <span className="mt-1 text-xl font-black leading-none">{formatAgendaDay(agenda.start_date)}</span>
                         </div>
                         <div className="min-w-0">
-                          <p className="text-[10px] font-black uppercase tracking-[0.22em] text-emerald-700">
+                          <p className="text-[10px] font-black uppercase tracking-[0.22em] text-blue-700">
                             {agenda.category || 'Agenda'}
                           </p>
                           <h3 className="mt-2 line-clamp-2 text-lg font-black tracking-tight text-slate-900">
@@ -1140,12 +1140,12 @@ export default function LandingPage() {
 
                       <div className="mt-5 space-y-2 text-sm text-slate-500">
                         <div className="flex items-start gap-2">
-                          <Calendar size={15} className="mt-0.5 shrink-0 text-emerald-500" />
+                          <Calendar size={15} className="mt-0.5 shrink-0 text-blue-500" />
                           <span>{agenda.time_info || formatAgendaFullDate(agenda.start_date)}</span>
                         </div>
                         <div className="flex items-start gap-2">
-                          <MapPin size={15} className="mt-0.5 shrink-0 text-emerald-500" />
-                          <span>{agenda.location || 'Kompleks Darussunnah Parung'}</span>
+                          <MapPin size={15} className="mt-0.5 shrink-0 text-blue-500" />
+                          <span>{agenda.location || 'Kompleks Al-Maa Parung'}</span>
                         </div>
                       </div>
                     </article>
@@ -1168,19 +1168,19 @@ export default function LandingPage() {
 
       <section className="relative overflow-hidden bg-[linear-gradient(180deg,#0d1522_0%,#0d2f27_58%,#08231e_100%)] py-24 lg:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(245,158,11,0.14),_transparent_22%),radial-gradient(circle_at_bottom_left,_rgba(16,185,129,0.18),_transparent_24%)]" />
-        <div className="absolute -top-32 right-0 h-72 w-72 rounded-full bg-emerald-300/16 blur-[110px]" />
+        <div className="absolute -top-32 right-0 h-72 w-72 rounded-full bg-blue-300/16 blur-[110px]" />
         <div className="absolute -bottom-36 left-0 h-72 w-72 rounded-full bg-teal-300/14 blur-[110px]" />
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-300/30 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-300/30 to-transparent" />
         <div className="container relative z-10 mx-auto max-w-6xl px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant}>
             <div className="overflow-hidden rounded-[2.25rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.03)_100%)] shadow-[0_34px_90px_-42px_rgba(0,0,0,0.55)] backdrop-blur-sm">
               <div className="grid gap-0 lg:grid-cols-[1.08fr_0.92fr]">
                 <div className="p-7 sm:p-8 lg:p-10">
-                  <p className="text-[11px] font-black uppercase tracking-[0.28em] text-emerald-200">Langkah Berikutnya</p>
+                  <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-200">Langkah Berikutnya</p>
                   <h2 className="mt-4 max-w-3xl text-4xl font-black tracking-tight text-white md:text-6xl">
-                    Siap mengenal Darussunnah lebih jauh?
+                    Siap mengenal Al-Maa lebih jauh?
                   </h2>
-                  <p className="mt-6 max-w-2xl text-base leading-8 text-emerald-50/88 md:text-lg">
+                  <p className="mt-6 max-w-2xl text-base leading-8 text-blue-50/88 md:text-lg">
                     Mulai dari profil pondok, program, dan fasilitas, lalu lanjutkan ke halaman pendaftaran
                     saat Anda sudah merasa cocok dengan arah pembinaannya.
                   </p>
@@ -1193,7 +1193,7 @@ export default function LandingPage() {
                     ].map((item) => (
                       <span
                         key={item}
-                        className="rounded-full border border-white/12 bg-white/8 px-4 py-2 text-xs font-semibold text-emerald-50/90 backdrop-blur-sm"
+                        className="rounded-full border border-white/12 bg-white/8 px-4 py-2 text-xs font-semibold text-blue-50/90 backdrop-blur-sm"
                       >
                         {item}
                       </span>
@@ -1203,7 +1203,7 @@ export default function LandingPage() {
                   <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                     <Link
                       href="/psb"
-                      className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-black text-emerald-800 shadow-[0_24px_55px_-28px_rgba(255,255,255,0.42)] transition-all hover:-translate-y-1 hover:bg-emerald-50"
+                      className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-black text-blue-800 shadow-[0_24px_55px_-28px_rgba(255,255,255,0.42)] transition-all hover:-translate-y-1 hover:bg-blue-50"
                     >
                       Lihat Info PSB <ArrowRight size={18} />
                     </Link>
@@ -1219,7 +1219,7 @@ export default function LandingPage() {
                 <div className="border-t border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0.02)_100%)] p-7 sm:p-8 lg:border-l lg:border-t-0 lg:p-10">
                   <div className="grid gap-4">
                     <div className="rounded-[1.6rem] border border-white/10 bg-slate-950/28 p-5 shadow-[0_20px_40px_-28px_rgba(0,0,0,0.45)]">
-                      <p className="text-[10px] font-black uppercase tracking-[0.24em] text-emerald-200/90">Jalur Cepat</p>
+                      <p className="text-[10px] font-black uppercase tracking-[0.24em] text-blue-200/90">Jalur Cepat</p>
                       <p className="mt-3 text-2xl font-black leading-tight text-white">Kenali arah pondok, lalu lanjut daftar dengan lebih mantap.</p>
                     </div>
                     <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
@@ -1234,8 +1234,8 @@ export default function LandingPage() {
                           className="group rounded-[1.35rem] border border-white/10 bg-white/6 p-4 transition-all hover:-translate-y-1 hover:bg-white/10"
                         >
                           <div className="flex items-center justify-between gap-3">
-                            <span className="text-[10px] font-black uppercase tracking-[0.24em] text-emerald-200/80">{item.step}</span>
-                            <ArrowRight size={16} className="text-emerald-200/80 transition-transform group-hover:translate-x-1" />
+                            <span className="text-[10px] font-black uppercase tracking-[0.24em] text-blue-200/80">{item.step}</span>
+                            <ArrowRight size={16} className="text-blue-200/80 transition-transform group-hover:translate-x-1" />
                           </div>
                           <p className="mt-3 text-sm font-bold text-white">{item.label}</p>
                         </Link>
@@ -1251,3 +1251,4 @@ export default function LandingPage() {
     </PublicLayout>
   );
 }
+

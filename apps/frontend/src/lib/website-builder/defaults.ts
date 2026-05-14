@@ -8,10 +8,10 @@ import {
 export const defaultWebsiteBuilderTheme: WebsiteBuilderTheme = {
   version: 1,
   palette: {
-    primary: 'emerald',
-    accent: 'amber',
+    primary: 'blue',
+    accent: 'sky',
     surface: 'slate',
-    tone: 'fresh',
+    tone: 'calm',
   },
   typography: {
     heading: 'outfit',
@@ -24,7 +24,7 @@ export const defaultWebsiteBuilderTheme: WebsiteBuilderTheme = {
   },
   background: {
     pattern: 'soft-blobs',
-    public_page: 'warm-white',
+    public_page: 'clean-white',
   },
 };
 
@@ -57,7 +57,7 @@ export const defaultWebsiteBuilderShell: WebsiteBuilderShell = {
       position: 'bottom-right',
       mobile_offset: 'default',
       label: 'WhatsApp',
-      url: '',
+      url: 'https://wa.me/6285776948779',
     },
     back_to_top: {
       enabled: true,
@@ -69,7 +69,7 @@ export const defaultWebsiteBuilderShell: WebsiteBuilderShell = {
     variant: 'contact-columns',
     logo_url: '',
     description:
-      'Pondok Pesantren Tahfidz Al Quran Darussunnah Parung membina santri melalui hafalan, adab, dan ilmu.',
+      'Pondok Pesantren Tahfidzul Qur’an Al-Maa Parung membina santri melalui tahfidz, adab, dan ilmu syar’i dalam suasana belajar yang tertib dan hangat.',
     quick_links: [
       { label: 'Profil', url: '/profil' },
       { label: 'Program', url: '/program' },
@@ -82,7 +82,7 @@ export const defaultWebsiteBuilderShell: WebsiteBuilderShell = {
     show_map_link: true,
     show_address: true,
     copyright_text: '',
-    background: 'emerald-dark',
+    background: 'slate-dark',
   },
 };
 
@@ -97,10 +97,10 @@ export const defaultHomeBuilderLayout: HomeBuilderLayout = {
       enabled: true,
       variant: 'slider',
       settings: {
-        kicker: 'Darussunnah Parung',
-        title: 'Tahfidz, Adab, dan Ilmu dalam Satu Pembinaan',
+        kicker: 'Al-Maa Parung',
+        title: 'Tahfidz, Adab, dan Ilmu dalam Satu Ritme Pembinaan',
         subtitle:
-          'Darussunnah Parung membina santri melalui hafalan Al-Quran, adab, dan pembelajaran terpadu.',
+          'Pondok Pesantren Tahfidzul Qur’an Al-Maa Parung membina santri melalui hafalan Al-Qur’an, adab, dan pembelajaran terpadu.',
         overlay: 'medium',
         text_position: 'left-top',
         mobile_height: 'compact',
@@ -110,9 +110,9 @@ export const defaultHomeBuilderLayout: HomeBuilderLayout = {
         ],
         slides: [
           {
-            title: 'Tahfidz, Adab, dan Ilmu dalam Satu Pembinaan',
+            title: 'Tahfidz, Adab, dan Ilmu dalam Satu Ritme Pembinaan',
             subtitle:
-              'Darussunnah Parung membina santri melalui hafalan Al-Quran, adab, dan pembelajaran terpadu.',
+              'Al-Maa Parung menghadirkan lingkungan belajar yang menjaga hafalan, akhlak, dan semangat tumbuh bersama.',
             image_url: '/assets/img/gedung.webp',
           },
         ],
@@ -218,7 +218,7 @@ export const defaultHomeBuilderLayout: HomeBuilderLayout = {
       enabled: true,
       variant: 'gradient',
       settings: {
-        title: 'Siap mengenal Darussunnah lebih jauh?',
+        title: 'Siap mengenal Al-Maa lebih jauh?',
         subtitle:
           'Mulai dari profil pondok, program, dan fasilitas, lalu lanjutkan ke halaman pendaftaran saat sudah siap.',
         button_label: 'Lihat Info PSB',
@@ -236,211 +236,192 @@ export const defaultWebsiteBuilderPages: WebsiteBuilderPages = {
     version: 1,
     hero: {
       eyebrow: 'Profil Pesantren',
-      title: 'Pondok Pesantren Tahfidz Al Quran Darussunnah Parung',
+      title: 'Pondok Pesantren Tahfidzul Qur’an Al-Maa Parung',
       subtitle:
-        'Mengenal lembaga, arah pembinaan, visi-misi, dan identitas resmi Darussunnah sebagai pondok yang menyiapkan generasi muslim berkualitas melalui pendekatan Al-Quran dan manajemen terpadu.',
+        'Mengenal lembaga, arah pembinaan, visi-misi, dan identitas resmi Al-Maa sebagai pondok yang menumbuhkan generasi Qurani melalui tahfidz, adab, dan pembinaan terpadu.',
       background_image_url: '/assets/img/gedung.webp',
       highlights: [
-        { value: '2009', label: 'Tahun Berdiri' },
-        { value: 'Qurani', label: 'Arah Pembinaan' },
-        { value: 'Bogor', label: 'Basis Pondok' },
+        { value: 'Parung', label: 'Lokasi Pondok' },
+        { value: '20 Juz', label: 'Target Hafalan' },
+        { value: 'SMP - SMK', label: 'Jenjang Pendidikan' },
       ],
     },
     about: {
-      eyebrow: 'Tentang Darussunnah',
-      title: 'Pondok yang tumbuh dari semangat pembinaan Qurani dan kaderisasi umat.',
+      eyebrow: 'Tentang Al-Maa',
+      title: 'Pondok yang menumbuhkan hafalan, adab, dan semangat belajar dalam suasana Qurani.',
       paragraphs: [
-        'Pondok Pesantren Tahfidz Al Quran Darussunnah didirikan oleh Yayasan Tunas Muda Qurani pada tahun 2009 di Kp. Lengkong Barang RT.01/02, Ds. Iwul, Kec. Parung, Bogor.',
-        'Saat ini Darussunnah juga tengah membangun fasilitas belajar santri putra termasuk masjid di Kp. Muara Jaya RT.01/05, Ciaureuten Ilir, Bogor sebagai lokasi Pondok Pesantren Putra.',
+        'Pondok Pesantren Tahfidzul Qur’an Al-Maa berlokasi di Parung, Bogor, dan dikenal sebagai ma’had yang menekankan pembinaan tahfidz, ilmu syar’i, serta akhlak santri secara bertahap dan terarah.',
+        'Melalui suasana belajar yang hangat, Al-Maa menguatkan hafalan, kedisiplinan, serta kesiapan santri untuk tumbuh menjadi pribadi yang mandiri dan bermanfaat.',
       ],
       location_chip: 'Parung, Bogor 16330',
-      phone_chip: '0813 8241 0582',
+      phone_chip: '0857 7694 8779',
       institution_facts: [
-        { label: 'Nama Yayasan', value: 'Tunas Muda Qurani' },
-        { label: 'NSPP', value: '510032011292' },
-        { label: 'Notaris', value: 'Dr. Aidir Amin Daud, DFM' },
-        { label: 'SK Kemenkumham', value: 'AHU-038333.50.80.2014' },
+        { label: 'Nama Lembaga', value: 'PPTQ Al-Maa / Ma’had Al Maa' },
+        { label: 'Jenjang', value: 'SMP - SMK' },
+        { label: 'Kuota PSB', value: '30 Ikhwan / 30 Akhwat' },
+        { label: 'Fokus', value: 'Tahfidz, Adab, Ilmu Syar’i' },
       ],
       address_title: 'Alamat Pondok',
-      address_text: 'Kp. Lengkong Barang RT.01/02, Ds. Iwul, Kec. Parung, Bogor 16330',
+      address_text:
+        'Jl. H. Mawi, Gg. Omega, Kp. Jati Waru, RT 003/RW 002, Waru, Kec. Parung, Kab. Bogor, Jawa Barat 16330',
     },
     vision: {
       eyebrow: 'Visi',
-      title: 'Arah utama pembinaan Darussunnah',
+      title: 'Arah utama pembinaan Al-Maa',
       description:
-        'Menjadi lembaga yang menyiapkan generasi muslim yang berkualitas, melalui pendekatan Al-Quran dan manajemen terpadu.',
+        'Membina generasi Qurani yang kuat dalam hafalan, baik dalam adab, dan siap tumbuh sebagai pribadi muslim yang bermanfaat bagi umat.',
     },
     mission: {
       eyebrow: 'Misi',
       items: [
-        'Mengembangkan potensi intelektual santri secara terarah dan seimbang.',
-        'Menjadikan Al-Quran sebagai media utama dalam proses pembelajaran.',
-        'Membentuk akhlak karimah sebagai dasar kepribadian santri.',
-        'Menjadi mediator kaderisasi umat yang siap hadir di tengah masyarakat.',
-        'Meningkatkan kreativitas, kemandirian, dan daya juang santri.',
-        'Berorientasi pada sistem manajemen terpadu yang tertib dan profesional.',
-        'Menumbuhkan jiwa patriot dan cinta tanah air sejak dini.',
+        'Menjadikan Al-Qur’an sebagai pusat pembinaan hafalan, akhlak, dan semangat belajar.',
+        'Menyelenggarakan pendidikan yang menjaga keseimbangan ilmu syar’i, akademik, dan kedisiplinan hidup.',
+        'Menumbuhkan karakter mandiri, tertib, dan bertanggung jawab dalam kehidupan santri sehari-hari.',
+        'Membangun suasana ma’had yang hangat, aman, dan mendukung perkembangan santri secara utuh.',
+        'Menghadirkan pembinaan yang relevan bagi santri yatim, dhuafa, dan keluarga muslim yang ingin pendidikan Qurani.',
       ],
     },
     cta: {
       eyebrow: 'Langkah Berikutnya',
-      title: 'Lanjutkan mengenal program dan fasilitas pondok',
+      title: 'Lanjutkan mengenal program dan alur pendaftaran pondok',
       subtitle:
-        'Setelah memahami identitas dan arah pembinaan Darussunnah, lanjutkan ke program dan fasilitas untuk melihat gambaran pondok secara lebih utuh.',
+        'Setelah memahami identitas dan arah pembinaan Al-Maa, lanjutkan ke program pendidikan dan informasi PSB untuk melihat gambaran pondok secara lebih utuh.',
       primary_button: { label: 'Lihat halaman program', url: '/program', style: 'primary' },
-      secondary_button: { label: 'Lihat fasilitas pondok', url: '/facilities', style: 'secondary' },
+      secondary_button: { label: 'Buka info PSB', url: '/psb', style: 'secondary' },
     },
   },
   program: {
     version: 1,
     hero: {
       eyebrow: 'Program Pendidikan',
-      title: 'Sistem pembinaan Darussunnah dirancang menyeluruh, bukan hanya kuat di hafalan.',
+      title: 'Pembinaan Al-Maa dirancang seimbang antara tahfidz, ilmu, dan pembentukan karakter.',
       subtitle:
-        'Kenali program unggulan, kurikulum, pembiasaan santri, dan kegiatan penunjang yang membentuk karakter serta kesiapan hidup mereka.',
+        'Kenali program unggulan, ritme belajar, pembiasaan santri, dan kegiatan penunjang yang membentuk hafalan sekaligus kemandirian mereka.',
       background_image_url: '/assets/img/khalaqoh.jpg',
-      tags: ['Tahfidz', 'Adab', 'Tsaqofah Islamiyah', 'Life Skill'],
+      tags: ['Tahfidz', 'Adab', 'Bahasa Arab', 'Ilmu Syar’i'],
       highlights: [
-        { value: '6', label: 'Program Inti' },
-        { value: '3', label: 'Kurikulum Utama' },
-        { value: '9', label: 'Ekskul Pilihan' },
+        { value: '20 Juz', label: 'Target Hafalan' },
+        { value: 'SMP - SMK', label: 'Jenjang' },
+        { value: '2', label: 'Kuota Kelas Besar' },
       ],
     },
     featured: {
       eyebrow: 'Program Unggulan',
-      title: 'Arah pembinaan inti Darussunnah',
+      title: 'Arah pembinaan inti Al-Maa',
       subtitle:
-        'Enam pilar pembinaan ini menjadi fondasi ritme belajar, ibadah, akhlak, dan kesiapan hidup santri.',
+        'Program-program ini menjadi fondasi ritme belajar, ibadah, akhlak, dan kesiapan hidup santri sehari-hari.',
       cards: [
         {
-          title: 'Tarbiyah Aqidah',
+          title: 'Tahfidz Al-Qur’an',
           description:
-            'Pembinaan fondasi iman agar santri bertumbuh dengan arah ibadah, akhlak, dan keyakinan yang kokoh.',
-          image_url: '/assets/img/khalaqoh.jpg',
-        },
-        {
-          title: 'Tsaqofah Islamiyah',
-          description:
-            'Bekal wawasan Islam yang luas untuk membentuk nalar, adab berpikir, dan kesiapan berdakwah.',
-          image_url: '/assets/img/belajar-kitab.jpg',
-        },
-        {
-          title: 'Akselerasi Tahfidz 30 Juz',
-          description:
-            'Program inti pesantren yang menargetkan hafalan Al-Quran yang kuat, terjaga, dan terus dibina.',
+            'Program inti pondok dengan target hafalan bertahap, setoran rutin, dan murajaah yang dijaga konsisten.',
           image_url: '/assets/img/tahfidz.jpg',
         },
         {
-          title: 'Tahfidz Hadits',
+          title: 'Pembinaan Adab',
           description:
-            'Penguatan hafalan hadits sebagai pelengkap pembinaan ilmu, adab, dan orientasi belajar santri.',
-          image_url: '/assets/img/tasmi.jpg',
+            'Pembiasaan akhlak, disiplin, dan tanggung jawab sebagai fondasi karakter santri dalam keseharian.',
+          image_url: '/assets/img/khalaqoh.jpg',
         },
         {
-          title: 'Mahasantri Bahasa Arab',
+          title: 'Bahasa Arab',
           description:
-            'Pendalaman bahasa Arab untuk memperkuat akses santri ke literatur Islam dan komunikasi akademik.',
+            'Penguatan dasar bahasa Arab untuk membantu santri memahami ilmu dan teks Islam dengan lebih baik.',
           image_url: '/assets/img/tahfidz1.jpg',
         },
         {
-          title: 'Life Skill',
+          title: 'Ilmu Syar’i Dasar',
           description:
-            'Pembekalan keterampilan hidup agar santri tumbuh mandiri, kreatif, dan siap berkontribusi nyata.',
-          image_url: '/assets/img/masak.jpg',
+            'Pembelajaran diniyah yang menolong santri mengenal aqidah, ibadah, dan adab secara terarah.',
+          image_url: '/assets/img/belajar-kitab.jpg',
         },
       ],
     },
     curriculum: {
       eyebrow: 'Kurikulum',
-      title: 'Kurikulum berlapis untuk menjaga keseimbangan ilmu.',
+      title: 'Struktur belajar yang menjaga hafalan dan pembentukan diri.',
       subtitle:
-        'Struktur belajar santri disusun agar pembinaan diniyah, akademik, dan tahfidz berjalan seimbang.',
-      tracks: ['Kurikulum Pondok', 'Kurikulum DIKNAS', 'Kurikulum Tahfidz'],
+        'Pembelajaran disusun agar tahfidz, ilmu agama, pembiasaan adab, dan pendidikan formal berjalan seimbang.',
+      tracks: ['Tahfidz Harian', 'Ilmu Syar’i Dasar', 'Pendidikan Menengah SMP - SMK'],
     },
     extracurricular: {
       eyebrow: 'Ekstrakurikuler',
-      title: 'Ruang tumbuh yang melatih keterampilan, disiplin, dan percaya diri santri.',
+      title: 'Ruang tumbuh yang menambah keterampilan, disiplin, dan kepercayaan diri santri.',
       subtitle:
-        'Kegiatan penunjang ini membantu santri berkembang aktif, terampil, dan lebih siap menghadapi kehidupan nyata.',
-      tags: [
-        'Teknik Otomotif',
-        'Teknik Listrik',
-        'Tata Boga',
-        'Futsal',
-        'Karate',
-        'Beladiri Tifan',
-        'Bahasa',
-        'Panahan',
-        'Basket',
-      ],
+        'Kegiatan penunjang membantu santri berkembang lebih aktif, terampil, dan siap menghadapi kehidupan nyata.',
+      tags: ['Olahraga', 'Life Skill', 'Kebersihan', 'Kedisiplinan', 'Kebersamaan', 'Kepemimpinan'],
     },
     listing: {
       eyebrow: 'Program Lainnya',
-      title: 'Program tambahan di Darussunnah',
+      title: 'Program tambahan di Al-Maa',
       subtitle:
-        'Daftar berikut melengkapi pembinaan utama Darussunnah dan menampilkan program-program yang tersedia untuk mendukung perkembangan santri.',
+        'Daftar berikut melengkapi pembinaan utama Al-Maa dan menampilkan program yang mendukung perkembangan santri.',
       empty_state: 'Program tambahan akan ditampilkan di sini saat tersedia.',
       card_badge: 'Program Pondok',
     },
     cta: {
       eyebrow: 'Selanjutnya',
-      title: 'Lanjutkan melihat fasilitas dan proses pendaftaran',
+      title: 'Lanjutkan melihat informasi pendaftaran pondok',
       subtitle:
-        'Setelah memahami program pembinaan, lanjutkan ke fasilitas pondok dan informasi PSB agar gambaran Darussunnah makin utuh.',
-      primary_button: { label: 'Lihat fasilitas pondok', url: '/facilities', style: 'primary' },
-      secondary_button: { label: 'Buka info PSB', url: '/psb', style: 'secondary' },
+        'Setelah memahami arah pembinaan, lanjutkan ke info PSB untuk melihat syarat, kuota, dan jalur komunikasi dengan panitia.',
+      primary_button: { label: 'Buka info PSB', url: '/psb', style: 'primary' },
+      secondary_button: { label: 'Hubungi admin', url: '/kontak', style: 'secondary' },
     },
   },
   psb: {
     version: 1,
     hero: {
       eyebrow: 'Pendaftaran Santri Baru',
-      title: 'Penerimaan santri baru Darussunnah untuk tahun pelajaran 2026/2027.',
+      title: 'Penerimaan santri baru Al-Maa untuk jenjang SMP sampai SMK.',
       subtitle:
-        'Kenali persyaratan, jadwal gelombang, dan langkah awal pendaftaran untuk bergabung bersama keluarga besar penghafal Al-Quran di Darussunnah.',
+        'Kenali persyaratan, kuota, biaya pendaftaran, dan langkah awal untuk bergabung bersama keluarga besar penghafal Al-Qur’an di Al-Maa Parung.',
       background_image_url: '/assets/img/psb-banner.png',
     },
     requirements: {
       eyebrow: 'Persyaratan',
       title: 'Dokumen yang perlu disiapkan',
       items: [
-        'Fotokopi Akta Kelahiran (3 lembar)',
-        'Fotokopi Kartu Keluarga (3 lembar)',
-        'Pas Foto 3x4 Background Merah (4 lembar)',
-        'Raport Terakhir / Ijazah Terakhir',
-        'Surat Keterangan Sehat dari Dokter',
+        'Fotokopi status aktif kelas 6 atau kelas 9',
+        'Fotokopi NISN',
+        'Fotokopi akta kelahiran',
+        'Fotokopi kartu keluarga',
+        'Fotokopi KTP kedua orang tua',
+        'Ijazah, transkrip, atau legalisir jika sudah tersedia',
+        'Untuk yatim atau dhuafa: surat pendukung sesuai ketentuan pondok',
       ],
     },
     schedule: {
-      eyebrow: 'Gelombang Pendaftaran',
-      title: 'Jadwal pendaftaran yang sedang dibuka',
+      eyebrow: 'Informasi Pendaftaran',
+      title: 'Ringkasan kuota dan biaya awal pendaftaran',
       waves: [
-        { label: 'Gelombang I', date_text: '1 Januari - 31 Maret 2026', active: true },
-        { label: 'Gelombang II', date_text: '1 April - 30 Juni 2026 (Opsional)', active: false },
+        { label: 'Kuota Ikhwan', date_text: '30 santri', active: true },
+        { label: 'Kuota Akhwat', date_text: '30 santri', active: true },
+        { label: 'Biaya Formulir', date_text: 'Rp 200.000', active: true },
       ],
     },
     location: {
       eyebrow: 'Lokasi Pendaftaran',
       title: 'Datang atau hubungi panitia untuk arahan berikutnya',
       subtitle:
-        'Hubungi panitia pendaftaran untuk petunjuk lokasi, jadwal kunjungan, dan informasi survei pondok.',
-      address_text: 'Kp. Lengkong Barang RT.01/02, Ds. Iwul, Kec. Parung, Bogor 16330',
+        'Hubungi panitia pendaftaran untuk petunjuk kunjungan, tanya program, dan memastikan alur pendaftaran terbaru.',
+      address_text:
+        'Jl. H. Mawi, Gg. Omega, Kp. Jati Waru, RT 003/RW 002, Waru, Kec. Parung, Kab. Bogor, Jawa Barat 16330',
       image_url: '/assets/img/info-pendaftaran.jpg',
     },
     cta: {
       eyebrow: 'Langkah Berikutnya',
-      title: 'Siap menjadi penghafal Al-Quran?',
+      title: 'Siap bergabung di Al-Maa?',
       subtitle:
-        'Buka formulir pendaftaran online atau hubungi panitia PSB untuk pertanyaan seputar jadwal, syarat, dan pembayaran.',
-      primary_button: { label: 'Daftar Online Sekarang', url: '/psb-daftar', style: 'primary' },
-      secondary_button: { label: 'Hubungi Panitia (WhatsApp)', url: 'https://wa.me/6281413241748', style: 'secondary' },
+        'Hubungi panitia PSB untuk pertanyaan seputar syarat, jadwal, biaya, dan kesiapan pendaftaran santri baru.',
+      primary_button: { label: 'Hubungi Panitia PSB', url: 'https://wa.me/6285776948779', style: 'primary' },
+      secondary_button: { label: 'Lihat halaman kontak', url: '/kontak', style: 'secondary' },
     },
   },
   kontak: {
     version: 1,
     hero: {
       eyebrow: 'Hubungi Kami',
-      title: 'Hubungi Pondok Darussunnah',
+      title: 'Hubungi Pondok Pesantren Al-Maa',
       subtitle:
         'Jika ingin bertanya tentang program pondok, pendaftaran, atau kebutuhan informasi lainnya, silakan kirim pesan kepada kami.',
     },
@@ -448,7 +429,7 @@ export const defaultWebsiteBuilderPages: WebsiteBuilderPages = {
       address_title: 'Alamat',
       address_supporting: 'Kami siap menerima kunjungan sesuai arahan panitia atau admin.',
       contact_title: 'Kontak Utama',
-      contact_supporting: 'Gunakan WhatsApp atau email aktif agar balasan lebih cepat sampai.',
+      contact_supporting: 'Gunakan WhatsApp aktif agar balasan lebih cepat sampai.',
       hours_title: 'Layanan',
       hours_supporting: 'Senin - Sabtu, 08:00 - 16:00 WIB',
     },
@@ -472,11 +453,12 @@ export const defaultWebsiteBuilderPages: WebsiteBuilderPages = {
       eyebrow: 'Lokasi Pondok',
       title: 'Peta Lokasi',
       subtitle:
-        'Gunakan peta ini untuk menemukan jalur menuju Pondok Pesantren Tahfidz Al-Quran Darussunnah di Parung, Bogor.',
+        'Gunakan peta ini untuk menemukan jalur menuju Pondok Pesantren Tahfidzul Qur’an Al-Maa di Parung, Bogor.',
       button_label: 'Buka di Google Maps',
-      button_url: 'https://maps.google.com/?q=Pondok%20Pesantren%20Darussunnah%20Parung',
+      button_url:
+        'https://maps.google.com/?q=Jl.%20H.%20Mawi%20Gg.%20Omega%20Kp.%20Jati%20Waru%20Parung%20Bogor',
       embed_url:
-        'https://maps.google.com/maps?q=Pondok%20Pesantren%20Darussunnah%20Parung&t=&z=15&ie=UTF8&iwloc=&output=embed',
+        'https://maps.google.com/maps?q=Jl.%20H.%20Mawi%20Gg.%20Omega%20Kp.%20Jati%20Waru%20Parung%20Bogor&t=&z=15&ie=UTF8&iwloc=&output=embed',
     },
   },
 };

@@ -1,5 +1,8 @@
 import type { NextConfig } from "next";
 
+const backendOrigin = (process.env.BACKEND_ORIGIN || process.env.NEXT_PUBLIC_SITE_API_ORIGIN || 'http://localhost:8080')
+  .replace(/\/+$/, '');
+
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
@@ -12,11 +15,11 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://localhost:8080/api/:path*',
+        destination: `${backendOrigin}/api/:path*`,
       },
       {
         source: '/uploads/:path*',
-        destination: 'http://localhost:8080/uploads/:path*',
+        destination: `${backendOrigin}/uploads/:path*`,
       },
     ];
   },
