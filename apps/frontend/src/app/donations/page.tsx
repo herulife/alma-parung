@@ -5,7 +5,31 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PublicLayout from '@/components/PublicLayout';
 import { getCampaigns, Campaign, resolveDisplayImageUrl } from '@/lib/api';
-import { Heart, Activity, CheckCircle, ArrowRight, Landmark } from 'lucide-react';
+import {
+  Heart,
+  Activity,
+  CheckCircle,
+  ArrowRight,
+  MessageCircle,
+  PaintBucket,
+  Target,
+} from 'lucide-react';
+
+const featuredOpenDonation = {
+  title: 'Wakaf Cat Tembok untuk Ruang Kelas Penghafal Al-Quran',
+  target: 15000000,
+  whatsappUrl: 'https://wa.me/6281932506078',
+  contactLabel: '0819 3250 6078',
+  posterImage: '/assets/img/donasi/wakaf-cat-tembok-brosur.jpeg',
+  coverImage: '/assets/img/donasi/wakaf-cat-tembok-gedung.jpeg',
+  summary:
+    'Open donasi baru untuk membantu pengecatan ruang kelas santri agar lebih nyaman, layak, dan penuh semangat belajar.',
+  points: [
+    'Bukan sekadar cat, tapi amal jariyah yang hidup bersama setiap ayat yang dihafal.',
+    'Difokuskan untuk ruang kelas para santri penghafal Al-Quran di Pondok Pesantren Al-Maa Parung Bogor.',
+    'Target penggalangan dana sebesar Rp 15.000.000.',
+  ],
+};
 
 export default function DonationsPage() {
   const [campaigns, setCampaigns] = useState<Campaign[]>([]);
@@ -28,63 +52,191 @@ export default function DonationsPage() {
 
   return (
     <PublicLayout>
-      <section className="relative overflow-hidden bg-slate-950 px-4 pb-16 pt-24 text-white sm:px-6 lg:px-8 lg:pb-24 lg:pt-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/86 to-emerald-950/72" />
-        <div className="absolute left-0 top-0 h-72 w-72 -translate-x-1/3 -translate-y-1/3 rounded-full bg-emerald-700/25 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-72 w-72 translate-x-1/3 translate-y-1/3 rounded-full bg-amber-300/18 blur-3xl" />
+      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#eff6ff_0%,#ffffff_48%,#e0f2fe_100%)] px-4 pb-16 pt-24 sm:px-6 lg:px-8 lg:pb-24 lg:pt-32">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.14),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.12),transparent_32%)]" />
+        <div className="absolute left-[-8rem] top-[-6rem] h-72 w-72 rounded-full bg-sky-200/40 blur-3xl" />
+        <div className="absolute bottom-[-8rem] right-[-4rem] h-80 w-80 rounded-full bg-blue-100/70 blur-3xl" />
 
         <div className="relative mx-auto max-w-6xl">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-end">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.18fr)_minmax(340px,0.82fr)] lg:items-end">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-emerald-200">
+              <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/90 px-4 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-sky-700 shadow-[0_20px_50px_-30px_rgba(14,165,233,0.45)]">
                 <Heart size={14} />
-                Donasi dan Wakaf
+                Open Donasi Baru
               </div>
-              <h1 className="mt-6 text-4xl font-black leading-tight tracking-tight text-white md:text-6xl">
-                Bersama membangun ruang belajar, ibadah, dan pembinaan santri.
+              <h1 className="mt-6 text-4xl font-black leading-tight tracking-tight text-slate-900 md:text-6xl">
+                Wakaf cat tembok untuk ruang kelas para penghafal Al-Quran.
               </h1>
-              <p className="mt-5 max-w-2xl text-sm leading-7 text-emerald-100/82 sm:text-base sm:leading-8">
-                Dukungan Anda membantu penguatan program tahfidz, kebutuhan operasional, dan
-                pengembangan fasilitas Darussunnah agar pembinaan santri terus berjalan optimal.
+              <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+                Setiap bantuanmu ikut menghadirkan ruang belajar yang lebih nyaman, layak, dan
+                penuh semangat bagi santri Al-Maa Parung Bogor. Ini bukan sekadar renovasi kecil,
+                tapi bagian dari amal jariyah yang terus mengalir.
               </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <a
+                  href={featuredOpenDonation.whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-[1rem] bg-sky-500 px-5 py-3 text-sm font-bold text-white shadow-[0_20px_40px_-22px_rgba(14,165,233,0.75)] transition hover:bg-sky-600"
+                >
+                  Donasi via WhatsApp <ArrowRight size={16} />
+                </a>
+                <Link
+                  href="#program-donasi"
+                  className="inline-flex items-center gap-2 rounded-[1rem] border border-sky-200 bg-white px-5 py-3 text-sm font-bold text-slate-700 transition hover:border-sky-300 hover:text-sky-700"
+                >
+                  Lihat Program Donasi <ArrowRight size={16} />
+                </Link>
+              </div>
             </div>
 
-            <div className="rounded-[1.75rem] border border-white/12 bg-white/10 p-5 backdrop-blur md:p-6">
-              <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-[1rem] bg-white/12 text-emerald-100">
-                  <Landmark size={20} />
+            <div className="rounded-[1.9rem] border border-sky-100 bg-white/92 p-5 shadow-[0_30px_80px_-40px_rgba(59,130,246,0.35)] md:p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-[1rem] bg-sky-100 text-sky-600">
+                  <Target size={20} />
                 </div>
                 <div>
-                  <p className="text-[11px] font-black uppercase tracking-[0.24em] text-emerald-200/80">
-                    Rekening Donasi
+                  <p className="text-[11px] font-black uppercase tracking-[0.24em] text-sky-600">
+                    Target Donasi
                   </p>
-                  <p className="mt-1 text-lg font-bold text-white">BSI 7123664177</p>
+                  <p className="mt-1 text-2xl font-black text-slate-900">
+                    Rp {featuredOpenDonation.target.toLocaleString('id-ID')}
+                  </p>
                 </div>
               </div>
-              <p className="mt-4 text-sm leading-7 text-emerald-100/80">
-                A.n. PONPES DARUSSUNNAH. Konfirmasi donasi dan kebutuhan bantuan dapat dilakukan
-                melalui halaman kontak pondok.
+              <p className="mt-4 text-sm leading-7 text-slate-600">
+                {featuredOpenDonation.summary} Konfirmasi dan arahan transfer sementara diarahkan
+                langsung ke admin pondok agar penyalurannya lebih rapi.
               </p>
+              <a
+                href={featuredOpenDonation.whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-sky-700 transition hover:text-sky-800"
+              >
+                Hubungi {featuredOpenDonation.contactLabel} <ArrowRight size={16} />
+              </a>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-[1.2rem] border border-sky-100 bg-sky-50 px-4 py-3">
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-sky-600">
+                    Kategori
+                  </p>
+                  <p className="mt-2 text-sm font-bold text-slate-800">Wakaf Renovasi Ringan</p>
+                </div>
+                <div className="rounded-[1.2rem] border border-slate-200 bg-slate-50 px-4 py-3">
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
+                    Fokus
+                  </p>
+                  <p className="mt-2 text-sm font-bold text-slate-800">
+                    Ruang Kelas Penghafal Al-Quran
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[linear-gradient(to_bottom,_#f8fbff,_#ffffff)] px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center">
+          <div className="overflow-hidden rounded-[2rem] border border-sky-100 bg-white shadow-[0_28px_80px_-44px_rgba(56,189,248,0.4)]">
+            <div className="relative h-[420px] bg-slate-100">
+              <Image
+                src={featuredOpenDonation.posterImage}
+                alt={featuredOpenDonation.title}
+                fill
+                unoptimized
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-sky-700">
+              <PaintBucket size={14} />
+              Wakaf Cat Tembok
+            </div>
+            <h2 className="mt-5 text-3xl font-black leading-tight tracking-tight text-slate-900 md:text-5xl">
+              Cuma cat tembok, tapi pahalanya terus mengalir.
+            </h2>
+            <p className="mt-5 text-sm leading-8 text-slate-600 sm:text-base">
+              Bayangkan setiap ayat yang dihafal santri terjadi di ruang kelas yang kamu bantu
+              bangun. Donasi ini dibuka untuk membantu pengecatan ruang belajar agar para santri
+              memiliki tempat yang lebih nyaman untuk belajar, murojaah, dan menjaga semangat
+              hafalan mereka.
+            </p>
+            <div className="mt-6 space-y-3">
+              {featuredOpenDonation.points.map((point) => (
+                <div
+                  key={point}
+                  className="flex items-start gap-3 rounded-[1.2rem] border border-slate-200 bg-white px-4 py-4 shadow-sm"
+                >
+                  <CheckCircle className="mt-0.5 text-sky-500" size={18} />
+                  <p className="text-sm leading-7 text-slate-700">{point}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <a
+                href={featuredOpenDonation.whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-[1rem] bg-sky-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-sky-600"
+              >
+                <MessageCircle size={16} />
+                Hubungi Admin Donasi
+              </a>
               <Link
                 href="/kontak"
-                className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-white transition hover:text-emerald-200"
+                className="inline-flex items-center gap-2 rounded-[1rem] border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-700 transition hover:border-sky-200 hover:text-sky-700"
               >
-                Konfirmasi donasi <ArrowRight size={16} />
+                Info Kontak Pondok <ArrowRight size={16} />
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-[linear-gradient(to_bottom,_#f8fafc,_#ffffff)] px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <section className="bg-white px-4 pb-8 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-slate-200/80 bg-slate-950 shadow-[0_30px_90px_-48px_rgba(15,23,42,0.6)]">
+          <div className="grid gap-0 lg:grid-cols-[1.12fr_0.88fr]">
+            <div className="relative min-h-[280px]">
+              <Image
+                src={featuredOpenDonation.coverImage}
+                alt="Gedung Pondok Pesantren Al-Maa"
+                fill
+                unoptimized
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-950/18 via-slate-950/6 to-transparent" />
+            </div>
+            <div className="p-6 text-white sm:p-8">
+              <p className="text-[11px] font-black uppercase tracking-[0.24em] text-sky-200">
+                Dampak Donasi
+              </p>
+              <h3 className="mt-3 text-2xl font-black tracking-tight">
+                Ruang belajar yang lebih layak untuk santri Al-Maa.
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-slate-300">
+                Donasi ini diharapkan membantu menghadirkan ruang kelas yang lebih bersih, cerah,
+                dan menyenangkan untuk hafalan, pembelajaran diniyah, dan aktivitas harian santri.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="program-donasi"
+        className="bg-[linear-gradient(to_bottom,_#f8fbff,_#ffffff)] px-4 py-14 sm:px-6 lg:px-8 lg:py-20"
+      >
         <div className="mx-auto max-w-6xl">
           <div className="mb-10 flex flex-col gap-4 sm:mb-12 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
-              <p className="text-[11px] font-black uppercase tracking-[0.24em] text-emerald-700">
+              <p className="text-[11px] font-black uppercase tracking-[0.24em] text-sky-700">
                 Program Aktif
               </p>
               <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl">
-                Pilihan dukungan untuk pengembangan dan keberlangsungan pondok.
+                Program donasi yang sudah terhubung ke sistem admin.
               </h2>
             </div>
             <p className="max-w-xl text-sm leading-7 text-slate-600">
@@ -117,7 +269,7 @@ export default function DonationsPage() {
                 return (
                   <article
                     key={campaign.id}
-                    className="group overflow-hidden rounded-[1.75rem] border border-slate-200/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-900/8"
+                    className="group overflow-hidden rounded-[1.75rem] border border-slate-200/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-200 hover:shadow-xl hover:shadow-sky-900/8"
                   >
                     <div className="relative h-56 overflow-hidden bg-slate-100">
                       {imageUrl ? (
@@ -129,12 +281,12 @@ export default function DonationsPage() {
                           className="object-cover transition duration-700 group-hover:scale-105"
                         />
                       ) : (
-                        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-emerald-50 to-teal-100 text-emerald-300">
+                        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-sky-50 to-blue-100 text-sky-300">
                           <Heart size={52} />
                         </div>
                       )}
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-slate-950/10 to-transparent" />
-                      <div className="absolute right-4 top-4 inline-flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-emerald-700 shadow-sm backdrop-blur">
+                      <div className="absolute right-4 top-4 inline-flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-sky-700 shadow-sm backdrop-blur">
                         <Activity size={12} />
                         Aktif
                       </div>
@@ -151,13 +303,13 @@ export default function DonationsPage() {
                       <div className="mt-6">
                         <div className="mb-2 flex items-center justify-between text-[11px] font-bold uppercase tracking-[0.18em]">
                           <span className="text-slate-400">Terkumpul</span>
-                          <span className="text-emerald-700">
+                          <span className="text-sky-700">
                             Rp {campaign.collected_amount.toLocaleString('id-ID')}
                           </span>
                         </div>
                         <div className="h-2.5 overflow-hidden rounded-full bg-slate-100">
                           <div
-                            className="h-full rounded-full bg-emerald-600"
+                            className="h-full rounded-full bg-sky-500"
                             style={{ width: `${progress}%` }}
                           />
                         </div>
@@ -169,13 +321,13 @@ export default function DonationsPage() {
                       <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                         <Link
                           href="/kontak"
-                          className="inline-flex flex-1 items-center justify-center gap-2 rounded-[1rem] bg-emerald-600 px-4 py-3 text-sm font-bold text-white transition hover:bg-emerald-700"
+                          className="inline-flex flex-1 items-center justify-center gap-2 rounded-[1rem] bg-sky-500 px-4 py-3 text-sm font-bold text-white transition hover:bg-sky-600"
                         >
                           Donasi Sekarang <ArrowRight size={16} />
                         </Link>
                         <Link
                           href="/profil"
-                          className="inline-flex items-center justify-center rounded-[1rem] border border-slate-200 px-4 py-3 text-sm font-bold text-slate-700 transition hover:border-emerald-200 hover:text-emerald-700"
+                          className="inline-flex items-center justify-center rounded-[1rem] border border-slate-200 px-4 py-3 text-sm font-bold text-slate-700 transition hover:border-sky-200 hover:text-sky-700"
                         >
                           Tentang Pondok
                         </Link>
@@ -187,7 +339,7 @@ export default function DonationsPage() {
             </div>
           ) : (
             <div className="rounded-[1.9rem] border border-dashed border-slate-200 bg-white px-6 py-20 text-center shadow-sm">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50 text-emerald-300">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-sky-50 text-sky-300">
                 <CheckCircle size={28} />
               </div>
               <h3 className="mt-5 text-xl font-bold tracking-tight text-slate-900">
@@ -195,7 +347,7 @@ export default function DonationsPage() {
               </h3>
               <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-slate-500">
                 Saat ini belum ada program publik yang sedang dibuka. Anda tetap dapat menghubungi
-                pondok untuk informasi donasi umum, wakaf, atau dukungan pembangunan.
+                pondok untuk informasi donasi umum, wakaf, atau open donasi pembangunan lainnya.
               </p>
             </div>
           )}
