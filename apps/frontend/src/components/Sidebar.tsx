@@ -48,7 +48,7 @@ export default function Sidebar({ onClose }: { onClose?: () => void }) {
     { category: 'Sistem', icon: <UserCog size={18} />, label: "Manajemen Pengguna", href: "/admin/users", roles: ["superadmin"], docRef: 'users' },
     { category: 'Sistem', icon: <ScrollText size={18} />, label: "Log Sistem", href: "/admin/logs", roles: ["superadmin"], docRef: 'logs' },
     { category: 'Sistem', icon: <Settings size={18} />, label: "Pengaturan Utama", href: "/admin/settings", roles: ["superadmin"], docRef: 'settings' },
-    { category: 'Sistem', icon: <HelpCircle size={18} />, label: "Bantuan", href: "/admin/help" },
+    { category: 'Sistem', icon: <HelpCircle size={18} />, label: "Tutorial", href: "/admin/help" },
   ];
 
   // Filter by role
@@ -62,10 +62,10 @@ export default function Sidebar({ onClose }: { onClose?: () => void }) {
       {/* Header */}
       <div className="h-[70px] flex items-center px-6 border-b border-emerald-900/40 shrink-0">
          <div className="flex items-center gap-3 w-full">
-            <div className="w-8 h-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-black shadow-lg shadow-emerald-950/30">D</div>
+            <div className="w-8 h-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-black shadow-lg shadow-emerald-950/30">A</div>
             <div className="min-w-0">
-              <span className="block font-semibold text-[15px] text-white tracking-wide uppercase">Darussunnah</span>
-              <span className="block text-[10px] uppercase tracking-[0.24em] text-emerald-200/70">Panel Pondok</span>
+              <span className="block font-semibold text-[15px] text-white tracking-wide uppercase">Al-Maa</span>
+              <span className="block text-[10px] uppercase tracking-[0.24em] text-emerald-200/70">Panel Admin</span>
             </div>
             
             <button 
@@ -115,8 +115,8 @@ export default function Sidebar({ onClose }: { onClose?: () => void }) {
                         ? 'text-emerald-100 hover:bg-white/10 hover:text-white'
                         : 'text-slate-500 hover:bg-white/10 hover:text-emerald-200'
                     }`}
-                    title={`Buka dokumentasi ${item.label}`}
-                    aria-label={`Buka dokumentasi ${item.label}`}
+                    title={`Buka tutorial ${item.label}`}
+                    aria-label={`Buka tutorial ${item.label}`}
                 >
                   <HelpCircle size={15} />
                 </Link>

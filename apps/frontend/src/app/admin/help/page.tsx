@@ -60,21 +60,21 @@ function HelpContent() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">
               <BookOpen className="h-3.5 w-3.5" />
-              Dokumentasi Admin
+              Tutorial Admin
             </div>
             <h1 className="mt-4 text-3xl font-black tracking-tight text-slate-900">
-              Pusat Bantuan Darussunnah
+              Pusat Tutorial Alma
             </h1>
             <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
-              Semua panduan operasional admin sekarang dikumpulkan di satu tempat. Tiap modul punya
-              ringkasan fungsi, langkah kerja cepat, tips operasional, dan tautan langsung ke halaman
-              modulnya.
+              Semua tutorial operasional admin sekarang dikumpulkan di satu tempat. Tiap modul punya
+              ringkasan fungsi, langkah kerja, tips praktis, dan tautan langsung ke halaman modulnya
+              supaya tim lebih cepat belajar dan bekerja.
             </p>
           </div>
 
           <div className="grid gap-3 sm:grid-cols-3">
             <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Modul Terdokumentasi</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Modul Bertutorial</p>
               <p className="mt-2 text-2xl font-black text-slate-900">{adminDocSections.length}</p>
             </div>
             <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
@@ -93,12 +93,12 @@ function HelpContent() {
         <aside className="space-y-5">
           <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
             <label className="mb-3 block text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-              Cari Panduan
+              Cari Tutorial
             </label>
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Cari modul atau kata kunci..."
+              placeholder="Cari modul, alur kerja, atau kata kunci..."
               className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-emerald-500 focus:bg-white"
             />
           </div>
@@ -106,7 +106,7 @@ function HelpContent() {
           <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
             <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-slate-700">
               <LayoutList className="h-4 w-4 text-emerald-600" />
-              Daftar Dokumentasi
+              Daftar Tutorial
             </div>
 
             <div className="space-y-4">
@@ -138,7 +138,7 @@ function HelpContent() {
 
               {filteredSections.length === 0 && (
                 <div className="rounded-xl border border-dashed border-slate-200 bg-slate-50 px-4 py-6 text-center text-sm text-slate-500">
-                  Tidak ada modul yang cocok dengan pencarian ini.
+                  Tidak ada tutorial yang cocok dengan pencarian ini.
                 </div>
               )}
             </div>
@@ -231,7 +231,7 @@ function HelpContent() {
               <h3 className="text-lg font-bold text-slate-900">Matriks Role & Akses</h3>
             </div>
             <p className="mt-2 text-sm leading-6 text-slate-600">
-              Ringkasan ini membantu tim memahami siapa yang berhak mengakses modul tertentu.
+              Ringkasan ini membantu tim memahami siapa yang berhak membuka modul tertentu.
             </p>
 
             <div className="mt-5 overflow-x-auto rounded-xl border border-slate-200">
@@ -263,10 +263,10 @@ function HelpContent() {
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-slate-900 p-6 text-white shadow-sm">
-            <h3 className="text-xl font-bold">Pola Bantuan Kontekstual</h3>
+            <h3 className="text-xl font-bold">Pola Tutorial Kontekstual</h3>
             <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-300">
-              Tiap menu di sidebar sekarang punya ikon bantuan kecil yang langsung membuka dokumentasi modul terkait.
-              Jadi tim tidak perlu kembali ke halaman bantuan utama setiap kali bingung dengan satu fitur tertentu.
+              Tiap menu di sidebar punya ikon tutorial kecil yang langsung membuka panduan modul terkait.
+              Jadi tim tidak perlu kembali ke halaman utama setiap kali ingin melihat langkah cepat untuk satu fitur tertentu.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link
