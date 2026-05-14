@@ -4,13 +4,17 @@ function getApiBaseUrl() {
 		return '/api';
 	}
 	const backendOrigin = process.env.NEXT_PUBLIC_SITE_API_ORIGIN?.trim();
+	const defaultBackendOrigin =
+		process.env.NODE_ENV === 'production'
+			? 'https://benuatech.web.id'
+			: 'http://localhost:8080';
 	if (configured) {
 		return configured;
 	}
 	if (backendOrigin) {
 		return `${backendOrigin.replace(/\/+$/, '')}/api`;
 	}
-	return 'http://localhost:8080/api';
+	return `${defaultBackendOrigin}/api`;
 }
 
 const API_BASE_URL = getApiBaseUrl();
@@ -52,7 +56,9 @@ function resolveApiOrigin() {
 	try {
 		return new URL(API_BASE_URL).origin;
 	} catch {
-		return 'http://localhost:8080';
+		return process.env.NODE_ENV === 'production'
+			? 'https://benuatech.web.id'
+			: 'http://localhost:8080';
 	}
 }
 

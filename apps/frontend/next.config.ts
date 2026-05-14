@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
-const backendOrigin = (process.env.BACKEND_ORIGIN || process.env.NEXT_PUBLIC_SITE_API_ORIGIN || 'http://localhost:8080')
-  .replace(/\/+$/, '');
+const defaultBackendOrigin =
+  process.env.NODE_ENV === 'production'
+    ? 'https://benuatech.web.id'
+    : 'http://localhost:8080';
+
+const backendOrigin = (
+  process.env.BACKEND_ORIGIN ||
+  process.env.NEXT_PUBLIC_SITE_API_ORIGIN ||
+  defaultBackendOrigin
+).replace(/\/+$/, '');
 
 const nextConfig: NextConfig = {
   images: {
