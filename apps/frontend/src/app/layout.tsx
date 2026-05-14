@@ -4,6 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Pondok Pesantren Tahfidzul Qur'an Al-Maa - Parung, Bogor",
   description: "Website resmi Pondok Pesantren Tahfidzul Qur'an Al-Maa Parung, Bogor. Informasi profil, program, dan pendaftaran santri baru.",
+  icons: {
+    icon: "/assets/img/logo-alama.jpg",
+    shortcut: "/assets/img/logo-alama.jpg",
+    apple: "/assets/img/logo-alama.jpg",
+  },
 };
 
 import { ToastProvider } from "@/components/Toast";
