@@ -482,6 +482,10 @@ export default function LandingPage() {
                   />
                   <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,250,252,0.74)_0%,rgba(248,250,252,0.5)_18%,rgba(248,250,252,0.18)_34%,rgba(255,255,255,0.02)_52%,rgba(255,255,255,0)_72%)] sm:bg-[linear-gradient(94deg,rgba(248,250,252,0.68)_0%,rgba(248,250,252,0.42)_20%,rgba(248,250,252,0.14)_38%,rgba(255,255,255,0)_62%)]" />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.08)_0%,rgba(15,23,42,0.03)_34%,rgba(15,23,42,0.16)_100%)]" />
+                  <div className="pointer-events-none absolute right-[-8%] top-[13%] hidden h-72 w-72 rounded-full border border-white/45 bg-white/8 backdrop-blur-[2px] lg:block" />
+                  <div className="pointer-events-none absolute right-[12%] top-[24%] hidden h-28 w-28 rounded-full border border-sky-200/70 bg-sky-100/12 lg:block" />
+                  <div className="pointer-events-none absolute bottom-[18%] right-[9%] hidden h-px w-48 bg-gradient-to-r from-transparent via-white/85 to-transparent lg:block" />
+                  <div className="pointer-events-none absolute bottom-[18%] right-[9%] hidden h-48 w-px bg-gradient-to-b from-white/10 via-white/70 to-transparent lg:block" />
 
                   <div className="container relative z-10 mx-auto max-w-6xl px-4 pb-16 pt-10 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-24">
                     <div className="grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
@@ -492,7 +496,7 @@ export default function LandingPage() {
                         className="max-w-3xl"
                       >
                         <div className="lg:max-w-[42rem]">
-                          <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-sky-200/90 bg-white/88 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-sky-700 shadow-sm shadow-sky-100/80 sm:text-[11px]">
+                          <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-sky-200/90 bg-white/90 px-4 py-2 text-[10px] font-black uppercase tracking-[0.28em] text-sky-700 shadow-[0_12px_30px_-20px_rgba(56,189,248,0.45)] sm:text-[11px]">
                             <Sparkles size={14} />
                             Al-Maa Parung
                           </span>
@@ -505,13 +509,13 @@ export default function LandingPage() {
                           <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
                             <Link
                               href={slide.button_url || '/psb'}
-                              className="inline-flex items-center justify-center gap-2 self-start rounded-full bg-gradient-to-r from-sky-500 via-sky-500 to-cyan-400 px-5 py-3 text-xs font-bold text-white shadow-[0_20px_44px_-22px_rgba(56,189,248,0.5)] transition-all hover:-translate-y-1 hover:brightness-105 sm:px-8 sm:py-4 sm:text-sm"
+                              className="inline-flex items-center justify-center gap-2 self-start rounded-full bg-gradient-to-r from-sky-500 via-sky-500 to-cyan-400 px-5 py-3 text-xs font-bold text-white shadow-[0_22px_48px_-22px_rgba(56,189,248,0.52)] ring-1 ring-white/25 transition-all hover:-translate-y-1 hover:brightness-105 sm:px-8 sm:py-4 sm:text-sm"
                             >
                               {slide.button_text || 'Lihat Info PSB'} <ArrowRight size={16} />
                             </Link>
                             <Link
                               href="/program"
-                              className="inline-flex items-center justify-center gap-2 self-start rounded-full border border-sky-200 bg-white/92 px-5 py-3 text-xs font-bold text-sky-700 backdrop-blur-md transition-all hover:bg-sky-50 sm:px-8 sm:py-4 sm:text-sm"
+                              className="inline-flex items-center justify-center gap-2 self-start rounded-full border border-sky-200 bg-white/94 px-5 py-3 text-xs font-bold text-sky-700 shadow-[0_16px_34px_-24px_rgba(15,23,42,0.18)] transition-all hover:-translate-y-0.5 hover:bg-sky-50 sm:px-8 sm:py-4 sm:text-sm"
                             >
                               Lihat Program
                             </Link>
@@ -534,9 +538,19 @@ export default function LandingPage() {
                         initial={{ opacity: 0, y: 28 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.16 }}
-                        className="hidden lg:block"
+                        className="hidden lg:flex lg:justify-end"
                       >
-                        <div className="h-[420px]" />
+                        <div className="mt-16 flex max-w-[240px] flex-col gap-3">
+                          <div className="rounded-[1.6rem] border border-white/50 bg-white/72 p-4 shadow-[0_22px_60px_-36px_rgba(59,130,246,0.3)] backdrop-blur-sm">
+                            <p className="text-[10px] font-black uppercase tracking-[0.24em] text-sky-600">Tahfidz</p>
+                            <p className="mt-2 text-2xl font-black text-slate-900">20 Juz</p>
+                            <p className="mt-2 text-sm leading-6 text-slate-600">Target hafalan bertahap dengan murajaah yang dijaga rutin.</p>
+                          </div>
+                          <div className="ml-auto rounded-[1.4rem] border border-white/45 bg-slate-950/78 px-4 py-3 text-white shadow-[0_22px_60px_-36px_rgba(15,23,42,0.55)] backdrop-blur-sm">
+                            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-sky-200/90">PSB</p>
+                            <p className="mt-2 text-sm font-semibold">SMP - SMK</p>
+                          </div>
+                        </div>
                       </motion.div>
                     </div>
                   </div>
