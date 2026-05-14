@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PublicLayout from '@/components/PublicLayout';
 import { getCampaigns, Campaign, resolveDisplayImageUrl } from '@/lib/api';
+import { buildCampaignDetailHref, featuredOpenDonation } from '@/lib/donations';
 import {
   Heart,
   Activity,
@@ -14,22 +15,6 @@ import {
   PaintBucket,
   Target,
 } from 'lucide-react';
-
-const featuredOpenDonation = {
-  title: 'Wakaf Cat Tembok untuk Ruang Kelas Penghafal Al-Quran',
-  target: 15000000,
-  whatsappUrl: 'https://wa.me/6281932506078',
-  contactLabel: '0819 3250 6078',
-  posterImage: '/assets/img/donasi/wakaf-cat-tembok-brosur.jpeg',
-  coverImage: '/assets/img/donasi/wakaf-cat-tembok-gedung.jpeg',
-  summary:
-    'Open donasi baru untuk membantu pengecatan ruang kelas santri agar lebih nyaman, layak, dan penuh semangat belajar.',
-  points: [
-    'Bukan sekadar cat, tapi amal jariyah yang hidup bersama setiap ayat yang dihafal.',
-    'Difokuskan untuk ruang kelas para santri penghafal Al-Quran di Pondok Pesantren Al-Maa Parung Bogor.',
-    'Target penggalangan dana sebesar Rp 15.000.000.',
-  ],
-};
 
 export default function DonationsPage() {
   const [campaigns, setCampaigns] = useState<Campaign[]>([]);
@@ -73,6 +58,12 @@ export default function DonationsPage() {
                 tapi bagian dari amal jariyah yang terus mengalir.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
+                <Link
+                  href={`/donations/${featuredOpenDonation.slug}`}
+                  className="inline-flex items-center gap-2 rounded-[1rem] bg-slate-900 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
+                >
+                  Lihat Halaman Donasi <ArrowRight size={16} />
+                </Link>
                 <a
                   href={featuredOpenDonation.whatsappUrl}
                   target="_blank"
@@ -176,6 +167,12 @@ export default function DonationsPage() {
               ))}
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
+              <Link
+                href={`/donations/${featuredOpenDonation.slug}`}
+                className="inline-flex items-center gap-2 rounded-[1rem] bg-slate-900 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
+              >
+                Buka Detail Donasi <ArrowRight size={16} />
+              </Link>
               <a
                 href={featuredOpenDonation.whatsappUrl}
                 target="_blank"
@@ -265,6 +262,7 @@ export default function DonationsPage() {
                       )
                     : 0;
                 const imageUrl = resolveDisplayImageUrl(campaign.image_url);
+                const detailHref = buildCampaignDetailHref(campaign);
 
                 return (
                   <article
@@ -320,16 +318,16 @@ export default function DonationsPage() {
 
                       <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                         <Link
-                          href="/kontak"
+                          href={detailHref}
                           className="inline-flex flex-1 items-center justify-center gap-2 rounded-[1rem] bg-sky-500 px-4 py-3 text-sm font-bold text-white transition hover:bg-sky-600"
                         >
-                          Donasi Sekarang <ArrowRight size={16} />
+                          Lihat Detail <ArrowRight size={16} />
                         </Link>
                         <Link
-                          href="/profil"
+                          href="/kontak"
                           className="inline-flex items-center justify-center rounded-[1rem] border border-slate-200 px-4 py-3 text-sm font-bold text-slate-700 transition hover:border-sky-200 hover:text-sky-700"
                         >
-                          Tentang Pondok
+                          Hubungi Admin
                         </Link>
                       </div>
                     </div>
