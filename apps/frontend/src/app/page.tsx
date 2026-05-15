@@ -476,7 +476,7 @@ export default function LandingPage() {
             const slideImage = resolveDisplayImageUrl(slide.image_url || '/assets/img/gedung.webp');
             return (
               <SwiperSlide key={slide.id}>
-                <div className="relative min-h-[560px] overflow-hidden sm:min-h-[620px] lg:min-h-[710px]">
+                <div className="relative min-h-[520px] overflow-hidden sm:min-h-[620px] lg:min-h-[710px]">
                   <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{ backgroundImage: `url('${slideImage}')` }}
@@ -488,7 +488,7 @@ export default function LandingPage() {
                   <div className="pointer-events-none absolute bottom-[18%] right-[9%] hidden h-px w-48 bg-gradient-to-r from-transparent via-white/85 to-transparent lg:block" />
                   <div className="pointer-events-none absolute bottom-[18%] right-[9%] hidden h-48 w-px bg-gradient-to-b from-white/10 via-white/70 to-transparent lg:block" />
 
-                  <div className="container relative z-10 mx-auto max-w-6xl px-4 pb-14 pt-10 sm:pb-16 sm:pt-14 lg:pb-20 lg:pt-20">
+                  <div className="container relative z-10 mx-auto max-w-6xl px-4 pb-12 pt-8 sm:pb-16 sm:pt-14 lg:pb-20 lg:pt-20">
                     <div className="grid items-center gap-8 lg:grid-cols-[1.08fr_0.92fr]">
                       <motion.div
                         initial={{ opacity: 0, y: 24 }}
@@ -501,31 +501,31 @@ export default function LandingPage() {
                             <Sparkles size={14} />
                             Al-Maa Parung
                           </span>
-                          <h1 className="mt-4 line-clamp-3 max-w-[19ch] text-balance text-[2.45rem] font-black leading-[0.96] tracking-[-0.05em] text-slate-950 [text-shadow:0_10px_26px_rgba(255,255,255,0.28)] sm:mt-6 sm:text-5xl md:text-[3.65rem] lg:text-[4rem]">
+                          <h1 className="mt-4 line-clamp-3 max-w-[19ch] text-balance text-[2.1rem] font-black leading-[0.96] tracking-[-0.05em] text-slate-950 [text-shadow:0_10px_26px_rgba(255,255,255,0.28)] sm:mt-6 sm:text-5xl md:text-[3.65rem] lg:text-[4rem]">
                             {slide.title}
                           </h1>
-                          <p className="mt-4 line-clamp-2 max-w-[32rem] text-sm font-medium leading-7 text-slate-800 sm:mt-5 sm:text-base md:line-clamp-3 md:text-lg">
+                          <p className="mt-3 line-clamp-3 max-w-[32rem] text-[13px] font-medium leading-6 text-slate-800 sm:mt-5 sm:text-base md:line-clamp-3 md:text-lg">
                             {slide.subtitle}
                           </p>
-                          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+                          <div className="mt-5 flex flex-col gap-3 sm:mt-8 sm:flex-row">
                             <Link
                               href={slide.button_url || '/psb'}
-                              className="inline-flex items-center justify-center gap-2 self-start rounded-full bg-gradient-to-r from-sky-500 via-sky-500 to-cyan-400 px-5 py-3 text-xs font-bold text-white shadow-[0_22px_48px_-22px_rgba(56,189,248,0.52)] ring-1 ring-white/25 transition-all hover:-translate-y-1 hover:brightness-105 sm:px-8 sm:py-4 sm:text-sm"
+                              className="inline-flex w-full items-center justify-center gap-2 self-start rounded-full bg-gradient-to-r from-sky-500 via-sky-500 to-cyan-400 px-5 py-3 text-xs font-bold text-white shadow-[0_22px_48px_-22px_rgba(56,189,248,0.52)] ring-1 ring-white/25 transition-all hover:-translate-y-1 hover:brightness-105 sm:w-auto sm:px-8 sm:py-4 sm:text-sm"
                             >
                               {slide.button_text || 'Lihat PSB'} <ArrowRight size={16} />
                             </Link>
                             <Link
                               href="/program"
-                              className="inline-flex items-center justify-center gap-2 self-start rounded-full border border-sky-200 bg-white/94 px-5 py-3 text-xs font-bold text-sky-700 shadow-[0_16px_34px_-24px_rgba(15,23,42,0.18)] transition-all hover:-translate-y-0.5 hover:bg-sky-50 sm:px-8 sm:py-4 sm:text-sm"
+                              className="inline-flex w-full items-center justify-center gap-2 self-start rounded-full border border-sky-200 bg-white/94 px-5 py-3 text-xs font-bold text-sky-700 shadow-[0_16px_34px_-24px_rgba(15,23,42,0.18)] transition-all hover:-translate-y-0.5 hover:bg-sky-50 sm:w-auto sm:px-8 sm:py-4 sm:text-sm"
                             >
                               Buka Program
                             </Link>
                           </div>
-                          <div className="mt-8 flex flex-wrap gap-3">
-                            {learningPillars.slice(0, 3).map((pillar) => (
+                          <div className="mt-6 flex flex-wrap gap-2.5 sm:mt-8 sm:gap-3">
+                            {learningPillars.slice(0, 2).map((pillar) => (
                               <span
                                 key={pillar.title}
-                                className="inline-flex items-center gap-2 rounded-full border border-sky-100/90 bg-white/88 px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm shadow-sky-100/60"
+                                className="inline-flex items-center gap-2 rounded-full border border-sky-100/90 bg-white/88 px-3 py-2 text-[11px] font-semibold text-slate-700 shadow-sm shadow-sky-100/60 sm:px-4 sm:text-xs"
                               >
                                 <span className="text-sky-400">{pillar.icon}</span>
                                 {pillar.title}
@@ -565,14 +565,14 @@ export default function LandingPage() {
 
         <div className="relative z-20 -mt-16 px-4 lg:-mt-12">
           <div className="container mx-auto max-w-6xl">
-            <div className="grid gap-4 rounded-[2.1rem] border border-white/60 bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(248,250,252,0.92)_100%)] p-5 shadow-[0_30px_70px_-35px_rgba(15,23,42,0.32)] backdrop-blur-xl md:grid-cols-4 md:p-6">
+            <div className="grid grid-cols-2 gap-3 rounded-[2.1rem] border border-white/60 bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(248,250,252,0.92)_100%)] p-4 shadow-[0_30px_70px_-35px_rgba(15,23,42,0.32)] backdrop-blur-xl md:grid-cols-4 md:gap-4 md:p-6">
               {institutionFacts.map((fact) => (
-                <div key={fact.label} className="rounded-[1.5rem] border border-slate-100/90 bg-white/95 px-5 py-4 shadow-[0_16px_36px_-30px_rgba(15,23,42,0.18)]">
-                  <div className="mb-3 inline-flex rounded-2xl bg-blue-50 p-3 text-blue-600 ring-1 ring-blue-100">
+                <div key={fact.label} className="rounded-[1.35rem] border border-slate-100/90 bg-white/95 px-4 py-4 shadow-[0_16px_36px_-30px_rgba(15,23,42,0.18)] md:rounded-[1.5rem] md:px-5">
+                  <div className="mb-3 inline-flex rounded-2xl bg-blue-50 p-2.5 text-blue-600 ring-1 ring-blue-100 md:p-3">
                     {fact.icon}
                   </div>
                   <p className="text-[10px] font-black uppercase tracking-[0.24em] text-slate-400">{fact.label}</p>
-                  <p className="mt-2 text-sm font-bold text-slate-800">{fact.value}</p>
+                  <p className="mt-2 text-[13px] font-bold leading-5 text-slate-800 md:text-sm">{fact.value}</p>
                 </div>
               ))}
             </div>
@@ -589,8 +589,8 @@ export default function LandingPage() {
             variants={fadeUpVariant}
             className="group overflow-hidden rounded-[1.8rem] border border-sky-200/80 bg-[linear-gradient(90deg,#f0f9ff_0%,#ffffff_48%,#ecfeff_100%)] shadow-[0_22px_50px_-34px_rgba(14,165,233,0.24)]"
           >
-            <div className="grid items-center gap-5 px-4 py-4 sm:px-6 sm:py-5 lg:grid-cols-[1fr_auto] lg:px-7">
-              <div className="flex min-w-0 items-center gap-4">
+            <div className="grid items-center gap-4 px-4 py-4 sm:px-6 sm:py-5 lg:grid-cols-[1fr_auto] lg:px-7">
+              <div className="flex min-w-0 items-start gap-4">
                 <div className="relative hidden h-20 w-16 shrink-0 overflow-hidden rounded-[1.1rem] border border-white/70 bg-white shadow-[0_18px_34px_-26px_rgba(15,23,42,0.28)] sm:block">
                   <Image
                     src={featuredOpenDonation.posterImage}
@@ -605,10 +605,10 @@ export default function LandingPage() {
                     <HeartHandshake size={14} />
                     Open Donasi
                   </span>
-                  <h2 className="mt-3 max-w-3xl text-lg font-black leading-tight tracking-[-0.03em] text-slate-950 md:text-[1.6rem]">
+                  <h2 className="mt-3 max-w-3xl text-base font-black leading-tight tracking-[-0.03em] text-slate-950 sm:text-lg md:text-[1.6rem]">
                     {featuredOpenDonation.title}
                   </h2>
-                  <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+                  <p className="mt-2 max-w-3xl text-[13px] leading-5 text-slate-600 sm:text-sm sm:leading-6">
                     {featuredOpenDonation.summary}
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2.5">
@@ -621,10 +621,10 @@ export default function LandingPage() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-3 lg:items-end">
+              <div className="flex flex-col gap-2.5 lg:items-end">
                 <Link
                   href={`/donations/${featuredOpenDonation.slug}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-5 py-3 text-sm font-bold text-white shadow-[0_18px_40px_-24px_rgba(14,165,233,0.45)] transition-all hover:-translate-y-0.5 hover:brightness-105"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-5 py-3 text-sm font-bold text-white shadow-[0_18px_40px_-24px_rgba(14,165,233,0.45)] transition-all hover:-translate-y-0.5 hover:brightness-105 lg:w-auto"
                 >
                   Lihat Open Donasi <ArrowRight size={16} />
                 </Link>
@@ -632,11 +632,11 @@ export default function LandingPage() {
                   href={featuredOpenDonation.whatsappUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-sky-200 bg-white px-5 py-3 text-sm font-bold text-sky-700 transition-all hover:-translate-y-0.5 hover:bg-sky-50"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-sky-200 bg-white px-5 py-3 text-sm font-bold text-sky-700 transition-all hover:-translate-y-0.5 hover:bg-sky-50 lg:w-auto"
                 >
                   Hubungi Donasi
                 </a>
-                <p className="max-w-xs text-xs font-medium leading-5 text-slate-500 lg:text-right">
+                <p className="hidden max-w-xs text-xs font-medium leading-5 text-slate-500 lg:block lg:text-right">
                   Banner singkat ini mengarah ke halaman detail campaign dengan informasi dan ajakan donasi lengkap.
                 </p>
               </div>
@@ -654,7 +654,7 @@ export default function LandingPage() {
                 <Compass size={14} />
                 Profil Singkat
               </span>
-              <h2 className="mt-5 text-[2.55rem] font-black leading-[1.02] tracking-[-0.03em] text-slate-900 md:mt-6 md:text-[3.1rem]">
+              <h2 className="mt-5 text-[2.15rem] font-black leading-[1.02] tracking-[-0.03em] text-slate-900 md:mt-6 md:text-[3.1rem]">
                 Al-Maa membangun iklim belajar Qurani yang hangat, tertib, dan bertumbuh.
               </h2>
               <p className="mt-5 text-[15px] leading-8 text-slate-600 md:mt-6 md:text-lg">
@@ -1204,9 +1204,9 @@ export default function LandingPage() {
           >
             <div>
               <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-600">Akses Cepat</p>
-              <h2 className="mt-3 max-w-3xl text-3xl font-black leading-[1.02] tracking-[-0.03em] text-slate-900 md:text-[3.1rem]">
-                Lanjutkan ke halaman yang paling sering dicari pengunjung.
-              </h2>
+                  <h2 className="mt-3 max-w-3xl text-[2rem] font-black leading-[1.02] tracking-[-0.03em] text-slate-900 md:text-[3.1rem]">
+                    Lanjutkan ke halaman yang paling sering dicari pengunjung.
+                  </h2>
               <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-500 md:text-base">
                 Profil, program, fasilitas, dan PSB kami kumpulkan di sini agar perjalanan menjelajah situs terasa lebih ringkas.
               </p>
@@ -1257,7 +1257,7 @@ export default function LandingPage() {
               <div className="grid gap-0 lg:grid-cols-[1.08fr_0.92fr]">
                 <div className="p-7 sm:p-8 lg:p-10">
                   <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-200">Langkah Berikutnya</p>
-                  <h2 className="mt-4 max-w-3xl text-4xl font-black tracking-tight text-white md:text-6xl">
+                  <h2 className="mt-4 max-w-3xl text-[2.3rem] font-black leading-[1.02] tracking-tight text-white md:text-6xl">
                     Siap melangkah lebih dekat ke Al-Maa?
                   </h2>
                   <p className="mt-6 max-w-2xl text-base leading-8 text-blue-50/88 md:text-lg">
@@ -1279,16 +1279,16 @@ export default function LandingPage() {
                     ))}
                   </div>
 
-                  <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                  <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                     <Link
                       href="/psb"
-                      className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-black text-blue-800 shadow-[0_24px_55px_-28px_rgba(255,255,255,0.42)] transition-all hover:-translate-y-1 hover:bg-blue-50"
+                      className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-black text-blue-800 shadow-[0_24px_55px_-28px_rgba(255,255,255,0.42)] transition-all hover:-translate-y-1 hover:bg-blue-50 sm:w-auto"
                     >
                       Lihat PSB <ArrowRight size={18} />
                     </Link>
                     <Link
                       href="/profil"
-                      className="inline-flex items-center justify-center gap-3 rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur-sm transition-all hover:bg-white/15"
+                      className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur-sm transition-all hover:bg-white/15 sm:w-auto"
                     >
                       Jelajahi profil
                     </Link>
