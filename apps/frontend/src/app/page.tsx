@@ -655,13 +655,11 @@ export default function LandingPage() {
                 Profil Singkat
               </span>
               <h2 className="mt-5 text-[2.55rem] font-black leading-[1.02] tracking-[-0.03em] text-slate-900 md:mt-6 md:text-[3.1rem]">
-                Al-Maa hadir sebagai ruang pembinaan Qurani yang hangat, tertib, dan terarah.
+                Al-Maa membangun iklim belajar Qurani yang hangat, tertib, dan bertumbuh.
               </h2>
               <p className="mt-5 text-[15px] leading-8 text-slate-600 md:mt-6 md:text-lg">
-                Pondok Pesantren Tahfidzul Qur&apos;an Al-Maa berlokasi di Jl. H. Mawi, Gg. Omega,
-                Kp. Jati Waru, RT 003/RW 002, Waru, Kec. Parung, Kab. Bogor, Jawa Barat 16330.
-                Pembinaannya menekankan tahfidz, adab, ilmu syar&apos;i dasar, dan suasana belajar
-                yang membantu santri tumbuh mandiri serta siap memberi manfaat.
+                Berlokasi di Parung, Bogor, Al-Maa memadukan tahfidz, adab, ilmu syar&apos;i dasar,
+                dan ritme belajar yang membantu santri tumbuh mandiri sekaligus siap memberi manfaat.
               </p>
               <div className="mt-7 flex flex-wrap gap-3 md:mt-8">
                 <span className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-4 py-3 text-sm font-bold text-white md:px-5">
@@ -687,7 +685,7 @@ export default function LandingPage() {
             >
               <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-600">Arah Pembinaan</p>
               <h3 className="mt-3 text-2xl font-black tracking-tight text-slate-900">
-                Fokus utama pondok dirancang agar santri tumbuh utuh.
+                Pembinaan diarahkan agar santri tumbuh utuh.
               </h3>
               <div className="mt-6 space-y-4">
                 {[
@@ -722,8 +720,8 @@ export default function LandingPage() {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant} className="relative z-10">
               <PublicSectionIntro
                 eyebrow="Program Inti"
-                title="Program unggulan yang menjadi fondasi pembinaan santri"
-                description="Pembinaan utama Al-Maa menguatkan hafalan, adab, wawasan Islam, dan kesiapan hidup santri secara seimbang."
+                title="Program utama yang membentuk ritme belajar santri"
+                description="Tahfidz, adab, wawasan Islam, dan kesiapan hidup disusun berjalan seimbang setiap hari."
               />
               <div className="mt-7 grid gap-4 sm:mt-8 sm:grid-cols-2">
                 {featuredProgramCards.map((program) => (
@@ -828,8 +826,8 @@ export default function LandingPage() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant} className="relative z-10">
             <PublicSectionIntro
               eyebrow="Potret Kegiatan"
-              title="Sekilas kehidupan belajar dan pembinaan di Al-Maa"
-              description="Lihat suasana belajar, ibadah, kebersamaan, dan ritme keseharian santri melalui dokumentasi kegiatan pondok."
+              title="Lihat ritme belajar dan kebersamaan santri di Al-Maa"
+              description="Dokumentasi ini memberi gambaran suasana belajar, ibadah, dan keseharian pondok."
               actionHref="/galeri"
               actionLabel="Lihat galeri lengkap"
               theme="dark"
@@ -925,11 +923,10 @@ export default function LandingPage() {
               <div>
                 <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-200">Al-Maa dalam Angka</p>
                 <h2 className="mt-3 text-2xl font-black tracking-tight md:text-4xl">
-                  Komitmen pembinaan yang tumbuh konsisten dan terarah.
+                  Angka-angka ringkas yang menggambarkan arah pembinaan Al-Maa.
                 </h2>
                 <p className="mt-4 max-w-xl text-sm leading-7 text-blue-50/85 md:text-base">
-                  Setelah melihat profil dan program utama, berikut gambaran singkat tentang target hafalan,
-                  jenjang pendidikan, serta ritme penerimaan santri di Al-Maa.
+                  Mulai dari target hafalan, jenjang pendidikan, hingga biaya formulir yang paling sering dicari pengunjung.
                 </p>
                 <Link
                   href="/profil"
@@ -962,8 +959,8 @@ export default function LandingPage() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant}>
             <PublicSectionIntro
               eyebrow="Video Pilihan"
-              title="Dokumentasi video kegiatan dan pembinaan Al-Maa"
-              description="Beberapa video pilihan untuk melihat suasana pondok, kegiatan santri, dan pembinaan yang berjalan di Al-Maa."
+              title="Video pilihan untuk melihat suasana Al-Maa dari dekat"
+              description="Beberapa tayangan singkat yang memperlihatkan kegiatan, pembinaan, dan kehidupan pondok."
               actionHref="/videos"
               actionLabel="Lihat semua video"
               theme="dark"
@@ -1038,7 +1035,7 @@ export default function LandingPage() {
             <PublicSectionIntro
               eyebrow="Berita Pondok"
               title="Kabar terbaru dari lingkungan Al-Maa"
-              description="Lanjutkan dengan berita, kabar kegiatan, dan pengumuman terbaru dari lingkungan pondok."
+              description="Ikuti pengumuman, cerita kegiatan, dan perkembangan terbaru dari pondok."
               actionHref="/news"
               actionLabel="Semua berita"
             />
@@ -1078,8 +1075,8 @@ export default function LandingPage() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant}>
             <PublicSectionIntro
               eyebrow="Agenda Mendatang"
-              title="Agenda terdekat di lingkungan Al-Maa"
-              description="Pantau kegiatan pondok, jadwal penting, dan informasi acara yang akan datang."
+              title="Agenda terdekat yang sedang disiapkan pondok"
+              description="Pantau jadwal penting dan kegiatan yang akan berlangsung dalam waktu dekat."
               actionHref="/agendas"
               actionLabel="Lihat semua agenda"
             />
@@ -1208,11 +1205,10 @@ export default function LandingPage() {
             <div>
               <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-600">Akses Cepat</p>
               <h2 className="mt-3 max-w-3xl text-3xl font-black leading-[1.02] tracking-[-0.03em] text-slate-900 md:text-[3.1rem]">
-                Setelah melihat gambaran pondok, lanjutkan ke halaman yang paling kamu butuhkan.
+                Lanjutkan ke halaman yang paling sering dicari pengunjung.
               </h2>
               <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-500 md:text-base">
-                Bagian ini jadi jalur cepat ke profil, program, fasilitas, dan informasi pendaftaran tanpa
-                membuat pengunjung harus kembali ke menu utama.
+                Profil, program, fasilitas, dan PSB kami kumpulkan di sini agar perjalanan menjelajah situs terasa lebih ringkas.
               </p>
             </div>
             <Link
@@ -1262,11 +1258,10 @@ export default function LandingPage() {
                 <div className="p-7 sm:p-8 lg:p-10">
                   <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-200">Langkah Berikutnya</p>
                   <h2 className="mt-4 max-w-3xl text-4xl font-black tracking-tight text-white md:text-6xl">
-                    Siap mengenal Al-Maa lebih jauh?
+                    Siap melangkah lebih dekat ke Al-Maa?
                   </h2>
                   <p className="mt-6 max-w-2xl text-base leading-8 text-blue-50/88 md:text-lg">
-                    Mulai dari profil pondok, program, dan fasilitas, lalu lanjutkan ke halaman pendaftaran
-                    saat Anda sudah merasa cocok dengan arah pembinaannya.
+                    Mulai dari profil, program, dan fasilitas, lalu lanjutkan ke PSB saat arah pembinaannya terasa cocok untuk keluarga Anda.
                   </p>
 
                   <div className="mt-8 flex flex-wrap gap-3">
