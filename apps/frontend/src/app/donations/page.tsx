@@ -5,7 +5,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PublicLayout from '@/components/PublicLayout';
 import { getCampaigns, Campaign, resolveDisplayImageUrl } from '@/lib/api';
-import { buildCampaignDetailHref, featuredOpenDonation } from '@/lib/donations';
+import {
+  buildCampaignDetailHref,
+  featuredOpenDonation,
+  findFeaturedDonationCampaign,
+} from '@/lib/donations';
 import {
   Heart,
   Activity,
@@ -34,6 +38,10 @@ export default function DonationsPage() {
 
     fetchCampaigns();
   }, []);
+
+  const featuredCampaign = findFeaturedDonationCampaign(campaigns);
+  const featuredTargetAmount = featuredCampaign?.target_amount ?? featuredOpenDonation.target;
+  const visibleCampaigns = campaigns.filter((campaign) => campaign.id !== featuredCampaign?.id);
 
   return (
     <PublicLayout>
@@ -92,7 +100,7 @@ export default function DonationsPage() {
                     Target Donasi
                   </p>
                   <p className="mt-1 text-2xl font-black text-slate-900">
-                    Rp {featuredOpenDonation.target.toLocaleString('id-ID')}
+                    Rp {featuredTargetAmount.toLocaleString('id-ID')}
                   </p>
                 </div>
               </div>
@@ -275,9 +283,9 @@ export default function DonationsPage() {
                 />
               ))}
             </div>
-          ) : campaigns.length > 0 ? (
+          ) : visibleCampaigns.length > 0 ? (
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-              {campaigns.map((campaign) => {
+              {visibleCampaigns.map((campaign) => {
                 const progress =
                   campaign.target_amount > 0
                     ? Math.min(

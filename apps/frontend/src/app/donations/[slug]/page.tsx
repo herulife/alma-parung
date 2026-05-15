@@ -8,6 +8,7 @@ import PublicLayout from '@/components/PublicLayout';
 import { Campaign, getCampaigns, resolveDisplayImageUrl } from '@/lib/api';
 import {
   buildCampaignDetailHref,
+  findFeaturedDonationCampaign,
   featuredOpenDonation,
   parseCampaignIdFromSlug,
 } from '@/lib/donations';
@@ -33,20 +34,30 @@ export default function DonationDetailPage() {
   const [isLoading, setIsLoading] = useState(slug !== featuredOpenDonation.slug);
 
   useEffect(() => {
-    if (!slug || slug === featuredOpenDonation.slug) {
-      setIsLoading(false);
-      return;
-    }
-
     async function fetchCampaignDetail() {
-      setIsLoading(true);
+      if (!slug) {
+        setIsLoading(false);
+        return;
+      }
+
+      if (slug !== featuredOpenDonation.slug) {
+        setIsLoading(true);
+      }
+
       try {
         const data = await getCampaigns({ activeOnly: true });
-        setCampaigns(data.filter((item) => item.is_active));
+        const activeCampaigns = data.filter((item) => item.is_active);
+        setCampaigns(activeCampaigns);
+
+        if (slug === featuredOpenDonation.slug) {
+          setCampaign(findFeaturedDonationCampaign(activeCampaigns));
+          return;
+        }
+
         const campaignId = parseCampaignIdFromSlug(slug);
         const foundCampaign =
-          data.find((item) => item.id === campaignId) ??
-          data.find((item) => buildCampaignDetailHref(item).endsWith(slug));
+          activeCampaigns.find((item) => item.id === campaignId) ??
+          activeCampaigns.find((item) => buildCampaignDetailHref(item).endsWith(slug));
         setCampaign(foundCampaign ?? null);
       } catch (error) {
         console.error('Failed to fetch donation detail:', error);
@@ -59,20 +70,27 @@ export default function DonationDetailPage() {
     fetchCampaignDetail();
   }, [slug]);
 
-  const featuredProgress = featuredOpenDonation.target
+  const featuredCampaign = useMemo(
+    () => findFeaturedDonationCampaign(campaigns),
+    [campaigns]
+  );
+
+  const featuredCollectedAmount = featuredCampaign?.collected_amount ?? featuredOpenDonation.progressAmount;
+  const featuredTargetAmount = featuredCampaign?.target_amount ?? featuredOpenDonation.target;
+  const featuredProgress = featuredTargetAmount
     ? Math.min(
         100,
-        Math.round((featuredOpenDonation.progressAmount / featuredOpenDonation.target) * 100)
+        Math.round((featuredCollectedAmount / featuredTargetAmount) * 100)
       )
     : 0;
 
   const relatedCampaigns = useMemo(() => {
     if (slug === featuredOpenDonation.slug) {
-      return campaigns.slice(0, 3);
+      return campaigns.filter((item) => item.id !== featuredCampaign?.id).slice(0, 3);
     }
 
     return campaigns.filter((item) => item.id !== campaign?.id).slice(0, 3);
-  }, [campaign?.id, campaigns, slug]);
+  }, [campaign?.id, campaigns, featuredCampaign?.id, slug]);
 
   const featuredDonationSteps = [
     'Transfer donasi ke rekening BSI yang tertera di halaman ini.',
@@ -115,7 +133,7 @@ export default function DonationDetailPage() {
                       Target
                     </p>
                     <p className="mt-2 text-xl font-black text-slate-900">
-                      Rp {featuredOpenDonation.target.toLocaleString('id-ID')}
+                      Rp {featuredTargetAmount.toLocaleString('id-ID')}
                     </p>
                   </div>
                   <div className="rounded-[1.45rem] border border-slate-200 bg-white/92 p-4 shadow-[0_22px_50px_-34px_rgba(15,23,42,0.16)]">
@@ -253,7 +271,7 @@ export default function DonationDetailPage() {
                   <div className="mb-2 flex items-center justify-between text-[11px] font-bold uppercase tracking-[0.18em]">
                     <span className="text-slate-400">Terkumpul</span>
                     <span className="text-sky-700">
-                      Rp {featuredOpenDonation.progressAmount.toLocaleString('id-ID')}
+                      Rp {featuredCollectedAmount.toLocaleString('id-ID')}
                     </span>
                   </div>
                   <div className="h-3 overflow-hidden rounded-full bg-slate-100">
@@ -263,7 +281,7 @@ export default function DonationDetailPage() {
                     />
                   </div>
                   <div className="mt-2 text-right text-[11px] text-slate-500">
-                    Target Rp {featuredOpenDonation.target.toLocaleString('id-ID')}
+                    Target Rp {featuredTargetAmount.toLocaleString('id-ID')}
                   </div>
                 </div>
               </div>

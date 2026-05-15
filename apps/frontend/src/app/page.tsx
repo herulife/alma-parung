@@ -6,10 +6,12 @@ import Image from 'next/image';
 import {
   getNews,
   getAgendas,
+  getCampaigns,
   getGallery,
   getPublicSettingsMap,
   getPrograms,
   getVideos,
+  Campaign,
   News,
   Agenda,
   GalleryItem,
@@ -27,7 +29,7 @@ import { PublicEmptyState, PublicGridSkeleton } from '@/components/PublicState';
 import PublicSectionIntro from '@/components/PublicSectionIntro';
 import NewsCard from '@/components/NewsCard';
 import { parseWebsiteBuilderState } from '@/lib/website-builder';
-import { featuredOpenDonation } from '@/lib/donations';
+import { featuredOpenDonation, findFeaturedDonationCampaign } from '@/lib/donations';
 import {
   ArrowRight,
   BookOpen,
@@ -349,6 +351,7 @@ export default function LandingPage() {
   const [gallery, setGallery] = useState<GalleryItem[]>([]);
   const [videos, setVideos] = useState<Video[]>([]);
   const [programs, setPrograms] = useState<Program[]>([]);
+  const [campaigns, setCampaigns] = useState<Campaign[]>([]);
   const [settings, setSettings] = useState<SettingsMap>({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -410,13 +413,14 @@ export default function LandingPage() {
   useEffect(() => {
     async function fetchAll() {
       try {
-        const [newsData, agendasData, galleryData, videosData, programsData, settingsData] = await Promise.all([
+        const [newsData, agendasData, galleryData, videosData, programsData, settingsData, campaignsData] = await Promise.all([
           getNews(),
           getAgendas(),
           getGallery({ limit: 24, offset: 0 }),
           getVideos({ limit: 24, offset: 0 }),
           getPrograms(),
           getPublicSettingsMap(),
+          getCampaigns({ activeOnly: true }),
         ]);
 
         setNews(extractListItems(newsData).slice(0, 3));
@@ -424,6 +428,7 @@ export default function LandingPage() {
         setGallery(extractListItems(galleryData));
         setVideos(extractListItems(videosData));
         setPrograms(extractListItems(programsData));
+        setCampaigns(campaignsData.filter((campaign) => campaign.is_active));
         setSettings(settingsData || {});
       } catch (error) {
         console.error('Error fetching landing page data:', error);
@@ -438,6 +443,8 @@ export default function LandingPage() {
   const heroSlides = useMemo(() => parseHeroSlides(settings), [settings]);
   const canSlideHero = heroSlides.length > 1;
   const builderState = useMemo(() => parseWebsiteBuilderState(settings), [settings]);
+  const featuredCampaign = useMemo(() => findFeaturedDonationCampaign(campaigns), [campaigns]);
+  const featuredTargetAmount = featuredCampaign?.target_amount ?? featuredOpenDonation.target;
 
   if (builderState.enabled) {
     return (
@@ -613,7 +620,7 @@ export default function LandingPage() {
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2.5">
                     <span className="rounded-full border border-sky-100 bg-white px-3 py-2 text-xs font-bold text-slate-700">
-                      Target Rp {featuredOpenDonation.target.toLocaleString('id-ID')}
+                      Target Rp {featuredTargetAmount.toLocaleString('id-ID')}
                     </span>
                     <span className="rounded-full border border-cyan-100 bg-cyan-50 px-3 py-2 text-xs font-bold text-cyan-800">
                       {featuredOpenDonation.focus}

@@ -3,6 +3,7 @@ import type { Campaign } from '@/lib/api';
 export type FeaturedDonationDetail = {
   slug: string;
   title: string;
+  campaignSearchTerm: string;
   target: number;
   whatsappUrl: string;
   contactLabel: string;
@@ -22,6 +23,7 @@ export type FeaturedDonationDetail = {
 export const featuredOpenDonation: FeaturedDonationDetail = {
   slug: 'wakaf-cat-tembok',
   title: 'Wakaf Cat Tembok untuk Ruang Kelas Penghafal Al-Quran',
+  campaignSearchTerm: 'wakaf cat tembok',
   target: 15000000,
   whatsappUrl: 'https://wa.me/6281932506078',
   contactLabel: '0819 3250 6078',
@@ -55,6 +57,41 @@ export function slugifyDonationTitle(value: string) {
     .trim()
     .replace(/[-\s]+/g, '-')
     .replace(/^-+|-+$/g, '');
+}
+
+function normalizeDonationText(value: string) {
+  return value
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[^\w\s-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+export function findFeaturedDonationCampaign(
+  campaigns: Campaign[],
+  featured: FeaturedDonationDetail = featuredOpenDonation
+) {
+  const searchTerms = [
+    featured.campaignSearchTerm,
+    featured.slug.replace(/-/g, ' '),
+    featured.title,
+  ]
+    .map(normalizeDonationText)
+    .filter(Boolean)
+    .sort((a, b) => b.length - a.length);
+
+  return (
+    campaigns.find((campaign) => {
+      const normalizedTitle = normalizeDonationText(campaign.title);
+      const normalizedSlug = slugifyDonationTitle(campaign.title);
+
+      return (
+        normalizedSlug === featured.slug ||
+        searchTerms.some((term) => normalizedTitle.includes(term))
+      );
+    }) ?? null
+  );
 }
 
 export function buildCampaignDetailHref(campaign: Campaign) {
