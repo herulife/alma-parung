@@ -917,32 +917,38 @@ export default function LandingPage() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUpVariant}
-            className="overflow-hidden rounded-[2rem] border border-blue-900/70 bg-gradient-to-r from-blue-950 via-blue-900 to-teal-900 px-5 py-7 text-white shadow-[0_30px_80px_-35px_rgba(6,78,59,0.65)] md:rounded-[2.25rem] md:px-8 md:py-8"
+            className="overflow-hidden rounded-[2rem] border border-sky-200/80 bg-[linear-gradient(135deg,#f0f9ff_0%,#e0f2fe_42%,#ecfeff_100%)] px-5 py-7 text-slate-900 shadow-[0_26px_60px_-34px_rgba(14,165,233,0.24)] md:rounded-[2.25rem] md:px-8 md:py-8"
           >
             <div className="grid gap-8 lg:grid-cols-[1.1fr_1.9fr] lg:items-center">
               <div>
-                <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-200">Al-Maa dalam Angka</p>
+                <p className="text-[11px] font-black uppercase tracking-[0.28em] text-sky-700">Al-Maa dalam Angka</p>
                 <h2 className="mt-3 text-2xl font-black tracking-tight md:text-4xl">
                   Angka-angka ringkas yang menggambarkan arah pembinaan Al-Maa.
                 </h2>
-                <p className="mt-4 max-w-xl text-sm leading-7 text-blue-50/85 md:text-base">
+                <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600 md:text-base">
                   Mulai dari target hafalan, jenjang pendidikan, hingga biaya formulir yang paling sering dicari pengunjung.
                 </p>
                 <Link
                   href="/profil"
-                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-blue-900 transition-all hover:-translate-y-0.5"
+                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-slate-900"
                 >
                   Jelajahi profil <ArrowRight size={16} />
                 </Link>
               </div>
               <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-5">
-                {institutionHighlights.map((item) => (
-                  <div key={item.label} className="rounded-[1.35rem] border border-white/10 bg-black/10 px-4 py-4 backdrop-blur-sm md:rounded-[1.5rem] md:py-5">
-                    <div className="mb-3 inline-flex rounded-2xl bg-white/10 p-3 text-blue-200 md:mb-4">
+                {institutionHighlights.map((item, index) => (
+                  <div key={item.label} className={`rounded-[1.35rem] border px-4 py-4 backdrop-blur-sm md:rounded-[1.5rem] md:py-5 ${
+                    index === 0
+                      ? 'border-sky-300 bg-sky-600 text-white shadow-[0_20px_42px_-30px_rgba(14,165,233,0.45)]'
+                      : 'border-white/70 bg-white/78'
+                  }`}>
+                    <div className={`mb-3 inline-flex rounded-2xl p-3 md:mb-4 ${
+                      index === 0 ? 'bg-white/16 text-white' : 'bg-sky-50 text-sky-600'
+                    }`}>
                       {item.icon}
                     </div>
-                    <p className="text-2xl font-black tracking-tight text-white">{item.value}</p>
-                    <p className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-blue-100/80">{item.label}</p>
+                    <p className={`text-2xl font-black tracking-tight ${index === 0 ? 'text-white' : 'text-slate-900'}`}>{item.value}</p>
+                    <p className={`mt-1 text-xs font-bold uppercase tracking-[0.18em] ${index === 0 ? 'text-sky-100/90' : 'text-slate-500'}`}>{item.label}</p>
                   </div>
                 ))}
               </div>
@@ -951,10 +957,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#07131d_0%,#0d1b26_100%)] py-12 md:py-16">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.12),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(245,158,11,0.08),_transparent_22%)]" />
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/6 to-transparent" />
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f8fbff_0%,#edf6ff_100%)] py-12 md:py-16">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.10),_transparent_24%),radial-gradient(circle_at_bottom_right,_rgba(14,165,233,0.08),_transparent_22%)]" />
         <div className="container relative z-10 mx-auto max-w-6xl px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant}>
             <PublicSectionIntro
@@ -963,7 +967,6 @@ export default function LandingPage() {
               description="Beberapa tayangan singkat yang memperlihatkan kegiatan, pembinaan, dan kehidupan pondok."
               actionHref="/videos"
               actionLabel="Jelajahi video"
-              theme="dark"
             />
           </motion.div>
 
@@ -971,7 +974,7 @@ export default function LandingPage() {
             <PublicGridSkeleton
               count={3}
               className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3"
-              itemClassName="h-56 rounded-[1.75rem] bg-white/10"
+              itemClassName="h-56 rounded-[1.75rem]"
             />
           ) : videoSeries.length > 0 ? (
             <div className="mt-7 grid gap-4 md:mt-8 md:grid-cols-3">
@@ -981,7 +984,7 @@ export default function LandingPage() {
                   <Link
                     key={series.key}
                     href={`/videos/${series.slug}`}
-                    className="group overflow-hidden rounded-[1.7rem] border border-white/10 bg-white/[0.04] shadow-[0_24px_50px_-34px_rgba(0,0,0,0.45)] backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-blue-300/20 md:rounded-[1.9rem]"
+                    className="group overflow-hidden rounded-[1.7rem] border border-sky-100/80 bg-white shadow-[0_24px_50px_-34px_rgba(15,23,42,0.18)] transition-all hover:-translate-y-1 hover:border-sky-200 md:rounded-[1.9rem]"
                   >
                     <div className="relative h-52 overflow-hidden bg-slate-900 md:h-56">
                       {thumbnail ? (
@@ -1018,10 +1021,7 @@ export default function LandingPage() {
                 icon={PlayCircle}
                 title="Belum ada dokumentasi video"
                 description="Video kegiatan pondok akan tampil di bagian ini setelah dipublikasikan."
-                className="border-white/10 bg-white/6 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.6)] backdrop-blur-sm"
-                iconClassName="text-blue-200/70"
-                titleClassName="text-white"
-                descriptionClassName="text-slate-300"
+                className="bg-white shadow-[0_24px_50px_-34px_rgba(15,23,42,0.12)]"
               />
             </div>
           )}
