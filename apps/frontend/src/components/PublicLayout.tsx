@@ -546,11 +546,11 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
       <main>{children}</main>
 
       {/* ═══════════════════ FOOTER ═══════════════════ */}
-      <footer className="relative overflow-hidden border-t border-sky-200 bg-[linear-gradient(180deg,#f7fbff_0%,#e9f5ff_100%)] pb-8 pt-14 md:pt-16">
+      <footer className="relative overflow-hidden border-t border-sky-200 bg-[linear-gradient(180deg,#f8fbff_0%,#eaf5ff_100%)] pb-8 pt-12 md:pt-14">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.12),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(125,211,252,0.12),transparent_18%)]" />
         <div className="mx-auto max-w-6xl px-4 relative z-10">
           {/* Top: Brand + Social */}
-          <div className="flex flex-col gap-6 rounded-[1.85rem] border border-sky-100 bg-white/85 p-5 shadow-[0_28px_70px_-42px_rgba(59,130,246,0.14)] backdrop-blur-sm md:flex-row md:items-center md:justify-between md:rounded-[2.15rem] md:p-8">
+          <div className="flex flex-col gap-5 rounded-[1.7rem] border border-sky-100 bg-white/88 p-5 shadow-[0_28px_70px_-42px_rgba(59,130,246,0.14)] backdrop-blur-sm md:flex-row md:items-center md:justify-between md:rounded-[2rem] md:p-7">
             <div className="flex flex-col items-center gap-4 text-center md:flex-row md:items-center md:text-left">
               <div className="relative">
                 <div className="absolute inset-0 rounded-full bg-sky-300/30 blur-xl" />
@@ -565,59 +565,74 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
               </div>
               <div>
                 <p className="text-[10px] font-black uppercase tracking-[0.28em] text-sky-600/85">Pondok Pesantren Tahfidz</p>
-                <div className="mt-2 text-xl font-extrabold tracking-tight text-slate-900 md:text-[1.75rem]">{schoolName}</div>
+                <div className="mt-2 text-xl font-extrabold tracking-tight text-slate-900 md:text-[1.6rem]">{schoolName}</div>
                 <div className="mt-1 text-xs font-medium tracking-[0.16em] text-sky-600/80 md:text-sm">{welcomeText}</div>
-                <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
-                  Pondok Pesantren Tahfidz Al-Qur&apos;an yang berikhtiar membina santri dalam ilmu,
-                  adab, dan kesiapan berdakwah melalui lingkungan belajar yang tertib dan terarah.
+                <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600">
+                  Lingkungan belajar Qurani yang menumbuhkan ilmu, adab, dan kemandirian santri secara terarah.
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-center gap-3 md:max-w-sm md:justify-end">
-              {socialLinks.map((s) => (
-                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-sky-200 bg-sky-50 text-sky-700 transition-all hover:-translate-y-1 hover:border-sky-300 hover:bg-sky-100 hover:text-sky-800" aria-label={s.label}>
-                  {s.icon}
-                </a>
-              ))}
+            <div className="flex flex-col items-center gap-3 md:items-end">
+              <div className="rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-xs font-bold text-sky-700">
+                Kontak utama: {schoolPhone}
+              </div>
+              <div className="flex items-center justify-center gap-3 md:max-w-sm md:justify-end">
+                {socialLinks.map((s) => (
+                  <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-sky-200 bg-white text-sky-700 transition-all hover:-translate-y-1 hover:border-sky-300 hover:bg-sky-100 hover:text-sky-800" aria-label={s.label}>
+                    {s.icon}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Grid Footer */}
-          <div className="grid gap-4 py-8 md:grid-cols-2 md:gap-5 md:py-10 lg:grid-cols-4">
-            <div className="rounded-[1.55rem] border border-sky-100 bg-white/80 p-5 shadow-[0_22px_50px_-36px_rgba(59,130,246,0.12)] backdrop-blur-sm md:rounded-[1.7rem] md:p-6">
-              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-sky-600/85">Ringkasan Pondok</p>
+          <div className="grid gap-4 py-8 md:grid-cols-2 md:gap-5 md:py-10 lg:grid-cols-[1.05fr_1.2fr_0.95fr_0.8fr]">
+            <div className="rounded-[1.45rem] border border-sky-100 bg-white/82 p-5 shadow-[0_22px_50px_-36px_rgba(59,130,246,0.12)] backdrop-blur-sm md:rounded-[1.65rem] md:p-6">
+              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-sky-600/85">Tentang Al-Maa</p>
               <p className="text-sm leading-7 text-slate-600">
                 Al-Maa Parung menekankan pembinaan tahfidz, adab, ilmu syar&apos;i, dan suasana belajar yang tertib untuk membantu santri tumbuh lebih mandiri.
               </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                <span className="rounded-full border border-sky-100 bg-sky-50 px-3 py-2 text-[11px] font-bold text-sky-700">Tahfidz</span>
+                <span className="rounded-full border border-sky-100 bg-sky-50 px-3 py-2 text-[11px] font-bold text-sky-700">Adab</span>
+                <span className="rounded-full border border-sky-100 bg-sky-50 px-3 py-2 text-[11px] font-bold text-sky-700">SMP - SMK</span>
+              </div>
             </div>
-            <div className="rounded-[1.55rem] border border-sky-100 bg-white/80 p-5 shadow-[0_22px_50px_-36px_rgba(59,130,246,0.12)] backdrop-blur-sm md:rounded-[1.7rem] md:p-6">
+            <div className="rounded-[1.45rem] border border-sky-100 bg-white/82 p-5 shadow-[0_22px_50px_-36px_rgba(59,130,246,0.12)] backdrop-blur-sm md:rounded-[1.65rem] md:p-6">
               <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-sky-600/85">Kontak Pondok</p>
               <div className="space-y-4 text-sm">
                 <div>
                   <div className="mb-2 text-[10px] font-black uppercase tracking-[0.2em] text-sky-500">Alamat</div>
                   <div className="leading-7 text-slate-600">{schoolAddress}</div>
                 </div>
-                {/* Embed Google Maps */}
-                <div className="h-28 w-full overflow-hidden rounded-[1.15rem] border border-sky-100 shadow-inner ring-1 ring-sky-100 md:h-40 md:rounded-2xl">
-                  <iframe 
-                    src="https://maps.google.com/maps?q=Jl.%20H.%20Mawi%20Gg.%20Omega%20Kp.%20Jati%20Waru%20Parung%20Bogor&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0 }} 
-                    allowFullScreen 
-                    loading="lazy" 
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
+                <div className="grid gap-2">
+                  <div className="rounded-[1rem] border border-sky-100 bg-sky-50/75 px-4 py-3 text-slate-600">
+                    Kontak utama: {schoolPhone}
+                  </div>
+                  {schoolEmail ? (
+                    <div className="rounded-[1rem] border border-sky-100 bg-sky-50/75 px-4 py-3 text-slate-600">
+                      Email: {schoolEmail}
+                    </div>
+                  ) : null}
+                  {schoolWebsite ? (
+                    <div className="rounded-[1rem] border border-sky-100 bg-sky-50/75 px-4 py-3 text-slate-600">
+                      Website: {schoolWebsite}
+                    </div>
+                  ) : null}
                 </div>
-                <div className="space-y-2 text-slate-600">
-                  <div>Kontak utama: {schoolPhone}</div>
-                  {schoolEmail ? <div>Email: {schoolEmail}</div> : null}
-                  {schoolWebsite ? <div>Website: {schoolWebsite}</div> : null}
-                </div>
+                <a
+                  href="https://maps.google.com/?q=Jl.%20H.%20Mawi%20Gg.%20Omega%20Kp.%20Jati%20Waru%20Parung%20Bogor"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-sky-700 transition-colors hover:text-sky-800"
+                >
+                  Buka lokasi di Google Maps <ArrowRight size={14} />
+                </a>
               </div>
             </div>
-            <div className="rounded-[1.55rem] border border-sky-100 bg-white/80 p-5 shadow-[0_22px_50px_-36px_rgba(59,130,246,0.12)] backdrop-blur-sm md:rounded-[1.7rem] md:p-6">
+            <div className="rounded-[1.45rem] border border-sky-100 bg-white/82 p-5 shadow-[0_22px_50px_-36px_rgba(59,130,246,0.12)] backdrop-blur-sm md:rounded-[1.65rem] md:p-6">
               <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-sky-600/85">Tautan Utama</p>
               <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-1">
                 {[
@@ -636,7 +651,7 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
                 ))}
               </div>
             </div>
-            <div className="rounded-[1.55rem] border border-sky-100 bg-white/80 p-5 shadow-[0_22px_50px_-36px_rgba(59,130,246,0.12)] backdrop-blur-sm md:rounded-[1.7rem] md:p-6">
+            <div className="rounded-[1.45rem] border border-sky-100 bg-white/82 p-5 shadow-[0_22px_50px_-36px_rgba(59,130,246,0.12)] backdrop-blur-sm md:rounded-[1.65rem] md:p-6">
               <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-sky-600/85">Waktu Layanan</p>
               <div className="space-y-3 text-sm text-slate-600">
                 <div className="rounded-2xl border border-sky-100 bg-sky-50/70 px-4 py-3">
@@ -652,8 +667,8 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
 
           {/* Copyright */}
           <div className="flex flex-col items-center justify-between gap-3 border-t border-sky-100 pt-7 text-center text-sm text-slate-500 md:flex-row md:gap-4 md:pt-8 md:text-left">
-            <div>&copy; 2026 {schoolName}.</div>
-            <div>Dikembangkan oleh <a href="https://herufidiyanto.netlify.app/" className="text-sky-600 transition-colors hover:text-sky-700">Heru F</a></div>
+            <div>&copy; 2026 {schoolName}. Seluruh hak cipta dilindungi.</div>
+            <div>Dikembangkan oleh <a href="https://herufidiyanto.netlify.app/" className="font-medium text-sky-600 transition-colors hover:text-sky-700">Heru F</a></div>
           </div>
         </div>
       </footer>
