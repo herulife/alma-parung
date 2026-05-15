@@ -31,19 +31,19 @@ export const featuredOpenDonation: FeaturedDonationDetail = {
   posterImage: '/assets/img/donasi/wakaf-cat-tembok-brosur.jpeg',
   coverImage: '/assets/img/donasi/wakaf-cat-tembok-gedung.jpeg',
   summary:
-    'Open donasi baru untuk membantu pengecatan ruang kelas santri agar lebih nyaman, layak, dan penuh semangat belajar.',
+    'Kami membuka kesempatan amal jariyah untuk membantu pengecatan ruang kelas santri agar suasana belajar lebih bersih, nyaman, dan membangkitkan semangat menghafal Al-Quran.',
   category: 'Wakaf Renovasi Ringan',
   focus: 'Ruang Kelas Penghafal Al-Quran',
   progressAmount: 0,
   points: [
-    'Bukan sekadar cat, tapi amal jariyah yang hidup bersama setiap ayat yang dihafal.',
-    'Difokuskan untuk ruang kelas para santri penghafal Al-Quran di Pondok Pesantren Al-Maa Parung Bogor.',
-    'Target penggalangan dana sebesar Rp 15.000.000.',
+    'Setiap rupiah yang dititipkan ikut menghadirkan ruang belajar yang lebih pantas untuk para penghafal Al-Quran.',
+    'Donasi difokuskan untuk pengecatan ruang kelas santri di Pondok Pesantren Al-Maa Parung Bogor.',
+    'Target penggalangan dana ditetapkan sebesar Rp 15.000.000 agar pengerjaan bisa dilakukan dengan rapi dan menyeluruh.',
   ],
   story: [
-    'Bayangkan setiap ayat yang dihafal santri terjadi di ruang kelas yang kamu bantu bangun.',
-    'Program ini dibuka agar ruang belajar santri menjadi lebih nyaman, bersih, dan menyenangkan untuk murojaah, belajar diniyah, dan aktivitas harian.',
-    'Setiap rupiah yang terkumpul diarahkan untuk pembenahan visual ruang kelas agar semangat belajar para santri ikut tumbuh.',
+    'Ruang kelas adalah tempat banyak ayat diulang, dihafal, dan dijaga setiap hari. Karena itu, suasana belajar yang bersih dan layak bukan hal kecil dalam perjalanan para santri.',
+    'Program ini dibuka agar ruang belajar santri terasa lebih nyaman untuk murojaah, belajar diniyah, dan menjalani aktivitas pembinaan dengan semangat yang lebih baik.',
+    'Kami mengajak para muhsinin untuk ikut mengambil bagian. InsyaAllah setiap bantuan yang masuk menjadi bagian dari jejak kebaikan yang terus hidup bersama ilmu yang dipelajari santri.',
   ],
 };
 
