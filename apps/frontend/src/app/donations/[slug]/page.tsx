@@ -98,7 +98,7 @@ export default function DonationDetailPage() {
             </Link>
 
             <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.04fr)_minmax(340px,0.96fr)] lg:items-center">
-              <div>
+              <div className="order-2 lg:order-1">
                 <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/90 px-4 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-sky-700 shadow-[0_18px_40px_-28px_rgba(14,165,233,0.35)]">
                   <Sparkles size={14} />
                   Open Donasi Unggulan
@@ -171,7 +171,7 @@ export default function DonationDetailPage() {
                 </div>
               </div>
 
-              <div className="relative">
+              <div className="relative order-1 lg:order-2">
                 <div className="overflow-hidden rounded-[2rem] border border-sky-100 bg-white p-3 shadow-[0_32px_90px_-42px_rgba(59,130,246,0.35)]">
                   <div className="relative flex min-h-[420px] items-center justify-center overflow-hidden rounded-[1.5rem] bg-[linear-gradient(180deg,#f8fbff_0%,#eef7ff_100%)] p-4 sm:min-h-[520px] sm:p-5">
                     <div className="relative h-[380px] w-full max-w-[390px] sm:h-[470px]">
