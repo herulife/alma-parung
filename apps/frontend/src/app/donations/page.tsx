@@ -99,6 +99,18 @@ export default function DonationsPage() {
                 {featuredOpenDonation.summary} Konfirmasi dan arahan transfer sementara diarahkan
                 langsung ke admin pondok agar penyalurannya lebih rapi.
               </p>
+              <div className="mt-5 rounded-[1.2rem] border border-emerald-100 bg-emerald-50/80 px-4 py-4">
+                <p className="text-[10px] font-black uppercase tracking-[0.22em] text-emerald-700">
+                  Rekening Donasi
+                </p>
+                <p className="mt-2 text-sm font-semibold leading-7 text-slate-800">
+                  Salurkan infak terbaik anda melalui:
+                </p>
+                <p className="mt-2 text-sm leading-7 text-slate-700">
+                  <span className="font-black">💳 {featuredOpenDonation.bankName} {featuredOpenDonation.accountNumber}</span>{' '}
+                  <span className="font-medium">(an. {featuredOpenDonation.accountHolder})</span>
+                </p>
+              </div>
               <a
                 href={featuredOpenDonation.whatsappUrl}
                 target="_blank"
@@ -164,7 +176,18 @@ export default function DonationsPage() {
                   <CheckCircle className="mt-0.5 text-sky-500" size={18} />
                   <p className="text-sm leading-7 text-slate-700">{point}</p>
                 </div>
-              ))}
+                ))}
+              </div>
+            <div className="mt-6 rounded-[1.35rem] border border-emerald-100 bg-emerald-50/75 px-4 py-4 shadow-sm">
+              <p className="text-[10px] font-black uppercase tracking-[0.22em] text-emerald-700">
+                Salurkan infak terbaik anda melalui
+              </p>
+              <p className="mt-3 text-sm font-bold leading-7 text-slate-900">
+                💳 {featuredOpenDonation.bankName} {featuredOpenDonation.accountNumber}
+              </p>
+              <p className="text-sm leading-7 text-slate-700">
+                a.n. {featuredOpenDonation.accountHolder}
+              </p>
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link

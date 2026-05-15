@@ -142,6 +142,20 @@ export default function DonationDetailPage() {
                     Kontak Pondok <ArrowRight size={16} />
                   </Link>
                 </div>
+                <div className="mt-6 rounded-[1.4rem] border border-emerald-100 bg-emerald-50/80 px-4 py-4 shadow-sm">
+                  <p className="text-[10px] font-black uppercase tracking-[0.22em] text-emerald-700">
+                    Rekening Donasi
+                  </p>
+                  <p className="mt-2 text-sm font-semibold leading-7 text-slate-800">
+                    Salurkan infak terbaik anda melalui:
+                  </p>
+                  <p className="mt-2 text-sm font-bold leading-7 text-slate-900">
+                    💳 {featuredOpenDonation.bankName} {featuredOpenDonation.accountNumber}
+                  </p>
+                  <p className="text-sm leading-7 text-slate-700">
+                    a.n. {featuredOpenDonation.accountHolder}
+                  </p>
+                </div>
               </div>
 
               <div className="overflow-hidden rounded-[2rem] border border-sky-100 bg-white shadow-[0_30px_80px_-40px_rgba(59,130,246,0.35)]">
@@ -255,6 +269,21 @@ export default function DonationDetailPage() {
                   <MessageCircle size={16} />
                   {featuredOpenDonation.contactLabel}
                 </a>
+              </div>
+
+              <div className="rounded-[2rem] border border-emerald-100 bg-emerald-50/75 p-6 shadow-sm">
+                <p className="text-[11px] font-black uppercase tracking-[0.24em] text-emerald-700">
+                  Transfer Donasi
+                </p>
+                <p className="mt-3 text-sm leading-7 text-slate-700">
+                  Salurkan infak terbaik anda melalui rekening berikut:
+                </p>
+                <p className="mt-4 text-lg font-black text-slate-900">
+                  {featuredOpenDonation.bankName} {featuredOpenDonation.accountNumber}
+                </p>
+                <p className="mt-1 text-sm font-medium text-slate-700">
+                  a.n. {featuredOpenDonation.accountHolder}
+                </p>
               </div>
             </aside>
           </div>

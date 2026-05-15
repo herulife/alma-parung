@@ -6,6 +6,9 @@ export type FeaturedDonationDetail = {
   target: number;
   whatsappUrl: string;
   contactLabel: string;
+  bankName: string;
+  accountNumber: string;
+  accountHolder: string;
   posterImage: string;
   coverImage: string;
   summary: string;
@@ -22,6 +25,9 @@ export const featuredOpenDonation: FeaturedDonationDetail = {
   target: 15000000,
   whatsappUrl: 'https://wa.me/6281932506078',
   contactLabel: '0819 3250 6078',
+  bankName: 'BSI',
+  accountNumber: '4381567120',
+  accountHolder: 'Alma Parung Bogor',
   posterImage: '/assets/img/donasi/wakaf-cat-tembok-brosur.jpeg',
   coverImage: '/assets/img/donasi/wakaf-cat-tembok-gedung.jpeg',
   summary:
