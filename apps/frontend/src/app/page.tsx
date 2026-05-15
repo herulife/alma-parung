@@ -220,10 +220,10 @@ const buildHeroSlideId = (overrides: Partial<HeroSlide> = {}, fallbackKey = 'sli
 
 const createHeroSlide = (overrides: Partial<HeroSlide> = {}, fallbackKey?: string): HeroSlide => ({
   id: buildHeroSlideId(overrides, fallbackKey),
-  title: 'Tahfidz, Adab, dan Ilmu dalam Satu Ritme Pembinaan',
-  subtitle: 'Al-Maa Parung membina santri melalui hafalan Al-Quran, adab, dan pembelajaran terpadu.',
+  title: 'Tahfidz, adab, dan ilmu dalam satu ritme pembinaan',
+  subtitle: 'Al-Maa Parung menumbuhkan hafalan, akhlak, dan pembelajaran terpadu dalam suasana yang tertata.',
   image_url: '/assets/img/gedung.webp',
-  button_text: 'Lihat Info PSB',
+  button_text: 'Lihat PSB',
   button_url: '/psb',
   ...overrides,
 });
@@ -244,33 +244,33 @@ const formatAgendaFullDate = (dateStr: string) =>
 const defaultHeroSlides = [
   createHeroSlide(
     {
-      title: 'Menghafal Al-Quran, Tumbuh dengan Adab',
+      title: 'Menghafal Al-Quran, tumbuh dengan adab',
       subtitle:
-        'Lingkungan pesantren yang menata hafalan, ilmu, ibadah, dan kemandirian santri.',
+        'Lingkungan pesantren yang menjaga hafalan, ilmu, ibadah, dan kemandirian santri dalam keseharian.',
       image_url: '/assets/img/gedung.webp',
-      button_text: 'Daftar Santri Baru',
+      button_text: 'Daftar PSB',
       button_url: '/psb',
     },
     'default-slide-1'
   ),
   createHeroSlide(
     {
-      title: 'Tahfidz dan Kurikulum yang Seimbang',
+      title: 'Tahfidz dan kurikulum yang berjalan seimbang',
       subtitle:
-        'Target hafalan, diniyah, akademik, dan karakter berjalan dalam ritme pembinaan harian.',
+        'Target hafalan, diniyah, akademik, dan karakter disusun menyatu dalam ritme pembinaan harian.',
       image_url: '/assets/img/gedung.webp',
-      button_text: 'Lihat Program',
+      button_text: 'Buka Program',
       button_url: '/program',
     },
     'default-slide-2'
   ),
   createHeroSlide(
     {
-      title: 'Belajar, Beribadah, dan Mandiri',
+      title: 'Belajar, beribadah, dan tumbuh mandiri',
       subtitle:
-        'Fasilitas pondok mendukung kegiatan ibadah, belajar, olahraga, dan life skill santri.',
+        'Fasilitas pondok mendukung ibadah, belajar, olahraga, dan life skill dalam satu lingkungan yang terarah.',
       image_url: '/assets/img/gedung.webp',
-      button_text: 'Lihat Fasilitas',
+      button_text: 'Buka Fasilitas',
       button_url: '/facilities',
     },
     'default-slide-3'
@@ -512,13 +512,13 @@ export default function LandingPage() {
                               href={slide.button_url || '/psb'}
                               className="inline-flex items-center justify-center gap-2 self-start rounded-full bg-gradient-to-r from-sky-500 via-sky-500 to-cyan-400 px-5 py-3 text-xs font-bold text-white shadow-[0_22px_48px_-22px_rgba(56,189,248,0.52)] ring-1 ring-white/25 transition-all hover:-translate-y-1 hover:brightness-105 sm:px-8 sm:py-4 sm:text-sm"
                             >
-                              {slide.button_text || 'Lihat Info PSB'} <ArrowRight size={16} />
+                              {slide.button_text || 'Lihat PSB'} <ArrowRight size={16} />
                             </Link>
                             <Link
                               href="/program"
                               className="inline-flex items-center justify-center gap-2 self-start rounded-full border border-sky-200 bg-white/94 px-5 py-3 text-xs font-bold text-sky-700 shadow-[0_16px_34px_-24px_rgba(15,23,42,0.18)] transition-all hover:-translate-y-0.5 hover:bg-sky-50 sm:px-8 sm:py-4 sm:text-sm"
                             >
-                              Lihat Program
+                              Buka Program
                             </Link>
                           </div>
                           <div className="mt-8 flex flex-wrap gap-3">
@@ -764,7 +764,7 @@ export default function LandingPage() {
                 href="/program"
                 className="mt-8 inline-flex items-center gap-3 self-start rounded-full border border-blue-200 bg-white px-6 py-3 text-sm font-black text-blue-800 shadow-[0_18px_36px_-28px_rgba(15,23,42,0.18)] transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:text-blue-700"
               >
-                Buka halaman program <ArrowRight size={16} />
+                Jelajahi program <ArrowRight size={16} />
               </Link>
             </motion.div>
 
@@ -829,7 +829,7 @@ export default function LandingPage() {
               title="Lihat ritme belajar dan kebersamaan santri di Al-Maa"
               description="Dokumentasi ini memberi gambaran suasana belajar, ibadah, dan keseharian pondok."
               actionHref="/galeri"
-              actionLabel="Lihat galeri lengkap"
+              actionLabel="Jelajahi galeri"
               theme="dark"
             />
           </motion.div>
@@ -932,7 +932,7 @@ export default function LandingPage() {
                   href="/profil"
                   className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-blue-900 transition-all hover:-translate-y-0.5"
                 >
-                  Lihat profil lengkap <ArrowRight size={16} />
+                  Jelajahi profil <ArrowRight size={16} />
                 </Link>
               </div>
               <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-5">
@@ -962,7 +962,7 @@ export default function LandingPage() {
               title="Video pilihan untuk melihat suasana Al-Maa dari dekat"
               description="Beberapa tayangan singkat yang memperlihatkan kegiatan, pembinaan, dan kehidupan pondok."
               actionHref="/videos"
-              actionLabel="Lihat semua video"
+              actionLabel="Jelajahi video"
               theme="dark"
             />
           </motion.div>
@@ -1037,7 +1037,7 @@ export default function LandingPage() {
               title="Kabar terbaru dari lingkungan Al-Maa"
               description="Ikuti pengumuman, cerita kegiatan, dan perkembangan terbaru dari pondok."
               actionHref="/news"
-              actionLabel="Semua berita"
+              actionLabel="Jelajahi berita"
             />
           </motion.div>
 
@@ -1078,7 +1078,7 @@ export default function LandingPage() {
               title="Agenda terdekat yang sedang disiapkan pondok"
               description="Pantau jadwal penting dan kegiatan yang akan berlangsung dalam waktu dekat."
               actionHref="/agendas"
-              actionLabel="Lihat semua agenda"
+              actionLabel="Lihat agenda lengkap"
             />
           </motion.div>
 
@@ -1215,7 +1215,7 @@ export default function LandingPage() {
               href="/psb"
               className="mt-5 inline-flex items-center gap-2 self-start rounded-full border border-blue-200 bg-white px-5 py-3 text-sm font-bold text-blue-700 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:text-blue-800 md:mt-0"
             >
-              Lihat info pendaftaran <ArrowRight size={16} />
+              Lihat PSB <ArrowRight size={16} />
             </Link>
           </motion.div>
           <motion.div
@@ -1284,13 +1284,13 @@ export default function LandingPage() {
                       href="/psb"
                       className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-black text-blue-800 shadow-[0_24px_55px_-28px_rgba(255,255,255,0.42)] transition-all hover:-translate-y-1 hover:bg-blue-50"
                     >
-                      Lihat Info PSB <ArrowRight size={18} />
+                      Lihat PSB <ArrowRight size={18} />
                     </Link>
                     <Link
                       href="/profil"
                       className="inline-flex items-center justify-center gap-3 rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur-sm transition-all hover:bg-white/15"
                     >
-                      Lihat profil pondok
+                      Jelajahi profil
                     </Link>
                   </div>
                 </div>
@@ -1303,9 +1303,9 @@ export default function LandingPage() {
                     </div>
                     <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
                       {[
-                        { step: '01', label: 'Lihat profil pondok', href: '/profil' },
-                        { step: '02', label: 'Pelajari program inti', href: '/program' },
-                        { step: '03', label: 'Buka informasi PSB', href: '/psb' },
+                        { step: '01', label: 'Jelajahi profil pondok', href: '/profil' },
+                        { step: '02', label: 'Lihat program utama', href: '/program' },
+                        { step: '03', label: 'Buka halaman PSB', href: '/psb' },
                       ].map((item) => (
                         <Link
                           key={item.step}
