@@ -462,60 +462,72 @@ export default function PublicLayout({ children, hideNavbar = false }: PublicLay
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="absolute left-0 top-full z-[999] w-full border-t border-sky-200 bg-white/98 shadow-2xl lg:hidden">
-            <div className="px-4 pb-5 pt-3">
-              <div className="rounded-[1.6rem] border border-sky-200 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(239,246,255,0.95)_100%)] p-3 shadow-[0_24px_50px_-34px_rgba(59,130,246,0.18)] backdrop-blur-sm">
-                <div className="grid grid-cols-1 gap-2 rounded-2xl border border-sky-100 bg-sky-50/80 p-2">
-                  <Link href="/" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-100">Beranda</Link>
-                  <Link href="/program" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-100">Program</Link>
-                  <Link href="/psb" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-100">Info PSB</Link>
-                  <Link href="/kontak" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-100">Kontak</Link>
-                </div>
-
-                <div className="mt-4">
-                  <p className="px-1 text-[10px] font-black uppercase tracking-[0.25em] text-sky-500/80">Profil</p>
-                  <div className="mt-2 grid grid-cols-1 gap-2">
-                    <Link href="/profil" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Profil Pesantren</Link>
-                    <Link href="/sambutan" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Sambutan Pimpinan</Link>
-                    <Link href="/teachers" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Profil Asatidz</Link>
-                    <Link href="/facilities" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Fasilitas Pondok</Link>
+            <div className="px-4 pb-4 pt-3">
+              <div className="rounded-[1.5rem] border border-sky-200 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(239,246,255,0.96)_100%)] p-3 shadow-[0_24px_50px_-34px_rgba(59,130,246,0.18)] backdrop-blur-sm">
+                <div className="mb-3 flex items-center justify-between rounded-[1.2rem] border border-sky-100 bg-white/90 px-4 py-3">
+                  <div>
+                    <p className="text-[10px] font-black uppercase tracking-[0.24em] text-sky-600/80">Navigasi</p>
+                    <p className="mt-1 text-sm font-bold text-slate-900">Menu Utama Al-Maa</p>
+                  </div>
+                  <div className="rounded-full bg-sky-50 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-sky-700">
+                    Mobile
                   </div>
                 </div>
 
-                <div className="mt-4">
-                  <p className="px-1 text-[10px] font-black uppercase tracking-[0.25em] text-sky-500/80">Informasi</p>
-                  <div className="mt-2 grid grid-cols-1 gap-2">
-                    <Link href="/galeri" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Galeri</Link>
-                    <Link href="/videos" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Video</Link>
-                    <Link href="/news" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Berita</Link>
-                    <Link href="/donations/wakaf-cat-tembok" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 hover:bg-sky-100">Open Donasi</Link>
+                <div className="grid grid-cols-2 gap-2 rounded-[1.35rem] border border-sky-100 bg-sky-50/75 p-2">
+                  <Link href="/" onClick={() => setMobileMenuOpen(false)} className="rounded-[1rem] bg-white px-4 py-3 text-center text-sm font-semibold text-slate-700 shadow-sm transition-colors hover:bg-sky-100">Beranda</Link>
+                  <Link href="/program" onClick={() => setMobileMenuOpen(false)} className="rounded-[1rem] bg-white px-4 py-3 text-center text-sm font-semibold text-slate-700 shadow-sm transition-colors hover:bg-sky-100">Program</Link>
+                  <Link href="/psb" onClick={() => setMobileMenuOpen(false)} className="rounded-[1rem] bg-white px-4 py-3 text-center text-sm font-semibold text-slate-700 shadow-sm transition-colors hover:bg-sky-100">PSB</Link>
+                  <Link href="/kontak" onClick={() => setMobileMenuOpen(false)} className="rounded-[1rem] bg-white px-4 py-3 text-center text-sm font-semibold text-slate-700 shadow-sm transition-colors hover:bg-sky-100">Kontak</Link>
+                </div>
+
+                <div className="mt-4 grid gap-3">
+                  <div className="rounded-[1.25rem] border border-slate-100 bg-white/88 p-3">
+                    <p className="px-1 text-[10px] font-black uppercase tracking-[0.25em] text-sky-500/80">Profil</p>
+                    <div className="mt-2 grid grid-cols-1 gap-2">
+                      <Link href="/profil" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-100">Profil Pesantren</Link>
+                      <Link href="/sambutan" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-100">Sambutan Pimpinan</Link>
+                      <Link href="/teachers" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-100">Profil Asatidz</Link>
+                      <Link href="/facilities" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-100">Fasilitas Pondok</Link>
+                    </div>
+                  </div>
+
+                  <div className="rounded-[1.25rem] border border-slate-100 bg-white/88 p-3">
+                    <p className="px-1 text-[10px] font-black uppercase tracking-[0.25em] text-sky-500/80">Informasi</p>
+                    <div className="mt-2 grid grid-cols-1 gap-2">
+                      <Link href="/galeri" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-100">Galeri</Link>
+                      <Link href="/videos" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-100">Video</Link>
+                      <Link href="/news" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm text-slate-700 transition-colors hover:bg-sky-100">Berita</Link>
+                      <Link href="/donations/wakaf-cat-tembok" onClick={() => setMobileMenuOpen(false)} className="rounded-xl bg-cyan-50 px-4 py-3 text-sm font-semibold text-cyan-800 transition-colors hover:bg-cyan-100">Open Donasi</Link>
+                    </div>
                   </div>
                 </div>
 
-                <div className="mt-5 grid grid-cols-1 gap-3">
+                <div className="mt-4 grid grid-cols-1 gap-3">
                   {loading ? (
                     <div className="h-24 animate-pulse rounded-2xl bg-blue-900/40" />
                   ) : user ? (
                     <>
-                      <div className="rounded-[1.35rem] border border-sky-200 bg-sky-50 px-5 py-4 text-center text-slate-700">
+                      <div className="rounded-[1.25rem] border border-sky-200 bg-sky-50 px-5 py-4 text-center text-slate-700">
                         <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600/70">Sudah Masuk</p>
                         <p className="mt-2 text-base font-semibold text-slate-900">{user.name}</p>
                         <p className="mt-1 text-sm text-slate-600">
                           {isPortalUser ? 'Lanjutkan proses melalui Portal Wali Santri.' : 'Lanjutkan pengelolaan melalui panel admin.'}
                         </p>
                       </div>
-                      <Link href={dashboardHref} onClick={() => setMobileMenuOpen(false)} className="block rounded-[1.15rem] bg-sky-500 px-6 py-3 text-center text-sm font-bold text-white shadow-lg shadow-sky-200/80">
+                      <Link href={dashboardHref} onClick={() => setMobileMenuOpen(false)} className="block rounded-[1.1rem] bg-sky-500 px-6 py-3 text-center text-sm font-bold text-white shadow-lg shadow-sky-200/80">
                         {isPortalUser ? 'Buka Portal Wali Santri' : 'Buka Panel Admin'}
                       </Link>
                     </>
                   ) : (
                     <>
-                      <Link href="/psb" onClick={() => setMobileMenuOpen(false)} className="block rounded-[1.15rem] bg-sky-500 px-6 py-3 text-center text-sm font-bold text-white shadow-lg shadow-sky-200/80">
+                      <Link href="/psb" onClick={() => setMobileMenuOpen(false)} className="block rounded-[1.1rem] bg-sky-500 px-6 py-3 text-center text-sm font-bold text-white shadow-lg shadow-sky-200/80">
                         Daftar Sekarang
                       </Link>
                       <Link
                         href="/login"
                         onClick={() => setMobileMenuOpen(false)}
-                        className="flex items-center justify-center gap-3 rounded-[1.15rem] border border-sky-200 bg-white px-6 py-3 text-center text-sm font-bold text-sky-700"
+                        className="flex items-center justify-center gap-3 rounded-[1.1rem] border border-sky-200 bg-white px-6 py-3 text-center text-sm font-bold text-sky-700"
                       >
                         <CircleUserRound size={18} />
                         Masuk Admin
