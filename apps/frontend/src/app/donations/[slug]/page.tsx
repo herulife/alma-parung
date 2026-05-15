@@ -173,21 +173,15 @@ export default function DonationDetailPage() {
 
               <div className="relative">
                 <div className="overflow-hidden rounded-[2rem] border border-sky-100 bg-white p-3 shadow-[0_32px_90px_-42px_rgba(59,130,246,0.35)]">
-                  <div className="relative h-[520px] overflow-hidden rounded-[1.5rem] bg-slate-100">
-                    <Image
-                      src={featuredOpenDonation.posterImage}
-                      alt={featuredOpenDonation.title}
-                      fill
-                      unoptimized
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/72 via-slate-950/12 to-transparent p-5 text-white">
-                      <p className="text-[10px] font-black uppercase tracking-[0.24em] text-sky-200">
-                        Campaign Visual
-                      </p>
-                      <p className="mt-2 text-lg font-black leading-tight">
-                        Ruang yang lebih layak untuk ayat-ayat yang terus dihafal.
-                      </p>
+                  <div className="relative flex min-h-[420px] items-center justify-center overflow-hidden rounded-[1.5rem] bg-[linear-gradient(180deg,#f8fbff_0%,#eef7ff_100%)] p-4 sm:min-h-[520px] sm:p-5">
+                    <div className="relative h-[380px] w-full max-w-[390px] sm:h-[470px]">
+                      <Image
+                        src={featuredOpenDonation.posterImage}
+                        alt={featuredOpenDonation.title}
+                        fill
+                        unoptimized
+                        className="object-contain"
+                      />
                     </div>
                   </div>
                 </div>
@@ -197,7 +191,7 @@ export default function DonationDetailPage() {
                       <Quote size={18} />
                     </div>
                     <p className="text-sm leading-7 text-slate-600">
-                      “Bukan hanya memperindah tembok, tetapi menghadirkan ruang yang lebih nyaman untuk para santri menjaga hafalan dan semangat belajarnya setiap hari.”
+                      Setiap infak yang dititipkan melalui campaign ini ikut menghadirkan ruang belajar yang lebih bersih, nyaman, dan layak untuk para santri menjaga hafalan Al-Quran setiap hari.
                     </p>
                   </div>
                 </div>
