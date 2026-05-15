@@ -638,22 +638,40 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              <div className="relative min-h-[260px] overflow-hidden border-t border-sky-100 bg-sky-100/60 lg:min-h-full lg:border-l lg:border-t-0">
+              <div className="relative min-h-[300px] overflow-hidden border-t border-sky-100 bg-sky-100/60 lg:min-h-full lg:border-l lg:border-t-0">
                 <Image
-                  src={featuredOpenDonation.posterImage}
+                  src={featuredOpenDonation.coverImage}
                   alt={featuredOpenDonation.title}
                   fill
                   unoptimized
-                  className="object-cover"
+                  className="object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.06)_0%,rgba(15,23,42,0.2)_100%)]" />
-                <div className="absolute bottom-4 left-4 right-4 rounded-[1.4rem] border border-white/60 bg-white/88 px-4 py-4 shadow-[0_18px_40px_-28px_rgba(15,23,42,0.28)] backdrop-blur-sm">
-                  <p className="text-[10px] font-black uppercase tracking-[0.22em] text-sky-600">
-                    Amal Jariyah
-                  </p>
-                  <p className="mt-2 text-base font-black leading-6 text-slate-900">
-                    Bantu ruang kelas santri terasa lebih nyaman, bersih, dan layak untuk belajar.
-                  </p>
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.08)_0%,rgba(15,23,42,0.12)_38%,rgba(15,23,42,0.4)_100%)]" />
+                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                  <div className="flex items-end gap-4">
+                    <div className="hidden w-32 shrink-0 overflow-hidden rounded-[1.35rem] border border-white/60 bg-white shadow-[0_20px_42px_-24px_rgba(15,23,42,0.38)] md:block">
+                      <div className="relative aspect-[3/4]">
+                        <Image
+                          src={featuredOpenDonation.posterImage}
+                          alt={`${featuredOpenDonation.title} poster`}
+                          fill
+                          unoptimized
+                          className="object-cover object-top"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex-1 rounded-[1.4rem] border border-white/18 bg-slate-950/48 px-4 py-4 text-white shadow-[0_18px_40px_-28px_rgba(15,23,42,0.45)] backdrop-blur-[6px]">
+                      <p className="text-[10px] font-black uppercase tracking-[0.22em] text-sky-200">
+                        Amal Jariyah
+                      </p>
+                      <p className="mt-2 text-base font-black leading-6 text-white">
+                        Bantu ruang kelas santri terasa lebih nyaman, bersih, dan layak untuk belajar.
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-sky-100/85">
+                        Klik banner ini untuk melihat detail campaign dan ajakan donasi lengkap.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
