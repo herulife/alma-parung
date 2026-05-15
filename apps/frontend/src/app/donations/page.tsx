@@ -55,7 +55,8 @@ export default function DonationsPage() {
               <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
                 Setiap bantuanmu ikut menghadirkan ruang belajar yang lebih nyaman, layak, dan
                 penuh semangat bagi santri Al-Maa Parung Bogor. Ini bukan sekadar renovasi kecil,
-                tapi bagian dari amal jariyah yang terus mengalir.
+                tapi bagian dari amal jariyah yang terus mengalir. Setelah transfer, silakan kirim bukti ke nomor WhatsApp konfirmasi yang tersedia. Setelah transfer, silakan kirim
+                bukti ke nomor WhatsApp konfirmasi yang tersedia.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
@@ -70,7 +71,7 @@ export default function DonationsPage() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-[1rem] bg-sky-500 px-5 py-3 text-sm font-bold text-white shadow-[0_20px_40px_-22px_rgba(14,165,233,0.75)] transition hover:bg-sky-600"
                 >
-                  Donasi via WhatsApp <ArrowRight size={16} />
+                  WA Konfirmasi Donasi <ArrowRight size={16} />
                 </a>
                 <Link
                   href="#program-donasi"
@@ -117,7 +118,7 @@ export default function DonationsPage() {
                 rel="noreferrer"
                 className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-sky-700 transition hover:text-sky-800"
               >
-                Hubungi {featuredOpenDonation.contactLabel} <ArrowRight size={16} />
+                WA Konfirmasi: {featuredOpenDonation.contactLabel} <ArrowRight size={16} />
               </a>
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 <div className="rounded-[1.2rem] border border-sky-100 bg-sky-50 px-4 py-3">
@@ -203,7 +204,7 @@ export default function DonationsPage() {
                 className="inline-flex items-center gap-2 rounded-[1rem] bg-sky-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-sky-600"
               >
                 <MessageCircle size={16} />
-                Hubungi Admin Donasi
+                WA Konfirmasi Donasi
               </a>
               <Link
                 href="/kontak"

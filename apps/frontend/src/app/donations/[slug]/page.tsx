@@ -133,7 +133,7 @@ export default function DonationDetailPage() {
                     className="inline-flex items-center gap-2 rounded-[1rem] bg-sky-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-sky-600"
                   >
                     <MessageCircle size={16} />
-                    Donasi via WhatsApp
+                    WA Konfirmasi Donasi
                   </a>
                   <Link
                     href="/kontak"
@@ -254,7 +254,7 @@ export default function DonationDetailPage() {
 
               <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">
                 <p className="text-[11px] font-black uppercase tracking-[0.24em] text-sky-700">
-                  Hubungi Admin Donasi
+                  WhatsApp Konfirmasi
                 </p>
                 <p className="mt-3 text-sm leading-7 text-slate-600">
                   Konfirmasi donasi, arahan transfer, dan pertanyaan seputar campaign ini bisa
@@ -267,7 +267,7 @@ export default function DonationDetailPage() {
                   className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-[1rem] bg-sky-500 px-4 py-3 text-sm font-bold text-white transition hover:bg-sky-600"
                 >
                   <MessageCircle size={16} />
-                  {featuredOpenDonation.contactLabel}
+                  WA Konfirmasi: {featuredOpenDonation.contactLabel}
                 </a>
               </div>
 
