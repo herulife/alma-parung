@@ -20,7 +20,6 @@ import {
   CheckCircle2,
   Heart,
   MessageCircle,
-  Quote,
   ShieldCheck,
   Sparkles,
   Target,
@@ -183,16 +182,6 @@ export default function DonationDetailPage() {
                         className="object-contain"
                       />
                     </div>
-                  </div>
-                </div>
-                <div className="mt-4 rounded-[1.45rem] border border-white/70 bg-white/90 p-4 shadow-[0_20px_50px_-34px_rgba(15,23,42,0.16)]">
-                  <div className="flex items-start gap-3">
-                    <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-[0.9rem] bg-sky-100 text-sky-600">
-                      <Quote size={18} />
-                    </div>
-                    <p className="text-sm leading-7 text-slate-600">
-                      Setiap infak yang dititipkan melalui campaign ini ikut menghadirkan ruang belajar yang lebih bersih, nyaman, dan layak untuk para santri menjaga hafalan Al-Quran setiap hari.
-                    </p>
                   </div>
                 </div>
               </div>
