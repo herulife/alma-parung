@@ -476,7 +476,7 @@ export default function LandingPage() {
             const slideImage = resolveDisplayImageUrl(slide.image_url || '/assets/img/gedung.webp');
             return (
               <SwiperSlide key={slide.id}>
-                <div className="relative min-h-[610px] overflow-hidden sm:min-h-[660px] lg:min-h-[780px]">
+                <div className="relative min-h-[560px] overflow-hidden sm:min-h-[620px] lg:min-h-[710px]">
                   <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{ backgroundImage: `url('${slideImage}')` }}
@@ -488,8 +488,8 @@ export default function LandingPage() {
                   <div className="pointer-events-none absolute bottom-[18%] right-[9%] hidden h-px w-48 bg-gradient-to-r from-transparent via-white/85 to-transparent lg:block" />
                   <div className="pointer-events-none absolute bottom-[18%] right-[9%] hidden h-48 w-px bg-gradient-to-b from-white/10 via-white/70 to-transparent lg:block" />
 
-                  <div className="container relative z-10 mx-auto max-w-6xl px-4 pb-16 pt-10 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-24">
-                    <div className="grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
+                  <div className="container relative z-10 mx-auto max-w-6xl px-4 pb-14 pt-10 sm:pb-16 sm:pt-14 lg:pb-20 lg:pt-20">
+                    <div className="grid items-center gap-8 lg:grid-cols-[1.08fr_0.92fr]">
                       <motion.div
                         initial={{ opacity: 0, y: 24 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -561,9 +561,9 @@ export default function LandingPage() {
           })}
         </Swiper>
 
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-t from-[#eaf6ff] via-[#eef8ff]/70 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-28 bg-gradient-to-t from-[#eaf6ff] via-[#eef8ff]/70 to-transparent" />
 
-        <div className="relative z-20 -mt-20 px-4 lg:-mt-16">
+        <div className="relative z-20 -mt-16 px-4 lg:-mt-12">
           <div className="container mx-auto max-w-6xl">
             <div className="grid gap-4 rounded-[2.1rem] border border-white/60 bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(248,250,252,0.92)_100%)] p-5 shadow-[0_30px_70px_-35px_rgba(15,23,42,0.32)] backdrop-blur-xl md:grid-cols-4 md:p-6">
               {institutionFacts.map((fact) => (
@@ -645,7 +645,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-y border-slate-200/70 bg-[#f6f7f4] py-14 md:py-20">
+      <section className="relative overflow-hidden border-y border-slate-200/70 bg-[#f6f7f4] py-12 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.10),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(15,118,110,0.08),_transparent_28%)]" />
         <div className="container relative z-10 mx-auto max-w-6xl px-4">
           <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-10">
@@ -712,7 +712,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#fbfcfa_0%,#f4f7f3_100%)] py-14 md:py-20">
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#fbfcfa_0%,#f4f7f3_100%)] py-12 md:py-16">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.08),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(15,118,110,0.06),_transparent_24%)]" />
         <div className="container mx-auto max-w-6xl px-4">
@@ -819,7 +819,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-slate-950 py-14 md:py-20">
+      <section className="relative overflow-hidden bg-slate-950 py-12 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.16),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(245,158,11,0.10),_transparent_24%)]" />
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         <div className="container mx-auto max-w-6xl px-4">
@@ -910,7 +910,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="pb-16 md:pb-20">
+      <section className="pb-12 md:pb-16">
         <div className="container mx-auto max-w-6xl px-4">
           <motion.div
             initial="hidden"
@@ -951,7 +951,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#07131d_0%,#0d1b26_100%)] py-14 md:py-20">
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#07131d_0%,#0d1b26_100%)] py-12 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.12),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(245,158,11,0.08),_transparent_22%)]" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/6 to-transparent" />
@@ -1028,7 +1028,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-t border-slate-200/70 bg-[linear-gradient(180deg,#fcfcfa_0%,#f7f7f3_100%)] py-14 md:py-20">
+      <section className="relative overflow-hidden border-t border-slate-200/70 bg-[linear-gradient(180deg,#fcfcfa_0%,#f7f7f3_100%)] py-12 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(16,185,129,0.06),_transparent_24%)]" />
         <div className="container mx-auto max-w-6xl px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant}>
@@ -1069,7 +1069,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-t border-slate-200 bg-[linear-gradient(180deg,#f6f7f3_0%,#eef4ef_100%)] py-16 md:py-20">
+      <section className="relative overflow-hidden border-t border-slate-200 bg-[linear-gradient(180deg,#f6f7f3_0%,#eef4ef_100%)] py-12 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.08),_transparent_24%),radial-gradient(circle_at_bottom_right,_rgba(15,23,42,0.05),_transparent_20%)]" />
         <div className="container relative z-10 mx-auto max-w-6xl px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant}>
@@ -1191,7 +1191,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f5f7f3_0%,#ffffff_24%,#ffffff_100%)] pb-16 pt-8 md:pb-20 md:pt-16">
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f5f7f3_0%,#ffffff_24%,#ffffff_100%)] pb-12 pt-8 md:pb-16 md:pt-14">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-blue-50/80 to-transparent" />
         <div className="pointer-events-none absolute left-1/2 top-10 h-28 w-28 -translate-x-1/2 rounded-full bg-blue-100/70 blur-3xl" />
         <div className="container relative mx-auto max-w-6xl px-4">
@@ -1246,7 +1246,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#0d1522_0%,#0d2f27_58%,#08231e_100%)] py-24 lg:py-28">
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#0d1522_0%,#0d2f27_58%,#08231e_100%)] py-16 lg:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(245,158,11,0.14),_transparent_22%),radial-gradient(circle_at_bottom_left,_rgba(16,185,129,0.18),_transparent_24%)]" />
         <div className="absolute -top-32 right-0 h-72 w-72 rounded-full bg-blue-300/16 blur-[110px]" />
         <div className="absolute -bottom-36 left-0 h-72 w-72 rounded-full bg-teal-300/14 blur-[110px]" />
