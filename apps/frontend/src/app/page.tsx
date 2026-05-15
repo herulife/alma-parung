@@ -645,100 +645,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f5f7f3_0%,#ffffff_24%,#ffffff_100%)] pb-16 pt-8 md:pb-20 md:pt-24">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-blue-50/80 to-transparent" />
-        <div className="pointer-events-none absolute left-1/2 top-10 h-28 w-28 -translate-x-1/2 rounded-full bg-blue-100/70 blur-3xl" />
-        <div className="container relative mx-auto max-w-6xl px-4">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUpVariant}
-            className="mb-8 border-b border-slate-200/80 pb-7 md:mb-10 md:pb-8 md:flex md:items-end md:justify-between md:gap-6"
-          >
-            <div>
-              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-600">Jelajahi Al-Maa</p>
-              <h2 className="mt-3 max-w-3xl text-3xl font-black leading-[1.02] tracking-[-0.03em] text-slate-900 md:text-[3.35rem]">
-                Mulai dari sisi Al-Maa yang paling ingin Anda kenali lebih dulu.
-              </h2>
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-500 md:text-base">
-                Profil, program, fasilitas, dan pendaftaran kami susun lebih ringkas agar perjalanan
-                mengenal pondok terasa lebih nyaman.
-              </p>
-            </div>
-            <Link
-              href="/psb"
-              className="mt-5 inline-flex items-center gap-2 self-start rounded-full border border-blue-200 bg-white px-5 py-3 text-sm font-bold text-blue-700 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:text-blue-800 md:mt-0"
-            >
-              Lihat info pendaftaran <ArrowRight size={16} />
-            </Link>
-          </motion.div>
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-60px' }}
-            className="grid gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4"
-          >
-            {focusAreas.map((item) => (
-              <motion.div key={item.title} variants={fadeUpVariant}>
-                <Link
-                  href={item.href}
-                  className="group block h-full rounded-[1.8rem] border border-blue-100/70 bg-[linear-gradient(180deg,#ffffff_0%,#f4faf6_100%)] p-6 shadow-[0_18px_44px_-34px_rgba(15,23,42,0.16)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-200 hover:shadow-[0_24px_60px_-30px_rgba(16,185,129,0.18)] md:rounded-[2rem] md:p-7"
-                >
-                  <div className="mb-5 inline-flex rounded-2xl bg-white p-4 text-blue-600 ring-1 ring-blue-100 transition-colors group-hover:bg-blue-500 group-hover:text-white group-hover:ring-blue-500">
-                    {item.icon}
-                  </div>
-                  <h2 className="text-xl font-black tracking-tight text-slate-900">{item.title}</h2>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">{item.desc}</p>
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-blue-700">
-                    Selengkapnya <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="pb-16 md:pb-20">
-        <div className="container mx-auto max-w-6xl px-4">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUpVariant}
-            className="overflow-hidden rounded-[2rem] border border-blue-900/70 bg-gradient-to-r from-blue-950 via-blue-900 to-teal-900 px-5 py-7 text-white shadow-[0_30px_80px_-35px_rgba(6,78,59,0.65)] md:rounded-[2.25rem] md:px-8 md:py-8"
-          >
-            <div className="grid gap-8 lg:grid-cols-[1.1fr_1.9fr] lg:items-center">
-              <div>
-                <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-200">Al-Maa dalam Angka</p>
-                <h2 className="mt-3 text-2xl font-black tracking-tight md:text-4xl">
-                  Komitmen pembinaan yang tumbuh konsisten dan terarah.
-                </h2>
-                <Link
-                  href="/profil"
-                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-blue-900 transition-all hover:-translate-y-0.5"
-                >
-                  Lihat profil lengkap <ArrowRight size={16} />
-                </Link>
-              </div>
-              <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-5">
-                {institutionHighlights.map((item) => (
-                  <div key={item.label} className="rounded-[1.35rem] border border-white/10 bg-black/10 px-4 py-4 backdrop-blur-sm md:rounded-[1.5rem] md:py-5">
-                    <div className="mb-3 inline-flex rounded-2xl bg-white/10 p-3 text-blue-200 md:mb-4">
-                      {item.icon}
-                    </div>
-                    <p className="text-2xl font-black tracking-tight text-white">{item.value}</p>
-                    <p className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-blue-100/80">{item.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       <section className="relative overflow-hidden border-y border-slate-200/70 bg-[#f6f7f4] py-14 md:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.10),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(15,118,110,0.08),_transparent_28%)]" />
         <div className="container relative z-10 mx-auto max-w-6xl px-4">
@@ -1006,6 +912,48 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section className="pb-16 md:pb-20">
+        <div className="container mx-auto max-w-6xl px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUpVariant}
+            className="overflow-hidden rounded-[2rem] border border-blue-900/70 bg-gradient-to-r from-blue-950 via-blue-900 to-teal-900 px-5 py-7 text-white shadow-[0_30px_80px_-35px_rgba(6,78,59,0.65)] md:rounded-[2.25rem] md:px-8 md:py-8"
+          >
+            <div className="grid gap-8 lg:grid-cols-[1.1fr_1.9fr] lg:items-center">
+              <div>
+                <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-200">Al-Maa dalam Angka</p>
+                <h2 className="mt-3 text-2xl font-black tracking-tight md:text-4xl">
+                  Komitmen pembinaan yang tumbuh konsisten dan terarah.
+                </h2>
+                <p className="mt-4 max-w-xl text-sm leading-7 text-blue-50/85 md:text-base">
+                  Setelah melihat profil dan program utama, berikut gambaran singkat tentang target hafalan,
+                  jenjang pendidikan, serta ritme penerimaan santri di Al-Maa.
+                </p>
+                <Link
+                  href="/profil"
+                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-blue-900 transition-all hover:-translate-y-0.5"
+                >
+                  Lihat profil lengkap <ArrowRight size={16} />
+                </Link>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-5">
+                {institutionHighlights.map((item) => (
+                  <div key={item.label} className="rounded-[1.35rem] border border-white/10 bg-black/10 px-4 py-4 backdrop-blur-sm md:rounded-[1.5rem] md:py-5">
+                    <div className="mb-3 inline-flex rounded-2xl bg-white/10 p-3 text-blue-200 md:mb-4">
+                      {item.icon}
+                    </div>
+                    <p className="text-2xl font-black tracking-tight text-white">{item.value}</p>
+                    <p className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-blue-100/80">{item.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       <section className="relative overflow-hidden bg-[linear-gradient(180deg,#07131d_0%,#0d1b26_100%)] py-14 md:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.12),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(245,158,11,0.08),_transparent_22%)]" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
@@ -1243,6 +1191,62 @@ export default function LandingPage() {
               </div>
             )}
           </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f5f7f3_0%,#ffffff_24%,#ffffff_100%)] pb-16 pt-8 md:pb-20 md:pt-16">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-blue-50/80 to-transparent" />
+        <div className="pointer-events-none absolute left-1/2 top-10 h-28 w-28 -translate-x-1/2 rounded-full bg-blue-100/70 blur-3xl" />
+        <div className="container relative mx-auto max-w-6xl px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUpVariant}
+            className="mb-8 border-b border-slate-200/80 pb-7 md:mb-10 md:pb-8 md:flex md:items-end md:justify-between md:gap-6"
+          >
+            <div>
+              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-blue-600">Akses Cepat</p>
+              <h2 className="mt-3 max-w-3xl text-3xl font-black leading-[1.02] tracking-[-0.03em] text-slate-900 md:text-[3.1rem]">
+                Setelah melihat gambaran pondok, lanjutkan ke halaman yang paling kamu butuhkan.
+              </h2>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-500 md:text-base">
+                Bagian ini jadi jalur cepat ke profil, program, fasilitas, dan informasi pendaftaran tanpa
+                membuat pengunjung harus kembali ke menu utama.
+              </p>
+            </div>
+            <Link
+              href="/psb"
+              className="mt-5 inline-flex items-center gap-2 self-start rounded-full border border-blue-200 bg-white px-5 py-3 text-sm font-bold text-blue-700 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:text-blue-800 md:mt-0"
+            >
+              Lihat info pendaftaran <ArrowRight size={16} />
+            </Link>
+          </motion.div>
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            className="grid gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4"
+          >
+            {focusAreas.map((item) => (
+              <motion.div key={item.title} variants={fadeUpVariant}>
+                <Link
+                  href={item.href}
+                  className="group block h-full rounded-[1.8rem] border border-blue-100/70 bg-[linear-gradient(180deg,#ffffff_0%,#f4faf6_100%)] p-6 shadow-[0_18px_44px_-34px_rgba(15,23,42,0.16)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-200 hover:shadow-[0_24px_60px_-30px_rgba(16,185,129,0.18)] md:rounded-[2rem] md:p-7"
+                >
+                  <div className="mb-5 inline-flex rounded-2xl bg-white p-4 text-blue-600 ring-1 ring-blue-100 transition-colors group-hover:bg-blue-500 group-hover:text-white group-hover:ring-blue-500">
+                    {item.icon}
+                  </div>
+                  <h2 className="text-xl font-black tracking-tight text-slate-900">{item.title}</h2>
+                  <p className="mt-3 text-sm leading-7 text-slate-600">{item.desc}</p>
+                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-blue-700">
+                    Selengkapnya <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
