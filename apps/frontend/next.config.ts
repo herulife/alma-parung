@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const defaultBackendOrigin =
   process.env.NODE_ENV === 'production'
-    ? 'https://benuatech.web.id'
+    ? 'https://darussunnahparung.com'
     : 'http://localhost:8080';
 
 const backendOrigin = (
