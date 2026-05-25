@@ -298,7 +298,7 @@ export default function UsersPage() {
                 value={createForm.email}
                 onChange={(e) => setCreateForm((prev) => ({ ...prev, email: e.target.value }))}
                 className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-800 outline-none transition focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10"
-                placeholder="nama@darussunnah.com"
+                placeholder="nama@almaparung.com"
               />
             </label>
 
@@ -544,7 +544,7 @@ export default function UsersPage() {
               </div>
               <h4 className="text-4xl font-black uppercase tracking-tight mb-4 font-outfit">Siklus Otoritas</h4>
               <p className="text-slate-400 text-sm font-medium leading-relaxed">
-                Darussunnah menggunakan sistem perizinan yang ketat. Pastikan setiap penugasan role sesuai dengan tupoksi pengurus demi keamanan data yayasan.
+                Al-Maa menggunakan sistem perizinan yang ketat. Pastikan setiap penugasan role sesuai dengan tupoksi pengurus demi keamanan data yayasan.
               </p>
            </div>
            
@@ -579,7 +579,7 @@ export default function UsersPage() {
         onConfirm={handleDelete}
         isLoading={isDeleting}
         title="Musnahkan Akun User?"
-        message="Data personel ini akan dihapus permanen dari sistem otentikasi Darussunnah. Akses mereka akan segera terblokir."
+        message="Data personel ini akan dihapus permanen dari sistem otentikasi Al-Maa. Akses mereka akan segera terblokir."
         confirmText="YA, HAPUS PERMANEN"
       />
 

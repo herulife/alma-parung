@@ -43,13 +43,13 @@ export default function TeachersPage() {
             <div className="max-w-4xl">
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-emerald-200">
                 <Sparkles size={14} />
-                Dewan Pengajar Darussunnah
+                Dewan Pengajar Al-Maa
               </div>
               <h1 className="mb-6 text-4xl font-black tracking-tight md:text-6xl">
                 Asatidz yang membersamai pembinaan santri.
               </h1>
               <p className="max-w-3xl text-sm font-medium leading-7 text-emerald-100/85 sm:text-base sm:leading-8">
-                Darussunnah dibimbing oleh para pengajar yang hadir bukan hanya menyampaikan materi,
+                Al-Maa dibimbing oleh para pengajar yang hadir bukan hanya menyampaikan materi,
                 tetapi juga menanamkan adab, kedisiplinan, dan semangat menuntut ilmu.
               </p>
             </div>
@@ -118,7 +118,7 @@ export default function TeachersPage() {
                   </h3>
                   <p className="mb-4 text-xs font-black uppercase tracking-widest text-slate-400">{teacher.subject}</p>
                   <p className="px-4 text-sm font-medium italic text-slate-500 line-clamp-2">
-                    &quot;{teacher.bio || 'Pengajar tetap di Darussunnah.'}&quot;
+                    &quot;{teacher.bio || 'Pengajar tetap di Al-Maa.'}&quot;
                   </p>
                 </div>
               </div>
@@ -141,7 +141,7 @@ export default function TeachersPage() {
             &quot;Mendidik dengan hati, mengajar dengan keteladanan.&quot;
           </h2>
           <p className="text-base font-medium leading-8 text-emerald-800/85 md:text-lg">
-            Di Darussunnah, kehadiran guru adalah qudwah. Para pengajar tidak hanya menyampaikan
+            Di Al-Maa, kehadiran guru adalah qudwah. Para pengajar tidak hanya menyampaikan
             materi, tetapi juga menjadi teladan dalam adab, keteguhan ibadah, dan semangat belajar.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">

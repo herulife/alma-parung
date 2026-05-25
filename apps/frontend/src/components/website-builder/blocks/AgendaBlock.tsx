@@ -60,7 +60,7 @@ export default function AgendaBlock({ section, agendas, isLoading }: { section: 
                   {showLocation ? (
                     <div className="flex items-start gap-2">
                       <MapPin size={15} className="mt-0.5 text-emerald-500" />
-                      <span>{agenda.location || 'Kompleks Darussunnah Parung'}</span>
+                      <span>{agenda.location || 'Kompleks Al-Maa Parung'}</span>
                     </div>
                   ) : null}
                 </div>
@@ -76,3 +76,4 @@ export default function AgendaBlock({ section, agendas, isLoading }: { section: 
     </section>
   );
 }
+

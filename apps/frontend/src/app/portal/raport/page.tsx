@@ -103,7 +103,7 @@ export default function PortalRaportPage() {
 
   const reportPayload = useMemo(
     () => ({
-      studentName: user?.name || 'Santri Darussunnah',
+      studentName: user?.name || 'Santri Al-Maa',
       studentIdentity: user?.email || '-',
       averageScore: formatScore(reportSummary.averageScore),
       hadir: reportSummary.hadir,
@@ -196,7 +196,7 @@ export default function PortalRaportPage() {
         <div className="grid grid-cols-1 gap-4 px-5 py-5 sm:grid-cols-2 xl:grid-cols-4 lg:px-6">
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
             <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-400">Nama Santri</p>
-            <p className="mt-2 break-words text-sm font-semibold text-slate-900">{user?.name || 'Santri Darussunnah'}</p>
+            <p className="mt-2 break-words text-sm font-semibold text-slate-900">{user?.name || 'Santri Al-Maa'}</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
             <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-400">Semester Aktif</p>
@@ -407,3 +407,4 @@ export default function PortalRaportPage() {
     </div>
   );
 }
+

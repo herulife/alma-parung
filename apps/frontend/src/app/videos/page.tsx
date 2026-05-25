@@ -82,7 +82,7 @@ export default function VideosPage() {
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
             <PublicSectionIntro
               eyebrow="Video Kegiatan & Kajian"
-              title="Pustaka Video Darussunnah"
+              title="Pustaka Video Al-Maa"
               description="Kumpulan video kegiatan, kajian, dan momen penting pondok yang tersusun per seri atau kegiatan."
               theme="dark"
             />

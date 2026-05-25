@@ -45,7 +45,7 @@ type AutoTableDoc = jsPDF & {
 };
 
 /**
- * Export data ke PDF dengan header Darussunnah
+ * Export data ke PDF dengan header Al-Maa
  */
 export function exportToPDF(
 	title: string,
@@ -58,7 +58,7 @@ export function exportToPDF(
 	// Header pondok
 	doc.setFontSize(16);
 	doc.setFont('helvetica', 'bold');
-	doc.text('PONDOK PESANTREN DARUSSUNNAH', 105, 20, { align: 'center' });
+	doc.text('PONDOK PESANTREN AL-MAA', 105, 20, { align: 'center' });
 	doc.setFontSize(10);
 	doc.setFont('helvetica', 'normal');
 	doc.text('Jl. Raya Parung - Bogor, Jawa Barat', 105, 28, { align: 'center' });
@@ -106,7 +106,7 @@ function renderStudentReport(doc: jsPDF, payload: StudentReportPayload) {
 
 	doc.setFontSize(18);
 	doc.setFont('helvetica', 'bold');
-	doc.text('PONDOK PESANTREN DARUSSUNNAH', 105, 30, { align: 'center' });
+	doc.text('PONDOK PESANTREN AL-MAA', 105, 30, { align: 'center' });
 	doc.setFontSize(11);
 	doc.setFont('helvetica', 'normal');
 	doc.text('e-Raport Akademik Santri', 105, 37, { align: 'center' });
@@ -260,7 +260,7 @@ export function exportToExcel(
 		.slice(0, 31) || 'Sheet1';
 
 	const wsData = [
-		['PONDOK PESANTREN DARUSSUNNAH'],
+		['PONDOK PESANTREN AL-MAA'],
 		[`Laporan: ${title}`],
 		[`Tanggal Cetak: ${new Date().toLocaleDateString('id-ID')}`],
 		[],
@@ -287,3 +287,4 @@ export function exportToExcel(
 	const blob = new Blob([excelBuffer], { type: 'application/octet-stream' });
 	saveAs(blob, `${filename}.xlsx`);
 }
+

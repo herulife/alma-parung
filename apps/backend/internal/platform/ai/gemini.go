@@ -57,7 +57,7 @@ func GenerateArticle(topic string) (string, error) {
 	model := client.GenerativeModel("gemini-2.5-flash")
 	model.SetTemperature(0.7)
 
-	prompt := "Tulis sebuah artikel profesional dan rapi dalam format HTML murni tanpa awalan markdown bersarang untuk website Yayasan Pondok Pesantren Tahfidz Darussunnah tentang topik: " + topic + ". Artikel harus lengkap memiliki tag <h2> untuk subjudul dan <p> untuk paragraf. Hindari penggunaan \\n yang tidak wajib dan jangan berikan format markdown HTML."
+	prompt := "Tulis sebuah artikel profesional dan rapi dalam format HTML murni tanpa awalan markdown bersarang untuk website Yayasan Pondok Pesantren Tahfidz Al-Maa tentang topik: " + topic + ". Artikel harus lengkap memiliki tag <h2> untuk subjudul dan <p> untuk paragraf. Hindari penggunaan \\n yang tidak wajib dan jangan berikan format markdown HTML."
 
 	resp, err := model.GenerateContent(ctx, genai.Text(prompt))
 	if err != nil || len(resp.Candidates) == 0 {
@@ -83,3 +83,4 @@ func GenerateArticle(topic string) (string, error) {
 
 	return articleText, nil
 }
+

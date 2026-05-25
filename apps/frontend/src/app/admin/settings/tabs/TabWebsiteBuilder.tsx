@@ -217,7 +217,7 @@ function writeShellList(shell: WebsiteBuilderShell, listKey: ShellListKey, items
 
 const defaultHeroSlide: HeroSlideDraft = {
   title: 'Tahfidz, Adab, dan Ilmu dalam Satu Pembinaan',
-  subtitle: 'Darussunnah Parung membina santri melalui hafalan Al-Quran, adab, dan pembelajaran terpadu.',
+  subtitle: 'Al-Maa Parung membina santri melalui hafalan Al-Quran, adab, dan pembelajaran terpadu.',
   image_url: '/assets/img/gedung.webp',
 };
 
@@ -755,7 +755,7 @@ function SectionEditor({
             onChange={(event) =>
               onChange(updateSectionSetting(section, showHeroFields ? 'kicker' : 'eyebrow', event.target.value))
             }
-            placeholder={showHeroFields ? 'Darussunnah Parung' : 'Berita Pondok / Agenda / Program'}
+            placeholder={showHeroFields ? 'Al-Maa Parung' : 'Berita Pondok / Agenda / Program'}
             className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-bold text-slate-800"
           />
         </label>
@@ -2231,7 +2231,7 @@ export default function TabWebsiteBuilder() {
                 <input
                   value={shellDraft.footer.copyright_text}
                   onChange={(event) => setShellDraft((current) => ({ ...current, footer: { ...current.footer, copyright_text: event.target.value } }))}
-                  placeholder={`Copyright ${new Date().getFullYear()} Darussunnah Parung.`}
+                  placeholder={`Copyright ${new Date().getFullYear()} Al-Maa Parung.`}
                   className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-bold"
                 />
               </label>
@@ -2429,3 +2429,4 @@ export default function TabWebsiteBuilder() {
     </div>
   );
 }
+

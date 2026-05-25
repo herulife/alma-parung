@@ -136,9 +136,10 @@ export default function AttendanceScannerPage() {
         </div>
 
         <p className="mt-8 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
-          Pesantren Darussunnah Modern Attendance System
+          Pesantren Al-Maa Modern Attendance System
         </p>
       </div>
     </div>
   );
 }
+

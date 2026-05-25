@@ -242,7 +242,7 @@ export default function PortalDashboard() {
     },
     {
       href: '/portal/wallet',
-      title: 'Darussunnah Pay',
+      title: 'Al-Maa Pay',
       description: 'Pantau saldo dan mutasi dompet santri.',
       icon: <Wallet size={20} />,
       accent: 'border-slate-200 bg-slate-100 text-slate-700',
@@ -416,7 +416,7 @@ export default function PortalDashboard() {
                   Presensi & Dompet
                 </h4>
                 <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-500">
-                  Gunakan QR presensi untuk scan kehadiran dan pantau saldo Darussunnah Pay dari satu area yang lebih ringkas.
+                  Gunakan QR presensi untuk scan kehadiran dan pantau saldo Al-Maa Pay dari satu area yang lebih ringkas.
                 </p>
               </div>
               <div className="inline-flex w-fit rounded-full border border-blue-100 bg-white px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-slate-500 shadow-sm">
@@ -622,3 +622,4 @@ export default function PortalDashboard() {
     </>
   );
 }
+

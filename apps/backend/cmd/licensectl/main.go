@@ -45,11 +45,11 @@ func main() {
 }
 
 func usage() {
-	fmt.Println("licensectl - Darussunnah license utility")
+	fmt.Println("licensectl - Al-Maa license utility")
 	fmt.Println()
 	fmt.Println("Usage:")
 	fmt.Println("  licensectl genkeypair --private-out license-private.pem --public-out public.key")
-	fmt.Println("  licensectl issue --private-key license-private.pem --days 365 --customer \"Darussunnah\" --domain darussunnahparung.com")
+	fmt.Println("  licensectl issue --private-key license-private.pem --days 365 --customer \"Al-Maa\" --domain pondpes-almaparung.vercel.app")
 	fmt.Println("  licensectl inspect --token <jwt>")
 }
 

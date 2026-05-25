@@ -174,7 +174,7 @@ function renderChrome(
         </div>
         <div className="flex min-w-0 flex-1 items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-bold text-slate-500">
           <Lock size={12} className="text-emerald-500" />
-          <span className="truncate">darussunnahparung.com{previewPath}</span>
+          <span className="truncate">pondpes-almaparung.vercel.app{previewPath}</span>
         </div>
         <span className="rounded-full bg-white px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">
           {previewTitle}
@@ -242,7 +242,7 @@ export default function WebsiteBuilderLivePreview({
     return () => observer.disconnect();
   }, []);
 
-  const schoolName = settings.school_name || 'Darussunnah Parung';
+  const schoolName = settings.school_name || 'Al-Maa Parung';
   const welcomeText = settings.web_welcome_text || 'Pondok Pesantren Tahfidz';
   const logoUrl = resolveDisplayImageUrl(settings.web_logo_url || '/assets/img/logo.jpg');
   const schoolAddress =
@@ -254,17 +254,17 @@ export default function WebsiteBuilderLivePreview({
   const whatsappNumber = schoolPhone.replace(/\D/g, '') || '6281413241748';
   const socialLinks = [
     {
-      href: settings.social_instagram || 'https://instagram.com/darussunnahparung',
+      href: settings.social_instagram || 'https://instagram.com/yayasanalmaa',
       label: 'Instagram',
       icon: <Camera size={18} />,
     },
     {
-      href: settings.social_facebook || 'https://facebook.com/darussunnahparung',
+      href: settings.social_facebook || 'https://facebook.com/yayasanalmaa',
       label: 'Facebook',
       icon: <ThumbsUp size={18} />,
     },
     {
-      href: settings.social_youtube || 'https://youtube.com/@darussunnahparung',
+      href: settings.social_youtube || 'https://youtube.com/@yayasanalmaa',
       label: 'YouTube',
       icon: <Play size={18} />,
     },
@@ -480,3 +480,4 @@ export default function WebsiteBuilderLivePreview({
     </div>
   );
 }
+

@@ -138,7 +138,7 @@ export default function WebsiteShellRenderer({
             ? [{ label: schoolWebsite, url: isExternalHref(schoolWebsite) ? schoolWebsite : `https://${schoolWebsite.replace(/^\/+/, '')}` }]
             : []),
           ...(shell.footer.show_map_link
-            ? [{ label: 'Buka Maps', url: 'https://maps.google.com/?q=Pondok%20Pesantren%20Darussunnah%20Parung' }]
+            ? [{ label: 'Buka Maps', url: 'https://maps.google.com/?q=Pondok%20Pesantren%20Al-Maa%20Parung' }]
             : []),
         ];
   const whatsappHref = shell.floating.whatsapp.url || `https://wa.me/${whatsappNumber}`;

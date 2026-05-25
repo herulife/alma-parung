@@ -108,7 +108,7 @@ export default function TabPembayaranPSB() {
             <input
               value={formValues.psb_payment_account_name || ''}
               onChange={(event) => handleChange('psb_payment_account_name', event.target.value)}
-              placeholder="Contoh: Yayasan Darussunnah Parung"
+              placeholder="Contoh: Yayasan Al-Maa Parung"
               className="w-full rounded-xl border border-slate-200 bg-slate-50 px-6 py-4 font-bold text-slate-800"
             />
           </div>
@@ -163,3 +163,4 @@ export default function TabPembayaranPSB() {
     </div>
   );
 }
+

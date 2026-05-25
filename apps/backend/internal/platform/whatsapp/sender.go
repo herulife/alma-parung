@@ -124,7 +124,7 @@ func FormatTagihanSPP(namaSantri string, bulan string, jumlah int) string {
 			"Kami mengingatkan bahwa tagihan SPP bulan *%s* sebesar *Rp %s* belum terbayarkan.\n\n"+
 			"Mohon segera melakukan pembayaran melalui portal atau transfer ke rekening pondok.\n\n"+
 			"Jazakumullahu khairan.\n"+
-			"_Admin Darussunnah_",
+			"_Admin Al-Maa_",
 		namaSantri, bulan, formatRupiah(jumlah))
 }
 
@@ -134,7 +134,7 @@ func FormatDonasiSukses(namaDonatur string, jumlah int, kampanye string) string 
 			"Terima kasih *%s*!\n"+
 			"Donasi Anda sebesar *Rp %s* untuk kampanye *\"%s\"* telah kami verifikasi.\n\n"+
 			"Semoga menjadi amal jariyah yang berkah.\n\n"+
-			"_Pondok Pesantren Darussunnah_",
+			"_Pondok Pesantren Al-Maa_",
 		namaDonatur, formatRupiah(jumlah), kampanye)
 }
 
@@ -149,8 +149,8 @@ func FormatPSBStatus(namaCalon string, status string) string {
 		"Assalamu'alaikum Wr. Wb.\n\n"+
 			"Kepada Yth. Wali dari *%s*,\n"+
 			"Status pendaftaran santri baru Anda: *%s*\n\n"+
-			"Silakan cek detail di Portal Wali Santri Darussunnah.\n\n"+
-			"_Panitia PSB Darussunnah_",
+			"Silakan cek detail di Portal Wali Santri Al-Maa.\n\n"+
+			"_Panitia PSB Al-Maa_",
 		namaCalon, statusText)
 }
 
@@ -160,9 +160,9 @@ func FormatNilaiRaport(namaSantri string, semester string, tahunAjaran string, n
 			"Yth. Wali Santri *%s*,\n"+
 			"Berikut informasi nilai raport semester *%s* tahun ajaran *%s*:\n\n"+
 			"Nilai Akhir: *%.1f* (Grade: *%s*)\n\n"+
-			"Untuk detail lengkap, silakan hubungi wali kelas atau cek di Portal Wali Santri Darussunnah.\n\n"+
+			"Untuk detail lengkap, silakan hubungi wali kelas atau cek di Portal Wali Santri Al-Maa.\n\n"+
 			"Jazakumullahu khairan.\n"+
-			"_Admin Darussunnah_",
+			"_Admin Al-Maa_",
 		namaSantri, semester, tahunAjaran, nilaiAkhir, gradeLetter)
 }
 
@@ -174,7 +174,7 @@ func FormatAbsensiAlert(namaSantri string, tanggal string, totalAlpha int) strin
 			"Total Alpha bulan ini: *%d* hari.\n\n"+
 			"Mohon perhatiannya agar ananda dapat hadir kembali di pondok.\n\n"+
 			"Jazakumullahu khairan.\n"+
-			"_Admin Darussunnah_",
+			"_Admin Al-Maa_",
 		namaSantri, tanggal, totalAlpha)
 }
 
@@ -194,3 +194,4 @@ func formatRupiah(amount int) string {
 	}
 	return result
 }
+

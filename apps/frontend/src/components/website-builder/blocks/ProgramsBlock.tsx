@@ -66,7 +66,7 @@ export default function ProgramsBlock({ section, mode, programs }: ProgramsBlock
     section,
     'subtitle',
     isProgram
-      ? 'Pembinaan utama Darussunnah menguatkan hafalan, adab, wawasan Islam, dan kesiapan hidup santri secara seimbang.'
+      ? 'Pembinaan utama Al-Maa menguatkan hafalan, adab, wawasan Islam, dan kesiapan hidup santri secara seimbang.'
       : 'Aktivitas penunjang yang membuat santri aktif, terampil, dan percaya diri.'
   );
   const buttonLabel = getString(section, 'button_label', isProgram ? 'Buka halaman program' : 'Lihat kegiatan santri');

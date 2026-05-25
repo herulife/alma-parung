@@ -94,7 +94,7 @@ export default function FacilitiesPage() {
               </h1>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-emerald-50/90">
                 Kenali sarana pondok yang mendukung ibadah, belajar, keterampilan, dan kenyamanan
-                santri dalam keseharian di Darussunnah.
+                santri dalam keseharian di Al-Maa.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
@@ -194,7 +194,7 @@ export default function FacilitiesPage() {
                 <MapPin size={18} />
               </div>
               <p className="text-sm leading-7 text-slate-600">
-                Kampus Darussunnah berada di lingkungan yang mendukung pembinaan santri secara lebih
+                Kampus Al-Maa berada di lingkungan yang mendukung pembinaan santri secara lebih
                 tenang, terarah, dan konsisten dalam ritme ibadah serta belajar.
               </p>
             </div>

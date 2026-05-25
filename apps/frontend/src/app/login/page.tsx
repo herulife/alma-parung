@@ -89,7 +89,7 @@ function LoginPageContent() {
                 {fromPSB ? 'Masuk ke Portal Wali Santri' : 'Selamat Datang'}
               </h1>
               <p className="text-slate-500 font-medium text-sm sm:text-base">
-                {fromPSB ? 'Gunakan akun wali/calon santri untuk melanjutkan biodata dan dokumen pendaftaran.' : 'Masuk ke Portal Manajemen Darussunnah.'}
+                {fromPSB ? 'Gunakan akun wali/calon santri untuk melanjutkan biodata dan dokumen pendaftaran.' : 'Masuk ke Portal Manajemen Al-Maa.'}
               </p>
             </div>
 
@@ -104,7 +104,7 @@ function LoginPageContent() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   className="w-full px-6 py-4 sm:py-5 bg-slate-50/50 border border-slate-200 rounded-2xl text-slate-800 placeholder-slate-400 focus:bg-white focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-400 transition-all font-medium outline-none shadow-inner"
-                  placeholder="admin@darussunnah.com"
+                  placeholder="admin@almaparung.com"
                 />
               </div>
 
@@ -198,7 +198,7 @@ function LoginPageContent() {
                    </motion.div>
                 </div>
 
-                <h2 className="text-2xl font-black text-slate-800 tracking-tight leading-snug text-center">Sistem Informasi<br/><span className="text-emerald-600">Terpadu Darussunnah</span></h2>
+                <h2 className="text-2xl font-black text-slate-800 tracking-tight leading-snug text-center">Sistem Informasi<br/><span className="text-emerald-600">Terpadu Al-Maa</span></h2>
                 <p className="text-slate-500 mt-5 max-w-[280px] text-center text-sm leading-relaxed font-medium">
                   {fromPSB
                     ? 'Setelah masuk, kamu bisa melengkapi biodata, unggah berkas, dan memantau status verifikasi PSB.'
@@ -229,3 +229,4 @@ export default function LoginPage() {
     </Suspense>
   );
 }
+

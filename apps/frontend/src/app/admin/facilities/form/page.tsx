@@ -183,7 +183,7 @@ function FacilityFormContent() {
               <div className="space-y-6">
                 <div className="space-y-3">
                   <label className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400"><Building size={12} /> Nama Fasilitas</label>
-                  <input value={form.name} onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))} className="w-full rounded-xl border border-slate-200 bg-slate-50 px-6 py-4 font-bold text-slate-800 transition-all focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10" placeholder="Masjid Jami' Darussunnah" />
+                  <input value={form.name} onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))} className="w-full rounded-xl border border-slate-200 bg-slate-50 px-6 py-4 font-bold text-slate-800 transition-all focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10" placeholder="Masjid Jami' Al-Maa" />
                 </div>
                 <div className="space-y-3">
                   <label className="text-[10px] font-black uppercase tracking-widest text-slate-400">Deskripsi</label>
@@ -222,3 +222,4 @@ function FacilityFormContent() {
     </>
   );
 }
+

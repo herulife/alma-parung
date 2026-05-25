@@ -50,8 +50,8 @@ export default function NewsPortal() {
           <div className="grid gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
             <PublicSectionIntro
               eyebrow="Berita"
-              title="Kabar Darussunnah"
-              description="Ikuti kabar kegiatan, pengumuman, dan perkembangan terbaru dari lingkungan Darussunnah."
+              title="Kabar Al-Maa"
+              description="Ikuti kabar kegiatan, pengumuman, dan perkembangan terbaru dari lingkungan Al-Maa."
             />
 
             <div className="rounded-[1.8rem] border border-white/80 bg-white/88 p-5 shadow-[0_22px_50px_-36px_rgba(15,23,42,0.16)] backdrop-blur-sm">

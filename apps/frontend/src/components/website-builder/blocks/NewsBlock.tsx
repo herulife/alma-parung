@@ -10,7 +10,7 @@ import { getArray, getBoolean, getNumber, getString } from './helpers';
 export default function NewsBlock({ section, news, isLoading }: { section: HomeSection; news: News[]; isLoading: boolean }) {
   const eyebrow = getString(section, 'eyebrow', 'Berita Pondok');
   const title = getString(section, 'title', 'Berita Pondok');
-  const subtitle = getString(section, 'subtitle', 'Kabar terbaru dari kegiatan dan informasi Darussunnah.');
+  const subtitle = getString(section, 'subtitle', 'Kabar terbaru dari kegiatan dan informasi Al-Maa.');
   const buttonLabel = getString(section, 'button_label', 'Baca semua berita');
   const buttonUrl = getString(section, 'button_url', '/news');
   const limit = Math.max(1, getNumber(section, 'limit', 3));

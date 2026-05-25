@@ -30,10 +30,10 @@ func main() {
 }
 
 func usage() {
-	fmt.Println("adminctl - Darussunnah admin utility")
+	fmt.Println("adminctl - Al-Maa admin utility")
 	fmt.Println()
 	fmt.Println("Usage:")
-	fmt.Println("  adminctl reset-password --db ./darussunnah.db --email admin@darussunnah.com --password \"NewStrongPassword!\"")
+	fmt.Println("  adminctl reset-password --db ./darussunnah.db --email admin@almaparung.com --password \"NewStrongPassword!\"")
 }
 
 func runResetPassword(args []string) error {

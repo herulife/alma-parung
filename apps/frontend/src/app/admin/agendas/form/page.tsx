@@ -197,7 +197,7 @@ function AgendaFormContent() {
                 value={form.location || ''}
                 onChange={(event) => setForm((prev) => ({ ...prev, location: event.target.value }))}
                 className="w-full rounded-xl border border-slate-200 bg-slate-50 px-6 py-4 font-bold text-slate-800 transition-all focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10"
-                placeholder="Aula Darussunnah"
+                placeholder="Aula Al-Maa"
               />
             </div>
 
@@ -253,3 +253,4 @@ function AgendaFormContent() {
     </div>
   );
 }
+

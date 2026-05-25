@@ -194,7 +194,7 @@ function TeachersAdminPageContent() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
         <div>
           <h1 className="text-3xl font-black text-slate-900 mb-2 font-outfit uppercase tracking-tight">SDM & Staf Pengajar</h1>
-          <p className="text-slate-500 text-sm font-medium">Kelola profil ustadz dan ustadzah yang berkhidmah di Darussunnah.</p>
+          <p className="text-slate-500 text-sm font-medium">Kelola profil ustadz dan ustadzah yang berkhidmah di Al-Maa.</p>
         </div>
         <button 
           onClick={() => router.push('/admin/teachers/form')}
@@ -270,7 +270,7 @@ function TeachersAdminPageContent() {
                     <div className="relative mb-8 flex-1">
                        <Quote className="absolute -left-2 -top-2 text-slate-100 fill-slate-50" size={32} />
                        <p className="text-slate-400 text-xs italic font-medium line-clamp-4 leading-relaxed relative z-10 pt-2 pl-4">
-                         {teacher.bio || 'Pengabdian ilmu tanpa batas di Darussunnah.'}
+                         {teacher.bio || 'Pengabdian ilmu tanpa batas di Al-Maa.'}
                        </p>
                     </div>
 
@@ -309,7 +309,7 @@ function TeachersAdminPageContent() {
                  <Users className="text-slate-200" size={48} />
                </div>
                <h3 className="text-3xl font-black text-slate-900 mb-2 uppercase tracking-tight">Khadimul Ilmi Kosong</h3>
-               <p className="text-slate-400 max-w-sm mx-auto font-medium">Daftar ustadz yang berkhidmah di Darussunnah akan tampil di sini setelah ditambahkan.</p>
+               <p className="text-slate-400 max-w-sm mx-auto font-medium">Daftar ustadz yang berkhidmah di Al-Maa akan tampil di sini setelah ditambahkan.</p>
             </div>
           )
         ) : (
@@ -356,7 +356,7 @@ function TeachersAdminPageContent() {
                           croppedImageUrl ? 'border-emerald-300' : 'border-slate-200 bg-slate-50 hover:bg-emerald-50 hover:border-emerald-300 cursor-pointer'
                         }`}>
                           {croppedImageUrl ? (
-                            <img src={croppedImageUrl} className="w-full h-full object-cover" />
+                            <img src={croppedImageUrl} alt="Pratinjau foto profil pengajar" className="w-full h-full object-cover" />
                           ) : (
                             <label className="w-full h-full flex flex-col items-center justify-center cursor-pointer">
                               <input type="file" accept="image/*" className="hidden" onChange={handleImageSelect} />
@@ -498,7 +498,7 @@ function TeachersAdminPageContent() {
         onConfirm={handleDelete}
         isLoading={isDeleting}
         title="Hapus Profil Guru?"
-        message="Data pengajar ini akan dihapus permanen dari sistem Darussunnah."
+        message="Data pengajar ini akan dihapus permanen dari sistem Al-Maa."
         confirmText="Hapus Permanen"
       />
 

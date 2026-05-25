@@ -204,7 +204,7 @@ function FacilitiesAdminPageContent() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
         <div>
           <h1 className="text-3xl font-black text-slate-900 mb-2 font-outfit uppercase tracking-tight">Fasilitas Pondok</h1>
-          <p className="text-slate-500 text-sm font-medium">Kelola sarana dan prasarana pendukung pendidikan di Darussunnah.</p>
+          <p className="text-slate-500 text-sm font-medium">Kelola sarana dan prasarana pendukung pendidikan di Al-Maa.</p>
         </div>
         <button 
           onClick={() => router.push('/admin/facilities/form')}
@@ -340,7 +340,7 @@ function FacilitiesAdminPageContent() {
                   <input 
                     type="text"
                     required
-                    placeholder="Contoh: Masjid Jami' Darussunnah"
+                    placeholder="Contoh: Masjid Jami' Al-Maa"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     className="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-500 outline-none transition-all font-bold"
@@ -487,3 +487,4 @@ export default function FacilitiesAdminPage() {
     </Suspense>
   );
 }
+

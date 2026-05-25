@@ -25,7 +25,7 @@ type BuilderHeroSlide = {
 
 const defaultSlide: BuilderHeroSlide = {
   title: 'Tahfidz, Adab, dan Ilmu dalam Satu Pembinaan',
-  subtitle: 'Darussunnah Parung membina santri melalui hafalan Al-Quran, adab, dan pembelajaran terpadu.',
+  subtitle: 'Al-Maa Parung membina santri melalui hafalan Al-Quran, adab, dan pembelajaran terpadu.',
   image_url: '/assets/img/gedung.webp',
 };
 
@@ -121,7 +121,7 @@ function HeroContent({
   textPosition: string;
 }) {
   const buttons = getButtons(section);
-  const kicker = getString(section, 'kicker', 'Darussunnah Parung');
+  const kicker = getString(section, 'kicker', 'Al-Maa Parung');
 
   return (
     <div className={`max-w-3xl ${contentPositionClass(textPosition, variant)}`}>
@@ -181,7 +181,7 @@ export default function HeroBlock({ section, settings }: HeroBlockProps) {
               <CalendarDays size={24} />
             </div>
             <p className="mt-6 text-[10px] font-black uppercase tracking-[0.28em] text-amber-200">Penerimaan Santri Baru</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight">PSB Darussunnah</h2>
+            <h2 className="mt-3 text-3xl font-black tracking-tight">PSB Al-Maa</h2>
             <p className="mt-3 text-sm leading-7 text-slate-200">
               {settings.psb_registration_note || 'Lengkapi biodata, dokumen, dan pembayaran pendaftaran melalui portal.'}
             </p>
@@ -234,3 +234,4 @@ export default function HeroBlock({ section, settings }: HeroBlockProps) {
 
   return <section className="relative overflow-hidden bg-slate-950">{renderSlide(slides[0] || defaultSlide)}</section>;
 }
+

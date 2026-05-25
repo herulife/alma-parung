@@ -27,7 +27,7 @@ export default function MessagesAdminPage() {
 	const buildWhatsAppLink = (name: string, whatsapp?: string) => {
 		const cleanPhone = (whatsapp || '').replace(/\D/g, '');
 		if (!cleanPhone) return '';
-		const text = `Assalamualaikum Bapak/Ibu ${name}, kami dari Pondok Pesantren Darussunnah ingin merespon pesan Anda.`;
+		const text = `Assalamualaikum Bapak/Ibu ${name}, kami dari Pondok Pesantren Al-Maa ingin merespon pesan Anda.`;
 		return `https://wa.me/${cleanPhone}?text=${encodeURIComponent(text)}`;
 	};
 
@@ -412,9 +412,10 @@ export default function MessagesAdminPage() {
 				onConfirm={handleDelete}
 				isLoading={isDeleting}
 				title="Musnahkan Pesan?"
-				message="Tindakan ini akan menghapus jejak komunikasi ini secara permanen dari server Darussunnah. Data tidak dapat dipulihkan kembali."
+				message="Tindakan ini akan menghapus jejak komunikasi ini secara permanen dari server Al-Maa. Data tidak dapat dipulihkan kembali."
 				confirmText="YA, HAPUS PERMANEN"
 			/>
 		</div>
 	);
 }
+

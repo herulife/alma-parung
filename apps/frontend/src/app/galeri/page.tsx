@@ -98,7 +98,7 @@ export default function GaleriPage() {
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
             <PublicSectionIntro
               eyebrow="Galeri Kegiatan Pondok"
-              title="Potret Kehidupan Darussunnah"
+              title="Potret Kehidupan Al-Maa"
               description="Dokumentasi belajar, ibadah, pembinaan, dan keseharian santri dalam suasana pondok yang tertib dan hangat."
               theme="dark"
             />
@@ -218,7 +218,7 @@ export default function GaleriPage() {
                   <p className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-700">Album Terbaru</p>
                   <h2 className="mt-2 text-3xl font-black tracking-tight text-slate-900">Jejak Kegiatan Santri</h2>
                   <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600">
-                    Dokumentasi kegiatan yang menampilkan ritme belajar, ibadah, kebersamaan, dan pembinaan santri Darussunnah.
+                    Dokumentasi kegiatan yang menampilkan ritme belajar, ibadah, kebersamaan, dan pembinaan santri Al-Maa.
                   </p>
                 </div>
                 <div className="hidden items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold text-slate-500 shadow-sm md:flex">
@@ -271,7 +271,7 @@ export default function GaleriPage() {
             <p className="text-[10px] font-black uppercase tracking-[0.35em] text-emerald-700">Kehidupan Pesantren</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-900">Ingin menjadi bagian dari pondok ini?</h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-600">
-              Lihat suasana belajar, ibadah, dan pembinaan santri Darussunnah, lalu lanjutkan ke informasi pendaftaran.
+              Lihat suasana belajar, ibadah, dan pembinaan santri Al-Maa, lalu lanjutkan ke informasi pendaftaran.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link href="/psb" className="rounded-full bg-emerald-600 px-8 py-4 text-sm font-black uppercase tracking-[0.2em] text-white shadow-xl shadow-emerald-600/20 transition-all hover:bg-emerald-500">
@@ -312,7 +312,7 @@ export default function GaleriPage() {
                 <p className="text-[10px] font-black uppercase tracking-[0.35em] text-emerald-200">{selectedPhoto.category}</p>
                 <h3 className="mt-4 text-3xl font-black uppercase tracking-tight">{selectedPhoto.title}</h3>
                 <p className="mt-4 text-sm leading-relaxed text-slate-300">
-                  Dokumentasi kegiatan dan kehidupan santri Darussunnah yang menampilkan suasana belajar, pembinaan, dan kebersamaan di lingkungan pondok.
+                  Dokumentasi kegiatan dan kehidupan santri Al-Maa yang menampilkan suasana belajar, pembinaan, dan kebersamaan di lingkungan pondok.
                 </p>
               </div>
             </div>

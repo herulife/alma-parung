@@ -143,7 +143,7 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
     },
     {
       href: '/portal/wallet',
-      label: 'Darussunnah Pay',
+      label: 'Al-Maa Pay',
       description: 'Pantau saldo, PIN, dan mutasi transaksi.',
       icon: <Wallet size={20} />,
       docRef: 'dashboard',
@@ -561,3 +561,4 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
     </PublicLayout>
   );
 }
+

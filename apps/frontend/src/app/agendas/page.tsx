@@ -60,13 +60,13 @@ export default function AgendasPage() {
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-emerald-200">
                 <Sparkles size={14} />
-                Agenda Darussunnah
+                Agenda Al-Maa
               </div>
               <h1 className="mt-6 max-w-4xl text-4xl font-black leading-tight tracking-tight text-white md:text-6xl">
                 Jadwal kegiatan pondok, kajian, dan momen pembinaan santri.
               </h1>
               <p className="mt-5 max-w-2xl text-sm leading-7 text-emerald-100/82 sm:text-base sm:leading-8">
-                Ikuti informasi kegiatan terdekat di lingkungan Darussunnah, mulai dari agenda
+                Ikuti informasi kegiatan terdekat di lingkungan Al-Maa, mulai dari agenda
                 pembinaan, kegiatan santri, hingga program dakwah yang terbuka untuk masyarakat.
               </p>
             </div>
@@ -159,13 +159,13 @@ export default function AgendasPage() {
                         </div>
                         <div className="flex items-center gap-2">
                           <MapPin size={16} className="text-rose-500" />
-                          {agenda.location || 'Kompleks Darussunnah Parung'}
+                          {agenda.location || 'Kompleks Al-Maa Parung'}
                         </div>
                       </div>
 
                       <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-600 sm:text-[15px]">
                         {agenda.description ||
-                          'Agenda ini menjadi bagian dari pembinaan rutin untuk memperkuat ilmu, adab, dan kebersamaan di lingkungan Darussunnah.'}
+                          'Agenda ini menjadi bagian dari pembinaan rutin untuk memperkuat ilmu, adab, dan kebersamaan di lingkungan Al-Maa.'}
                       </p>
                     </div>
 
@@ -202,7 +202,7 @@ export default function AgendasPage() {
                 Ingin menanyakan agenda kunjungan, kajian, atau kegiatan pondok?
               </h3>
               <p className="mt-4 text-sm leading-7 text-emerald-100/82 sm:text-base">
-                Tim Darussunnah siap membantu informasi kegiatan dan kebutuhan komunikasi wali,
+                Tim Al-Maa siap membantu informasi kegiatan dan kebutuhan komunikasi wali,
                 calon santri, maupun mitra dakwah.
               </p>
             </div>
@@ -226,3 +226,4 @@ export default function AgendasPage() {
     </PublicLayout>
   );
 }
+

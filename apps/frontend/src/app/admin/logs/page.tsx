@@ -216,7 +216,7 @@ export default function LogsAdminPage() {
            <div>
               <h4 className="text-2xl font-black uppercase tracking-tight mb-3 font-outfit">Protokol Integritas Audit</h4>
               <p className="text-slate-400 text-sm font-medium leading-relaxed max-w-3xl">
-                Setiap perubahan pada basis data Darussunnah dicatat secara permanen untuk mematuhi standar audit keamanan cyber. Data ini bersifat <strong>Read-Only</strong> dan tidak dapat dianulir atau dihapus oleh pihak manapun guna menjamin validitas historis platform.
+                Setiap perubahan pada basis data Al-Maa dicatat secara permanen untuk mematuhi standar audit keamanan cyber. Data ini bersifat <strong>Read-Only</strong> dan tidak dapat dianulir atau dihapus oleh pihak manapun guna menjamin validitas historis platform.
               </p>
            </div>
         </div>

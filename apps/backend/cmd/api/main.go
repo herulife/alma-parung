@@ -40,7 +40,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Starting Darussunnah API Monorepo (Go Backend)...")
+	fmt.Println("Starting Al-Maa API Monorepo (Go Backend)...")
 
 	// 0. Load Environment variables
 	loadEnv()

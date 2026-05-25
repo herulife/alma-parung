@@ -12,7 +12,7 @@ import { getArray, getNumber, getString } from './helpers';
 export default function VideoBlock({ section, series, isLoading }: { section: HomeSection; series: VideoSeriesSummary[]; isLoading: boolean }) {
   const eyebrow = getString(section, 'eyebrow', 'Video');
   const title = getString(section, 'title', 'Video Pondok');
-  const subtitle = getString(section, 'subtitle', 'Rekaman kegiatan, kajian, dan dokumentasi video Darussunnah.');
+  const subtitle = getString(section, 'subtitle', 'Rekaman kegiatan, kajian, dan dokumentasi video Al-Maa.');
   const buttonLabel = getString(section, 'button_label', 'Lihat video');
   const buttonUrl = getString(section, 'button_url', '/videos');
   const limit = Math.max(1, getNumber(section, 'limit', 3));

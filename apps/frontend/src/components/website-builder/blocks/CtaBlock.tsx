@@ -6,7 +6,7 @@ import { getString } from './helpers';
 
 export default function CtaBlock({ section }: { section: HomeSection }) {
   const eyebrow = getString(section, 'eyebrow', 'Mulai Dari Sini');
-  const title = getString(section, 'title', 'Siap mengenal Darussunnah lebih jauh?');
+  const title = getString(section, 'title', 'Siap mengenal Al-Maa lebih jauh?');
   const subtitle = getString(
     section,
     'subtitle',

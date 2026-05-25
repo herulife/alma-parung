@@ -259,7 +259,7 @@ export default function AcademicsPage() {
   const notifyAlpha = async (item: Attendance) => {
     if (!item.student_phone) return showToast('error', 'Nomor WA tidak tersedia.');
     try {
-      await sendWhatsApp(item.student_phone, `Assalamu'alaikum Wr. Wb.\n\nYth. Wali Santri *${item.student_name}*,\nKami informasikan bahwa ananda tercatat *TIDAK HADIR (Alpha)* pada tanggal *${item.date}*.\n\nMohon perhatiannya.\n_Admin Darussunnah_`);
+      await sendWhatsApp(item.student_phone, `Assalamu'alaikum Wr. Wb.\n\nYth. Wali Santri *${item.student_name}*,\nKami informasikan bahwa ananda tercatat *TIDAK HADIR (Alpha)* pada tanggal *${item.date}*.\n\nMohon perhatiannya.\n_Admin Al-Maa_`);
       showToast('success', 'Notifikasi alpha berhasil dikirim.');
     } catch { showToast('error', 'Gagal mengirim notifikasi WA.'); }
   };
@@ -296,7 +296,7 @@ export default function AcademicsPage() {
   };
 
   const buildReportPayload = () => ({
-    studentName: selectedReportStudent?.name || 'Santri Darussunnah',
+    studentName: selectedReportStudent?.name || 'Santri Al-Maa',
     studentIdentity: selectedReportStudent?.email || '-',
     averageScore: reportAverage,
     hadir: reportAttendanceSummary.hadir || 0,
@@ -809,7 +809,7 @@ export default function AcademicsPage() {
                 <div className="border-b-4 border-emerald-600 px-8 py-7 print:px-0">
                   <div className="text-center">
                     <p className="text-[11px] font-black uppercase tracking-[0.35em] text-emerald-700">e-Raport Santri</p>
-                    <h4 className="mt-3 text-3xl font-black tracking-tight text-slate-900 print:text-2xl">Pondok Pesantren Darussunnah</h4>
+                    <h4 className="mt-3 text-3xl font-black tracking-tight text-slate-900 print:text-2xl">Pondok Pesantren Al-Maa</h4>
                     <p className="mt-2 text-sm font-medium text-slate-500">Tahun Pelajaran {reportGrades[0]?.academic_year || '-'} - Semester {reportGrades[0]?.semester || '-'}</p>
                   </div>
                 </div>
@@ -1130,3 +1130,4 @@ export default function AcademicsPage() {
     </div>
   );
 }
+

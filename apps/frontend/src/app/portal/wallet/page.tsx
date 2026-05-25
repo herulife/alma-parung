@@ -115,7 +115,7 @@ export default function WalletPage() {
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white backdrop-blur-md border border-white/20">
                 <Nfc size={20} />
               </div>
-              <span className="font-outfit text-sm font-black uppercase tracking-widest text-white/50">Darussunnah Pay</span>
+              <span className="font-outfit text-sm font-black uppercase tracking-widest text-white/50">Al-Maa Pay</span>
             </div>
             
             <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/50 drop-shadow-md">Total Saldo</p>
@@ -242,3 +242,4 @@ export default function WalletPage() {
     </div>
   );
 }
+

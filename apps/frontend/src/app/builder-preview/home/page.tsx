@@ -153,7 +153,7 @@ export default function BuilderPreviewHomePage() {
       .slice(0, 3);
   }, [videos]);
 
-  const schoolName = settings.school_name || 'Darussunnah Parung';
+  const schoolName = settings.school_name || 'Al-Maa Parung';
   const welcomeText = settings.web_welcome_text || 'Pondok Pesantren Tahfidz';
   const logoUrl = resolveDisplayImageUrl(settings.web_logo_url || '/assets/img/logo.jpg');
   const schoolAddress =
@@ -165,9 +165,9 @@ export default function BuilderPreviewHomePage() {
   const whatsappNumber = schoolPhone.replace(/\D/g, '') || '6281413241748';
   const previewMode: BuilderPreviewMode = pathname.startsWith('/builder-compare') ? 'compare' : 'draft';
   const socialLinks = [
-    { href: settings.social_instagram || 'https://instagram.com/darussunnahparung', label: 'Instagram', icon: <Camera size={18} /> },
-    { href: settings.social_facebook || 'https://facebook.com/darussunnahparung', label: 'Facebook', icon: <ThumbsUp size={18} /> },
-    { href: settings.social_youtube || 'https://youtube.com/@darussunnahparung', label: 'YouTube', icon: <Play size={18} /> },
+    { href: settings.social_instagram || 'https://instagram.com/yayasanalmaa', label: 'Instagram', icon: <Camera size={18} /> },
+    { href: settings.social_facebook || 'https://facebook.com/yayasanalmaa', label: 'Facebook', icon: <ThumbsUp size={18} /> },
+    { href: settings.social_youtube || 'https://youtube.com/@yayasanalmaa', label: 'YouTube', icon: <Play size={18} /> },
   ].filter((item) => item.href);
 
   if (loading || (!user && !isLoading)) {
@@ -269,3 +269,4 @@ export default function BuilderPreviewHomePage() {
     </div>
   );
 }
+

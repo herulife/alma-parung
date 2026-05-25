@@ -91,7 +91,7 @@ function RegisterPageContent() {
                 {fromPSB ? 'Buat Akun Portal PSB' : 'Buat Akun'}
               </h1>
               <p className="text-slate-500 font-medium text-sm sm:text-base">
-                {fromPSB ? 'Akun ini dipakai untuk melanjutkan proses pendaftaran santri baru.' : 'Daftarkan diri Anda di Ekosistem Darussunnah.'}
+                {fromPSB ? 'Akun ini dipakai untuk melanjutkan proses pendaftaran santri baru.' : 'Daftarkan diri Anda di Ekosistem Al-Maa.'}
               </p>
             </div>
 
@@ -120,7 +120,7 @@ function RegisterPageContent() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   className="w-full px-6 py-4 sm:py-5 bg-slate-50/50 border border-slate-200 rounded-2xl text-slate-800 placeholder-slate-400 focus:bg-white focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-400 transition-all font-medium outline-none shadow-inner"
-                  placeholder="fulan@darussunnah.com"
+                  placeholder="fulan@almaparung.com"
                 />
               </div>
 
@@ -215,7 +215,7 @@ function RegisterPageContent() {
                    </motion.div>
                 </div>
 
-                <h2 className="text-2xl font-black text-slate-800 tracking-tight leading-snug text-center">Sistem Informasi<br/><span className="text-emerald-600">Terpadu Darussunnah</span></h2>
+                <h2 className="text-2xl font-black text-slate-800 tracking-tight leading-snug text-center">Sistem Informasi<br/><span className="text-emerald-600">Terpadu Al-Maa</span></h2>
                 <p className="text-slate-500 mt-5 max-w-[280px] text-center text-sm leading-relaxed font-medium">
                   {fromPSB
                     ? 'Setelah akun dibuat, lanjutkan isi biodata dan unggah berkas melalui portal PSB.'
@@ -246,3 +246,4 @@ export default function RegisterPage() {
     </Suspense>
   );
 }
+

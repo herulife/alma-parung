@@ -80,7 +80,7 @@ func (h *Handler) Scan(w http.ResponseWriter, r *http.Request) {
 			"Yth. Wali Santri *" + sName + "*,\n" +
 			"Kami informasikan bahwa ananda telah hadir di pondok dan melakukan presensi via QR Code hari ini.\n\n" +
 			"Jazakumullahu khairan.\n" +
-			"_Admin Darussunnah_"
+			"_Admin Al-Maa_"
 
 		if err := whatsapp.SendMessage(phone, msg); err != nil {
 			logger.Error(r.Context(), "attendance notification failed", logger.Field{"operation": "attendance_scan_notify", "student_id": sID, "error": err.Error()})
@@ -119,3 +119,4 @@ type IRepository interface {
 	ValidateAndRecordAttendance(token string) (int, string, error)
 	GetStudentInfo(userID int) (string, string, error)
 }
+

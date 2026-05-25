@@ -543,7 +543,7 @@ export default function TabBannerHero() {
                   <div className="max-w-2xl">
                   <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-emerald-200 backdrop-blur-sm">
                     <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                    Pondok Pesantren Darussunnah Parung
+                    Pondok Pesantren Al-Maa Parung
                   </span>
                   <h4 className="max-w-xl text-4xl font-black leading-tight tracking-tight md:text-5xl">
                     {selectedSlide.title || 'Tanpa Judul'}
@@ -588,3 +588,4 @@ export default function TabBannerHero() {
     </div>
   );
 }
+

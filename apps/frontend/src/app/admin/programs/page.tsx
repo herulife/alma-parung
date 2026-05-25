@@ -511,7 +511,7 @@ export default function ProgramsAdminPage() {
 				onConfirm={handleDelete}
 				isLoading={isDeleting}
 				title="Hapus Program?"
-				message="Data kurikulum ini akan dihapus permanen dari sistem Darussunnah."
+				message="Data kurikulum ini akan dihapus permanen dari sistem Al-Maa."
 				confirmText="Hapus Permanen"
 			/>
 

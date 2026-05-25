@@ -15,12 +15,12 @@ export default function ProfileBlock({ section }: { section: HomeSection }) {
   const title = getString(
     section,
     'title',
-    'Darussunnah hadir sebagai ruang pembinaan Qurani yang serius, hangat, dan terarah.'
+    'Al-Maa hadir sebagai ruang pembinaan Qurani yang serius, hangat, dan terarah.'
   );
   const body = getString(
     section,
     'body',
-    'Pondok Pesantren Tahfidz Al Quran Darussunnah berdiri sejak 2009 di Parung, Bogor. Pondok berikhtiar membina hafalan, adab, ilmu, dan kemandirian santri melalui ritme pendidikan terpadu.'
+    "Pondok Pesantren Tahfidz Al-Qur'an Al-Maa berdiri sejak 2009 di Parung, Bogor. Pondok berikhtiar membina hafalan, adab, ilmu, dan kemandirian santri melalui ritme pendidikan terpadu."
   );
   const buttonLabel = getString(section, 'button_label', 'Lihat profil lengkap');
   const buttonUrl = getString(section, 'button_url', '/profil');
@@ -65,3 +65,4 @@ export default function ProfileBlock({ section }: { section: HomeSection }) {
     </section>
   );
 }
+

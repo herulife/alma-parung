@@ -37,7 +37,7 @@ export default function SambutanPage() {
     .filter(Boolean);
 
   const fallbackText =
-    "Selamat datang di Pondok Pesantren Tahfidz Darussunnah. Kami berkomitmen untuk melahirkan generasi Robbani yang hafal Al-Qur'an, memiliki kedalaman ilmu syar'i, serta berakhlak mulia sesuai sunnah Nabi Muhammad SAW. Melalui kurikulum yang terintegrasi, kami membangun kemandirian dan integritas santri untuk siap mengabdi di tengah umat.";
+    "Selamat datang di Pondok Pesantren Tahfidz Al-Maa. Kami berkomitmen untuk melahirkan generasi Robbani yang hafal Al-Qur'an, memiliki kedalaman ilmu syar'i, serta berakhlak mulia sesuai sunnah Nabi Muhammad SAW. Melalui kurikulum yang terintegrasi, kami membangun kemandirian dan integritas santri untuk siap mengabdi di tengah umat.";
 
   if (isLoading) {
     return (
@@ -72,7 +72,7 @@ export default function SambutanPage() {
               Pesan dari Pimpinan
             </span>
             <h1 className="mt-6 text-4xl font-black tracking-tight text-white md:text-6xl">
-              Sambutan yang menegaskan arah pendidikan Darussunnah.
+              Sambutan yang menegaskan arah pendidikan Al-Maa.
             </h1>
             <p className="mt-5 max-w-2xl text-sm leading-7 text-emerald-100/82 sm:text-base sm:leading-8">
               Visi, harapan, dan ajakan untuk menumbuhkan generasi yang dekat dengan Al-Qur&apos;an,
@@ -161,7 +161,7 @@ export default function SambutanPage() {
             </h2>
             <p className="mt-4 text-sm leading-7 text-emerald-800/85 sm:text-base sm:leading-8">
               Setelah membaca sambutan pimpinan, Anda dapat melanjutkan ke informasi program,
-              fasilitas, dan pendaftaran untuk melihat gambaran pembinaan di Darussunnah.
+              fasilitas, dan pendaftaran untuk melihat gambaran pembinaan di Al-Maa.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <Link
@@ -183,3 +183,4 @@ export default function SambutanPage() {
     </PublicLayout>
   );
 }
+
